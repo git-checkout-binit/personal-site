@@ -9,7 +9,7 @@ import { Github, ExternalLink } from 'lucide-react';
 const projects = [
   {
     title: "NFL Playoff Fantasy Draft Platform",
-    description: "Building a head-to-head fantasy football platform specifically for NFL playoffs. Moving beyond spreadsheet-based tracking to create a dynamic draft system where friends compete with real-time player performance data and leaderboards. Features include playoff-specific scoring, live game integration, and competitive matchmaking.",
+    description: "Building a head-to-head fantasy football platform specifically for NFL playoffs. After searching extensively, nothing like this exists on the market - most fantasy platforms end before playoffs begin. Moving beyond complex spreadsheet formulas to create a dynamic draft system where friends compete with real-time player performance data and leaderboards.",
     image: "/images/nfl-fantasy-pff.webp",
     technologies: ["React", "Node.js", "Sports Data API", "Real-time Updates", "PostgreSQL"],
     githubUrl: null,
