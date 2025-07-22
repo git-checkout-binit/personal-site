@@ -111,7 +111,7 @@ const CompanyLogo = ({ type }: { type: string }) => {
       <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg p-2">
         <img 
           src="/images/logos/hubspot.png" 
-          alt="HubSpot Logo" 
+          alt="HubSpot company logo - Binit Shrestha's current employer as Senior Security Software Engineer" 
           className="w-full h-full object-contain"
         />
       </div>
@@ -123,7 +123,7 @@ const CompanyLogo = ({ type }: { type: string }) => {
       <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg p-1.5">
         <img 
           src="/images/logos/tripadvisor-full.png" 
-          alt="TripAdvisor Logo" 
+          alt="TripAdvisor company logo - where Binit Shrestha worked as Core Product Team Intern optimizing booking algorithms" 
           className="w-full h-full object-contain"
         />
       </div>
@@ -135,7 +135,7 @@ const CompanyLogo = ({ type }: { type: string }) => {
       <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg p-1">
         <img 
           src="/images/logos/tufts.png" 
-          alt="Tufts University Logo" 
+          alt="Tufts University logo - Binit Shrestha's alma mater, MS Computer Science and BS Computer Science Cum Laude" 
           className="w-full h-full object-contain"
         />
       </div>

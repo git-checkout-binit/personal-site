@@ -143,7 +143,7 @@ export function RunningSection() {
                   />
                   <motion.img
                     src="/images/running-1.jpg"
-                    alt="Professional running photoshoot"
+                    alt="Binit Shrestha marathon runner training - Brooklyn NYC runner with 3:26:20 marathon PR and Brooklyn Half Marathon 1:28:32 PR"
                     className="w-full h-[500px] lg:h-[600px] object-cover running-mobile-position md:object-center mobile-reduce-effects"
                     style={{
                       filter: 'brightness(1.08) contrast(1.15) saturate(1.1) sharpen(1px)',
