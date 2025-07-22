@@ -142,7 +142,7 @@ export function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Right Side - Globe Visual */}
+        {/* Right Side - NYC Map Visual */}
         <div className="flex items-center justify-center p-8 lg:p-16">
           <motion.div
             className="relative w-full max-w-md aspect-square"
@@ -150,101 +150,129 @@ export function HeroSection() {
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: 1.2, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            {/* Globe Container */}
+            {/* NYC Map Container */}
             <div className="relative w-full h-full">
               
               {/* Outer Orbital Ring */}
               <motion.div
-                className="absolute inset-0 border-2 border-primary/20 rounded-full"
+                className="absolute inset-0 border-2 border-primary/20 rounded-3xl"
                 style={{ borderStyle: 'dashed' }}
-                animate={{ rotate: 360 }}
-                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                animate={{ rotate: [0, 5, 0, -5, 0] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
               />
               
-              {/* Globe Base */}
-              <div className="absolute inset-8 bg-gradient-to-br from-card via-card/90 to-card/60 backdrop-blur-sm rounded-full border-2 border-border/30 shadow-2xl overflow-hidden">
+              {/* Map Base */}
+              <div className="absolute inset-8 bg-gradient-to-br from-card via-card/90 to-card/60 backdrop-blur-sm rounded-2xl border-2 border-border/30 shadow-2xl overflow-hidden">
                 
-                {/* Globe Grid Lines */}
-                <div className="absolute inset-0 rounded-full">
-                  {/* Longitude lines */}
-                  {[...Array(6)].map((_, i) => (
-                    <motion.div
-                      key={`long-${i}`}
-                      className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent transform -translate-x-1/2 origin-bottom"
-                      style={{ transform: `translateX(-50%) rotateZ(${i * 30}deg)` }}
-                      animate={{ opacity: [0.3, 0.6, 0.3] }}
-                      transition={{ duration: 4, repeat: Infinity, delay: i * 0.2 }}
-                    />
-                  ))}
+                {/* Stylized NYC Boroughs */}
+                <div className="absolute inset-4 relative">
                   
-                  {/* Latitude lines */}
-                  {[...Array(4)].map((_, i) => (
-                    <div
-                      key={`lat-${i}`}
-                      className="absolute left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"
-                      style={{ top: `${25 + i * 16.67}%` }}
-                    />
-                  ))}
+                  {/* Manhattan (vertical rectangle) */}
+                  <div className="absolute w-3 h-16 bg-primary/20 rounded-sm transform rotate-12" 
+                       style={{ top: '35%', left: '42%' }} />
+                  
+                  {/* Brooklyn (larger irregular shape) */}
+                  <div className="absolute w-12 h-8 bg-accent/30 rounded-lg transform -rotate-12" 
+                       style={{ top: '45%', left: '48%' }} />
+                  
+                  {/* Queens (top right) */}
+                  <div className="absolute w-8 h-6 bg-primary/15 rounded-md transform rotate-6" 
+                       style={{ top: '28%', left: '55%' }} />
+                  
+                  {/* Staten Island (bottom left) */}
+                  <div className="absolute w-4 h-4 bg-accent/20 rounded-full" 
+                       style={{ top: '70%', left: '25%' }} />
+                  
+                  {/* The Bronx (top) */}
+                  <div className="absolute w-6 h-4 bg-primary/15 rounded-md transform rotate-3" 
+                       style={{ top: '15%', left: '45%' }} />
+                  
+                  {/* Williamsburg Pin in Brooklyn */}
+                  <motion.div
+                    className="absolute w-6 h-6 bg-gradient-to-br from-red-400 to-red-600 rounded-full shadow-lg border-2 border-white flex items-center justify-center"
+                    style={{ top: '50%', left: '52%' }}
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      boxShadow: [
+                        '0 0 0 0 rgba(239, 68, 68, 0.7)',
+                        '0 0 0 10px rgba(239, 68, 68, 0)',
+                        '0 0 0 0 rgba(239, 68, 68, 0)'
+                      ]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <div className="w-2 h-2 bg-white rounded-full" />
+                  </motion.div>
+                  
+                  {/* Connecting Lines to Pin */}
+                  <motion.div
+                    className="absolute w-8 h-px bg-gradient-to-r from-red-400 to-transparent"
+                    style={{ top: '52%', left: '62%' }}
+                    animate={{ opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  />
+                  
+                  {/* Grid Lines */}
+                  <div className="absolute inset-0">
+                    {[...Array(4)].map((_, i) => (
+                      <div
+                        key={`grid-h-${i}`}
+                        className="absolute left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent"
+                        style={{ top: `${20 + i * 20}%` }}
+                      />
+                    ))}
+                    {[...Array(4)].map((_, i) => (
+                      <div
+                        key={`grid-v-${i}`}
+                        className="absolute top-0 h-full w-px bg-gradient-to-b from-transparent via-accent/10 to-transparent"
+                        style={{ left: `${20 + i * 20}%` }}
+                      />
+                    ))}
+                  </div>
                 </div>
-                
-                {/* Brooklyn Pin */}
-                <motion.div
-                  className="absolute w-4 h-4 bg-gradient-to-br from-red-400 to-red-600 rounded-full shadow-lg border-2 border-white"
-                  style={{ top: '45%', left: '52%' }}
-                  animate={{ 
-                    scale: [1, 1.3, 1],
-                    boxShadow: [
-                      '0 0 0 0 rgba(239, 68, 68, 0.7)',
-                      '0 0 0 8px rgba(239, 68, 68, 0)',
-                      '0 0 0 0 rgba(239, 68, 68, 0)'
-                    ]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <div className="absolute -top-1 -left-1 w-6 h-6 bg-red-500/20 rounded-full animate-ping" />
-                </motion.div>
                 
                 {/* Location Label */}
                 <motion.div
-                  className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center"
-                  animate={{ y: [0, -5, 0] }}
+                  className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center"
+                  animate={{ y: [0, -3, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <div className="text-lg font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
-                    BROOKLYN
+                  <div className="text-sm font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+                    WILLIAMSBURG
                   </div>
                   <div className="text-xs text-muted-foreground tracking-widest">
-                    NEW YORK
+                    BROOKLYN, NYC
                   </div>
                 </motion.div>
               </div>
               
-              {/* Floating Satellites */}
+              {/* Floating Data Points */}
               {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={i}
                   className="absolute w-2 h-2 bg-gradient-to-br from-accent to-accent/80 rounded-full shadow-lg"
                   style={{
-                    top: `${15 + i * 25}%`,
-                    right: `${5 + i * 10}%`,
+                    top: `${20 + i * 25}%`,
+                    right: `${10 + i * 8}%`,
                   }}
                   animate={{
-                    rotate: 360,
-                    scale: [0.8, 1.2, 0.8]
+                    y: [0, -15, 0],
+                    opacity: [0.6, 1, 0.6]
                   }}
                   transition={{
-                    rotate: { duration: 10 + i * 3, repeat: Infinity, ease: "linear" },
-                    scale: { duration: 2 + i * 0.5, repeat: Infinity, ease: "easeInOut" }
+                    duration: 3 + i * 0.5,
+                    repeat: Infinity,
+                    delay: i * 0.8,
+                    ease: "easeInOut"
                   }}
                 />
               ))}
               
-              {/* Data Streams */}
+              {/* Corner Accent */}
               <motion.div
-                className="absolute inset-12 border border-accent/30 rounded-full"
-                style={{ borderStyle: 'dotted' }}
-                animate={{ rotate: -360 }}
-                transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+                className="absolute top-4 right-4 w-6 h-6 border-2 border-primary/40 rounded-full"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />
             </div>
           </motion.div>
