@@ -71,25 +71,29 @@ const education = [
     logo: "tufts",
     position: "Master of Science, Computer Science",
     location: "Medford, MA",
-    duration: "2020 - 2023",
-    description: "School of Engineering",
-    technologies: [],
+    duration: "Sep 2020 - May 2023",
+    description: "School of Engineering • Part-Time Student",
+    technologies: ["Machine Learning", "Reinforcement Learning", "AI", "Database Systems", "Cyberlaw", "Sports Analytics"],
     achievements: [
       "3.83 GPA",
-      "Advanced coursework in algorithms, systems, and software engineering"
+      "Entrepreneurial Field Study participation",
+      "Advanced coursework in ML, AI, and cyberpolicy",
+      "Ethics in Computer Science and Entrepreneurial Business Law"
     ]
   },
   {
     company: "Tufts University",
     logo: "tufts",
-    position: "Bachelor of Science, Computer Science",
+    position: "Bachelor of Science, Computer Science (Cum Laude)",
     location: "Medford, MA",
     duration: "2014 - 2018",
     description: "School of Arts & Sciences • Minor in Entrepreneurship",
-    technologies: [],
+    technologies: ["Java", "Python", "Algorithms", "Data Structures", "Software Engineering", "Database Design"],
     achievements: [
-      "3.64 GPA",
-      "Major in Computer Science with Entrepreneurship Minor"
+      "3.64 GPA - Graduated Cum Laude",
+      "Rosamond M. Najjar Scholarship recipient",
+      "Dean's List all 8 semesters (Fall '14 - Spring '18)",
+      "Entrepreneurship Leadership Department Fellowship"
     ]
   }
 ];
@@ -309,7 +313,7 @@ export function ExperienceSection() {
                       {edu.description}
                     </p>
                     
-                    <div className="mb-6">
+                    <div className="mb-8">
                       <h4 className="font-bold mb-4 text-lg tracking-wide">ACHIEVEMENTS</h4>
                       <ul className="space-y-2">
                         {edu.achievements.map((achievement, idx) => (
@@ -326,6 +330,30 @@ export function ExperienceSection() {
                         ))}
                       </ul>
                     </div>
+
+                    {edu.technologies.length > 0 && (
+                      <>
+                        <Separator className="my-6 bg-gradient-to-r from-transparent via-border to-transparent" />
+                        
+                        <div className="flex flex-wrap gap-3">
+                          {edu.technologies.map((tech, idx) => (
+                            <motion.div
+                              key={tech}
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              whileInView={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: index * 0.1 + idx * 0.05, duration: 0.3 }}
+                            >
+                              <Badge 
+                                variant="secondary" 
+                                className="px-3 py-1 font-medium bg-gradient-to-r from-secondary to-secondary/80 hover:from-accent/20 hover:to-primary/20 transition-all duration-300"
+                              >
+                                {tech}
+                              </Badge>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
