@@ -8,6 +8,17 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
+    title: "NFL Playoff Fantasy Draft Platform",
+    description: "Building a head-to-head fantasy football platform specifically for NFL playoffs. Moving beyond spreadsheet-based tracking to create a dynamic draft system where friends compete with real-time player performance data and leaderboards. Features include playoff-specific scoring, live game integration, and competitive matchmaking.",
+    image: "/images/nfl-fantasy-preview.jpg",
+    technologies: ["React", "Node.js", "Sports Data API", "Real-time Updates", "PostgreSQL"],
+    githubUrl: null,
+    liveUrl: null,
+    featured: true,
+    status: "Work in Progress",
+    comingSoon: true
+  },
+  {
     title: "Help, I'm Smiling! (Executive Producer)",
     description: "Executive producer for this 15-minute 2023 short film. After captivating the nation with a viral dance-challenge, a millennial daughter takes advantage of her aging father to seek out clout and internet stardom.",
     image: "https://i.ytimg.com/vi/QrTM3MWyRMQ/maxresdefault.jpg",
@@ -81,6 +92,11 @@ export function ProjectsSection() {
                     <CardTitle className="text-xl group-hover:text-primary transition-colors">
                       {project.title}
                     </CardTitle>
+                    {project.status && (
+                      <Badge variant="secondary" className="ml-2 bg-accent/20 text-accent border-accent/30">
+                        {project.status}
+                      </Badge>
+                    )}
                   </div>
                 </CardHeader>
                 
@@ -98,21 +114,30 @@ export function ProjectsSection() {
                   </div>
                   
                   <div className="flex gap-3">
-                    {project.githubUrl && (
-                      <Button size="sm" className="flex-1" asChild>
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4 mr-2" />
-                          Code
-                        </a>
+                    {project.comingSoon ? (
+                      <Button size="sm" variant="outline" className="w-full" disabled>
+                        <div className="w-4 h-4 mr-2 rounded-full bg-accent animate-pulse" />
+                        Coming Soon
                       </Button>
-                    )}
-                    {project.liveUrl && (
-                      <Button size="sm" variant="outline" className={`${project.githubUrl ? 'flex-1' : 'w-full'}`} asChild>
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          {project.githubUrl ? 'Live Demo' : 'View Project'}
-                        </a>
-                      </Button>
+                    ) : (
+                      <>
+                        {project.githubUrl && (
+                          <Button size="sm" className="flex-1" asChild>
+                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                              <Github className="w-4 h-4 mr-2" />
+                              Code
+                            </a>
+                          </Button>
+                        )}
+                        {project.liveUrl && (
+                          <Button size="sm" variant="outline" className={`${project.githubUrl ? 'flex-1' : 'w-full'}`} asChild>
+                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              {project.githubUrl ? 'Live Demo' : 'View Project'}
+                            </a>
+                          </Button>
+                        )}
+                      </>
                     )}
                   </div>
                 </CardContent>

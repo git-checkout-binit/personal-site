@@ -1,9 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { LogoReveal } from '@/components/logo-reveal';
 
 const navItems = [
   { name: 'Home', href: '#home' },
