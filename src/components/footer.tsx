@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -47,14 +47,8 @@ export function Footer() {
               </Button>
             </div>
             
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>Built with</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>using Next.js & TypeScript</span>
-            </div>
-            
             <div className="text-sm text-muted-foreground">
-              © 2024 Binit Shrestha. All rights reserved.
+              © 2025 Binit Shrestha. All rights reserved.
             </div>
           </div>
         </motion.div>

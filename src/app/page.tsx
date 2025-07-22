@@ -12,8 +12,8 @@ export default function Home() {
       <main>
         <HeroSection />
         <ExperienceSection />
-        <ProjectsSection />
         <RunningSection />
+        <ProjectsSection />
       </main>
       <Footer />
     </div>
