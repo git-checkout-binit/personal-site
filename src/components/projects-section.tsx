@@ -10,7 +10,7 @@ const projects = [
   {
     title: "NFL Playoff Fantasy Draft Platform",
     description: "Building a head-to-head fantasy football platform specifically for NFL playoffs. Moving beyond spreadsheet-based tracking to create a dynamic draft system where friends compete with real-time player performance data and leaderboards. Features include playoff-specific scoring, live game integration, and competitive matchmaking.",
-    image: "/images/nfl-fantasy-preview.jpg",
+    image: "https://media.pff.com/2025/07/YT.1-scaled.webp?w=1200&h=675",
     technologies: ["React", "Node.js", "Sports Data API", "Real-time Updates", "PostgreSQL"],
     githubUrl: null,
     liveUrl: null,
