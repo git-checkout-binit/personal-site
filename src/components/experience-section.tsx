@@ -9,6 +9,7 @@ import { Calendar, MapPin } from 'lucide-react';
 const experiences = [
   {
     company: "HubSpot",
+    logo: "hubspot",
     position: "Senior Software Engineer I, Infrastructure Security",
     location: "Cambridge, MA",
     duration: "Nov 2023 - Present",
@@ -22,6 +23,7 @@ const experiences = [
   },
   {
     company: "HubSpot",
+    logo: "hubspot",
     position: "Senior DevSecOps Engineer, Corporate Security",
     location: "Cambridge, MA", 
     duration: "Apr 2022 - Nov 2023",
@@ -35,6 +37,7 @@ const experiences = [
   },
   {
     company: "HubSpot",
+    logo: "hubspot",
     position: "Security Software Engineer",
     location: "Cambridge, MA",
     duration: "Jun 2018 - Apr 2022", 
@@ -48,6 +51,7 @@ const experiences = [
   },
   {
     company: "TripAdvisor",
+    logo: "tripadvisor",
     position: "Core Product Team Intern",
     location: "Needham, MA",
     duration: "Jun 2015 - Aug 2015",
@@ -60,6 +64,27 @@ const experiences = [
     ]
   }
 ];
+
+// Company Logo Components
+const CompanyLogo = ({ type }: { type: string }) => {
+  if (type === 'hubspot') {
+    return (
+      <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
+        <div className="text-white font-black text-lg">H</div>
+      </div>
+    );
+  }
+  
+  if (type === 'tripadvisor') {
+    return (
+      <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+        <div className="text-white font-black text-lg">TA</div>
+      </div>
+    );
+  }
+  
+  return null;
+};
 
 export function ExperienceSection() {
   return (
@@ -79,7 +104,7 @@ export function ExperienceSection() {
             EXPERIENCE
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
-            Crafting digital experiences that push boundaries and solve real-world problems
+            Building secure, scalable systems and automating security operations at enterprise scale
           </p>
         </motion.div>
 
@@ -98,7 +123,8 @@ export function ExperienceSection() {
                 <CardHeader className="pb-6 relative z-10">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                     <div className="space-y-3">
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-4">
+                        <CompanyLogo type={exp.logo} />
                         <div className="w-2 h-8 bg-gradient-to-b from-primary to-accent rounded-full" />
                         <div>
                           <CardTitle className="text-2xl md:text-3xl font-black tracking-tight group-hover:text-primary transition-colors duration-300">
