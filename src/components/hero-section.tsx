@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Linkedin, ArrowDown, Film, Activity } from 'lucide-react';
+import { Linkedin, ArrowDown, Film, Activity, PenTool } from 'lucide-react';
+import Link from 'next/link';
 
 export function HeroSection() {
   const scrollToExperience = () => {
@@ -146,6 +147,18 @@ export function HeroSection() {
                   <Linkedin className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
                   CONNECT
                 </a>
+              </Button>
+              
+              <Button 
+                size="lg" 
+                variant="outline" 
+                asChild
+                className="group border-2 border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-accent transition-all duration-300 px-6 md:px-10 py-3 md:py-5 h-auto font-bold text-white text-sm md:text-base"
+              >
+                <Link href="/blog">
+                  <PenTool className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                  THOUGHTS
+                </Link>
               </Button>
               
               <Button 
