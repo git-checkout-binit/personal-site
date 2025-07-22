@@ -17,7 +17,11 @@ export const metadata: Metadata = {
   description: "Personal website of Binit Shrestha - Software Engineer passionate about building exceptional digital experiences and endurance running.",
   keywords: ["software engineer", "developer", "runner", "typescript", "react", "next.js"],
   authors: [{ name: "Binit Shrestha" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
