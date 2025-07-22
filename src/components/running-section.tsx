@@ -130,13 +130,13 @@ export function RunningSection() {
             >
               <div className="relative">
                 <motion.div
-                  className="relative overflow-hidden rounded-3xl shadow-2xl professional-image"
+                  className="relative overflow-hidden rounded-3xl shadow-2xl professional-image mobile-optimized"
                   initial={{ y: 20 }}
                   whileInView={{ y: 0 }}
                   transition={{ delay: 0.4, duration: 0.8 }}
                 >
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 z-10"
+                    className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 z-10 md:block hidden"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 1 }}
@@ -144,7 +144,7 @@ export function RunningSection() {
                   <motion.img
                     src="/images/running-1.jpg"
                     alt="Professional running photoshoot"
-                    className="w-full h-[500px] lg:h-[600px] object-cover running-mobile-position md:object-center"
+                    className="w-full h-[500px] lg:h-[600px] object-cover running-mobile-position md:object-center mobile-reduce-effects"
                     style={{
                       filter: 'brightness(1.08) contrast(1.15) saturate(1.1) sharpen(1px)',
                       imageRendering: 'crisp-edges',
@@ -153,9 +153,9 @@ export function RunningSection() {
                       WebkitTransform: 'translateZ(0)',
                       transform: 'translateZ(0)'
                     }}
-                    initial={{ scale: 1.05 }}
+                    initial={{ scale: 1.02 }}
                     whileInView={{ scale: 1 }}
-                    transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+                    transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
                     loading="eager"
                     decoding="async"
                   />

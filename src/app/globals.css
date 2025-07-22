@@ -299,3 +299,64 @@
     transform-origin: left center;
   }
 }
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  /* Hardware acceleration for all elements */
+  * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* Optimize animations for mobile */
+  .mobile-optimized {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* Reduce motion complexity on mobile */
+  .hero-section {
+    animation-duration: 0.8s !important;
+  }
+  
+  /* Simplify filters on mobile for performance */
+  .mobile-reduce-effects img {
+    filter: brightness(1.05) contrast(1.1) !important;
+  }
+  
+  /* Optimize framer-motion for mobile */
+  [data-framer-component] {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Prefer reduced motion for users who want it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.3s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.3s !important;
+  }
+  
+  /* Keep essential animations but make them faster */
+  .hero-section * {
+    animation-duration: 0.5s !important;
+    transition-duration: 0.5s !important;
+  }
+}
+
+/* Optimize scrolling performance */
+@media (max-width: 768px) {
+  html {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

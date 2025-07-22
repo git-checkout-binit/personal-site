@@ -34,9 +34,9 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
         
-        {/* Film grain effect */}
+        {/* Film grain effect - simplified for mobile */}
         <motion.div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-20 hidden md:block"
           style={{
             backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,.15) 1px, transparent 0)',
             backgroundSize: '20px 20px'
