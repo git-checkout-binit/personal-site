@@ -102,24 +102,36 @@ const education = [
 const CompanyLogo = ({ type }: { type: string }) => {
   if (type === 'hubspot') {
     return (
-      <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
-        <div className="text-white font-black text-lg">H</div>
+      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg p-2">
+        <img 
+          src="/images/logos/hubspot.png" 
+          alt="HubSpot Logo" 
+          className="w-full h-full object-contain"
+        />
       </div>
     );
   }
   
   if (type === 'tripadvisor') {
     return (
-      <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
-        <div className="text-white font-black text-lg">TA</div>
+      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg p-1.5">
+        <img 
+          src="/images/logos/tripadvisor-full.png" 
+          alt="TripAdvisor Logo" 
+          className="w-full h-full object-contain"
+        />
       </div>
     );
   }
   
   if (type === 'tufts') {
     return (
-      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
-        <div className="text-white font-black text-lg">T</div>
+      <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg p-1">
+        <img 
+          src="/images/logos/tufts.png" 
+          alt="Tufts University Logo" 
+          className="w-full h-full object-contain"
+        />
       </div>
     );
   }
