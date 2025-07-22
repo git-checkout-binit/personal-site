@@ -164,24 +164,24 @@ export default function BlogPost() {
                   </div>
                   
                   <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                    <span className="text-4xl">🥊</span> The Accidental Fighter
+                    <span className="text-4xl">🥊</span> How This Happened
                   </h2>
                   
                   <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                    This summer, I joined a Muay Thai fight camp in Bangkok—alone, in the sweltering heat, and entirely unqualified. 
-                    It was an impulsive decision on a solo backpacking trip. I wanted a challenge. This sounded like one.
+                    This summer I joined a Muay Thai fight camp in Bangkok. I was traveling solo, had no real Muay Thai experience, 
+                    and it was incredibly hot. But I wanted to try something hard while I was there.
                   </p>
                   
                   <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
-                    I wasn&apos;t a total beginner: I have a black belt in Taekwondo and run marathons—but that didn&apos;t exactly 
-                    translate to Muay Thai credibility. The cab driver who picked me up couldn&apos;t believe where I was going. 
-                    Midway through the ride, he Google Translated something that roughly meant: <em>&quot;You are going to die.&quot;</em>
+                    I do have a black belt in Taekwondo and I run marathons, but that doesn&apos;t really translate to Muay Thai. 
+                    The cab driver taking me to the camp couldn&apos;t believe where I was going. He Google Translated 
+                    something that said &quot;You are going to die.&quot;
                   </p>
 
                   {/* Daily Schedule */}
                   <div className="bg-gradient-to-br from-orange-500/5 to-red-500/5 p-8 rounded-xl border border-orange-500/20 my-8">
                     <h4 className="font-bold text-xl mb-6 text-orange-600 flex items-center gap-2">
-                      <span>⏰</span> Fighter&apos;s Daily Schedule
+                      <span>⏰</span> What a Day Looked Like
                     </h4>
                     <div className="grid md:grid-cols-2 gap-4 text-sm">
                       <div className="space-y-2">
@@ -195,11 +195,11 @@ export default function BlogPost() {
                         </div>
                         <div className="flex justify-between py-2 border-b border-orange-500/20">
                           <span className="font-semibold">9:00 AM</span>
-                          <span className="text-muted-foreground">Breakfast & rest</span>
+                          <span className="text-muted-foreground">Breakfast and rest</span>
                         </div>
                         <div className="flex justify-between py-2 border-b border-orange-500/20">
                           <span className="font-semibold">3:00 PM</span>
-                          <span className="text-muted-foreground">Pad work & technique</span>
+                          <span className="text-muted-foreground">Pad work and technique</span>
                         </div>
                       </div>
                       <div className="space-y-2">
@@ -209,94 +209,92 @@ export default function BlogPost() {
                         </div>
                         <div className="flex justify-between py-2 border-b border-orange-500/20">
                           <span className="font-semibold">5:00 PM</span>
-                          <span className="text-muted-foreground">Sparring sessions</span>
+                          <span className="text-muted-foreground">Sparring</span>
                         </div>
                         <div className="flex justify-between py-2 border-b border-orange-500/20">
                           <span className="font-semibold">6:00 PM</span>
-                          <span className="text-muted-foreground">Conditioning & stretching</span>
+                          <span className="text-muted-foreground">Conditioning and stretching</span>
                         </div>
                         <div className="flex justify-between py-2 border-b border-orange-500/20">
                           <span className="font-semibold">8:00 PM</span>
-                          <span className="text-muted-foreground">Dinner & recovery</span>
+                          <span className="text-muted-foreground">Dinner and recovery</span>
                         </div>
                       </div>
                     </div>
                     <p className="text-orange-600 font-medium mt-4 text-center">
-                      <span className="text-lg">💀</span> I wasn&apos;t there for the tourist class—I was living like the fighters
+                      This wasn&apos;t a tourist class. I was doing the real fighter schedule.
                     </p>
                   </div>
                   
                   <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                    When I arrived, they handed me a schedule, showed me to my room, and gave me the full fighter itinerary. 
-                    They teased me, but I kept showing up.
+                    When I got there, they gave me a schedule and a room. I was doing the same training as people 
+                    who fight professionally. They thought it was funny, but I kept showing up.
                   </p>
                   
                   <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground">
-                    Three Lessons from the Ring
+                    What I Learned
                   </h2>
                   
                   <div className="space-y-12 my-10">
                     <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-xl border-l-4 border-red-500">
                       <h3 className="text-2xl font-bold text-red-600 mb-4 flex items-center gap-3">
-                        <span className="text-3xl">💪</span> Lesson 1: Sweat Now, Bleed Less Later
+                        <span className="text-3xl">💪</span> 1. Put in the Work Early
                       </h3>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        This phrase took on new meaning during the week. These fighters weren&apos;t training for fun—many were 
-                        doing this to escape poverty. Their lives depended on this discipline.
+                        These fighters weren&apos;t training for fun. Many were doing this to get out of poverty. 
+                        Their lives actually depended on being disciplined about training.
                       </p>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        The training was brutal. On day one, I asked how far we&apos;d run—they said 50 kilometers. I thought 
-                        they were joking. They weren&apos;t. It was during these runs that I realized how far from their world I was. 
-                        But the effort earned me their respect.
+                        The training was hard. On day one I asked how far we were running. They said 50 kilometers. 
+                        I thought they were joking. They weren&apos;t. During those runs I realized how different our situations were. 
+                        But showing up consistently earned their respect.
                       </p>
                       <div className="bg-red-500/5 p-4 rounded-lg border border-red-500/20 mt-4">
-                        <p className="font-semibold text-red-600">The Takeaway:</p>
+                        <p className="font-semibold text-red-600">The Point:</p>
                         <p className="text-muted-foreground text-sm mt-1">
-                          Put everything into your preparation. Whatever you&apos;re doing, front-load the suffering so 
-                          when it really counts, you&apos;re ready.
+                          Do the hard work before you need it. Whatever you&apos;re preparing for, front-load the effort 
+                          so when it matters, you&apos;re ready.
                         </p>
                       </div>
                     </div>
                     
                     <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-8 rounded-xl border-l-4 border-green-500">
                       <h3 className="text-2xl font-bold text-green-600 mb-4 flex items-center gap-3">
-                        <span className="text-3xl">❤️</span> Lesson 2: Kindness is Universal
+                        <span className="text-3xl">❤️</span> 2. Strength and Kindness Go Together
                       </h3>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        These were some of the most dangerous people I&apos;ve ever met—and the kindest. One fighter, 
-                        <strong className="text-green-600"> Petch Morakot</strong> (former #1 in his weight class), 
+                        These were some of the toughest people I&apos;ve met, but also some of the kindest. 
+                        <strong className="text-green-600"> Petch Morakot</strong>, a former #1 ranked fighter, 
                         trained with us every day.
                       </p>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        On runs, he&apos;d say hi to everyone. In the gym, he was serious but generous. They invited me 
-                        out to dinner after sessions. They included me. I still keep in touch with some of them today.
+                        On runs he&apos;d greet everyone we passed. In the gym he was serious but helpful. 
+                        They invited me to dinner after training. They made me feel included. I still talk to some of them.
                       </p>
                       <div className="bg-green-500/5 p-4 rounded-lg border border-green-500/20 mt-4">
-                        <p className="font-semibold text-green-600">The Takeaway:</p>
+                        <p className="font-semibold text-green-600">The Point:</p>
                         <p className="text-muted-foreground text-sm mt-1">
-                          Kindness transcends language, culture, and yes—combat. The strongest people are often 
-                          the most generous with their strength.
+                          Being strong doesn&apos;t mean being mean. The strongest people I met were also the most generous.
                         </p>
                       </div>
                     </div>
                     
                     <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-8 rounded-xl border-l-4 border-blue-500">
                       <h3 className="text-2xl font-bold text-blue-600 mb-4 flex items-center gap-3">
-                        <span className="text-3xl">📅</span> Lesson 3: Set a Fight Date
+                        <span className="text-3xl">📅</span> 3. Have a Date in Mind
                       </h3>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        Every fighter at the camp was training for a specific date: their next fight. That date gave their 
-                        training urgency, structure, and meaning. I realized we all need that—a &quot;fight day.&quot;
+                        Every fighter there was training for a specific fight date. That date made their training 
+                        urgent and focused. I realized most of us need something like that.
                       </p>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        It might be a race, a deadline, a performance—but it gives shape to your effort. Since then, 
-                        I&apos;ve been setting dates for myself—whether in fitness, writing, or life—and training like it&apos;s a fight.
+                        It could be a race, a deadline, a presentation. But having a specific date gives your preparation 
+                        meaning. Since then I try to set dates for things I&apos;m working on and treat the prep seriously.
                       </p>
                       <div className="bg-blue-500/5 p-4 rounded-lg border border-blue-500/20 mt-4">
-                        <p className="font-semibold text-blue-600">The Takeaway:</p>
+                        <p className="font-semibold text-blue-600">The Point:</p>
                         <p className="text-muted-foreground text-sm mt-1">
-                          A moment on the calendar gives purpose to your preparation. Set your date, then train like 
-                          your life depends on it.
+                          Having a date on the calendar makes your preparation real. Pick your date, then train accordingly.
                         </p>
                       </div>
                     </div>
@@ -305,7 +303,7 @@ export default function BlogPost() {
                   {/* Photo section */}
                   <div className="bg-muted/30 p-8 rounded-xl border my-10">
                     <div className="text-center">
-                      <h4 className="text-lg font-semibold mb-4 text-foreground">Training with Champions</h4>
+                      <h4 className="text-lg font-semibold mb-4 text-foreground">Training with Real Fighters</h4>
                       <div className="relative rounded-lg overflow-hidden shadow-lg mb-4">
                         <img
                           src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=800&h=500&fit=crop&crop=center"
@@ -318,48 +316,48 @@ export default function BlogPost() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                       </div>
                       <p className="text-sm text-muted-foreground italic">
-                        Training alongside former champions like Petch Morakot taught me that true strength includes kindness
+                        Training with champions like Petch Morakot showed me that being tough and being kind aren&apos;t opposites
                       </p>
                     </div>
                   </div>
                   
                   <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                    <span className="text-4xl">🥋</span> The Fighter Mindset
+                    <span className="text-4xl">🥋</span> Taking It Home
                   </h2>
                   
                   <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                    I went in pretending to be a fighter. I came out feeling a little more like one. You don&apos;t have to be 
-                    in a ring to take the fighter mindset with you.
+                    I went there as a tourist trying something hard. I left feeling like I understood something about 
+                    what real preparation looks like. You don&apos;t need to be in a fight camp to apply this stuff.
                   </p>
                   
                   <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-xl border border-primary/20 my-8">
-                    <h4 className="text-xl font-bold text-primary mb-4">The Three Principles</h4>
+                    <h4 className="text-xl font-bold text-primary mb-4">The Three Things</h4>
                     <ul className="space-y-3 text-muted-foreground">
                       <li className="flex items-start gap-3">
                         <span className="text-primary font-bold">1.</span>
-                        <span><strong>Respect the sweat:</strong> Front-load your preparation and suffering</span>
+                        <span><strong>Do the work early:</strong> Prepare before you need it</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-primary font-bold">2.</span>
-                        <span><strong>Lead with kindness:</strong> Strength and generosity go hand in hand</span>
+                        <span><strong>Strength includes kindness:</strong> The toughest people can be the most generous</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-primary font-bold">3.</span>
-                        <span><strong>Always set your date:</strong> Give your effort a target worth fighting for</span>
+                        <span><strong>Set your date:</strong> Give your effort a specific target</span>
                       </li>
                     </ul>
                   </div>
                   
                   <div className="bg-gradient-to-br from-orange-500/5 to-red-500/5 p-6 rounded-lg border border-orange-500/20 my-8">
                     <h4 className="text-orange-600 font-bold text-lg mb-3 flex items-center gap-2">
-                      <span>✈️</span> Thinking of Doing This Yourself?
+                      <span>✈️</span> If You Want to Try This
                     </h4>
                     <ul className="text-sm text-muted-foreground space-y-2">
-                      <li>• Start running NOW. Seriously. The cardio requirements are insane.</li>
-                      <li>• Learn basic Thai phrases. &quot;Thank you&quot; (kob khun) goes a long way.</li>
-                      <li>• Bring extra everything: wraps, shorts, electrolytes.</li>
-                      <li>• Don&apos;t expect to be good. Expect to be humbled. Then show up anyway.</li>
-                      <li>• The heat is no joke. Hydrate like your life depends on it (it does).</li>
+                      <li>• Start running now. The cardio is brutal.</li>
+                      <li>• Learn basic Thai. &quot;Thank you&quot; (kob khun) helps a lot.</li>
+                      <li>• Bring extra gear: wraps, shorts, electrolytes.</li>
+                      <li>• Don&apos;t expect to be good. Expect to get humbled. Show up anyway.</li>
+                      <li>• The heat is serious. Drink more water than you think you need.</li>
                     </ul>
                   </div>
                 </>
@@ -388,22 +386,22 @@ export default function BlogPost() {
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">🏈</span> The Annual Ritual
+                <span className="text-4xl">🏈</span> Why This Started
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                Every January, the same thing happens. My friends and I gather around (virtually these days) for our 
-                favorite tradition: the <strong className="text-primary">NFL Playoff Fantasy Draft</strong>.
+                Every January we try to do fantasy football for the NFL playoffs. The regular season ends, but the best games 
+                are just starting. Problem is, there&apos;s nothing out there for playoff fantasy.
               </p>
               
               <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
-                Picture this: We jump in a group text thread and just start rattling off player names. &quot;I&apos;ll take Josh Allen!&quot; 
-                &quot;Dibs on CMC!&quot; &quot;Is Mahomes still available?&quot; It&apos;s chaotic, it&apos;s fun, and it&apos;s completely unorganized.
+                So we improvise. Someone creates a group text and we just start calling out players. &quot;I want Josh Allen.&quot; 
+                &quot;Taking CMC.&quot; &quot;Is Mahomes gone already?&quot; It works but it&apos;s messy.
               </p>
 
               {/* Group Chat Screenshot Mockup */}
               <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-xl border border-primary/20 my-8">
-                <h4 className="font-bold text-lg mb-4 text-primary">📱 Our Draft &quot;Process&quot;</h4>
+                <h4 className="font-bold text-lg mb-4 text-primary">📱 How We Actually Draft</h4>
                 <div className="space-y-3 font-mono text-sm">
                   <div className="bg-blue-500/10 p-3 rounded-lg border-l-4 border-blue-500">
                     <strong className="text-blue-400">Mike:</strong> I got Josh Allen first!
@@ -421,32 +419,32 @@ export default function BlogPost() {
               </div>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                Then comes my job: taking this beautiful mess and somehow turning it into a functional fantasy league 
-                using the most sophisticated tool known to mankind... <em>Microsoft Excel</em>.
+                After everyone picks their players in the group chat, I get stuck turning this mess into 
+                something trackable. Usually that means Excel.
               </p>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">📊</span> Spreadsheet Hell
+                <span className="text-4xl">📊</span> The Excel Problem
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                What started as &quot;just track who has which players&quot; quickly evolved into a <strong className="text-primary">monster of Excel engineering</strong>. 
-                We&apos;re talking multiple sheets, complex formulas, and enough conditional formatting to make a data analyst cry.
+                What should be simple becomes complicated fast. You need to track who drafted who, calculate scores 
+                for each game, update standings, and somehow make it not terrible to use.
               </p>
 
               {/* Spreadsheet Breakdown */}
               <div className="grid md:grid-cols-2 gap-6 my-10">
                 <div className="bg-muted/50 p-6 rounded-lg border">
-                  <h4 className="font-bold text-primary mb-3">📋 Draft Tracker Sheet</h4>
+                  <h4 className="font-bold text-primary mb-3">📋 Draft Sheet</h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Player names manually typed from group chat</li>
-                    <li>• Color-coded cells for each team owner</li>
-                    <li>• Position tracking (QB, RB, WR, etc.)</li>
-                    <li>• Draft order reconstruction</li>
+                    <li>• Copy player names from group chat</li>
+                    <li>• Color-code cells by team owner</li>
+                    <li>• Track positions (QB, RB, WR)</li>
+                    <li>• Try to remember draft order</li>
                   </ul>
                 </div>
                 <div className="bg-muted/50 p-6 rounded-lg border">
-                  <h4 className="font-bold text-primary mb-3">🎯 Scoring Rules Sheet</h4>
+                  <h4 className="font-bold text-primary mb-3">🎯 Scoring Sheet</h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li>• Passing TD: 4 points</li>
                     <li>• Rushing/Receiving TD: 6 points</li>
@@ -455,28 +453,28 @@ export default function BlogPost() {
                   </ul>
                 </div>
                 <div className="bg-muted/50 p-6 rounded-lg border">
-                  <h4 className="font-bold text-primary mb-3">📈 Performance Tracker</h4>
+                  <h4 className="font-bold text-primary mb-3">📈 Stats Sheet</h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Manual data entry after each game</li>
-                    <li>• Individual player statistics</li>
-                    <li>• Game-by-game breakdown</li>
-                    <li>• We take turns updating this (painful!)</li>
+                    <li>• Manual entry after each game</li>
+                    <li>• Look up individual stats</li>
+                    <li>• Update game by game</li>
+                    <li>• Takes forever</li>
                   </ul>
                 </div>
                 <div className="bg-muted/50 p-6 rounded-lg border">
-                  <h4 className="font-bold text-primary mb-3">🏆 Leaderboard Sheet</h4>
+                  <h4 className="font-bold text-primary mb-3">🏆 Standings Sheet</h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Live calculated team totals</li>
-                    <li>• Ranking by total points</li>
-                    <li>• Week-by-week progression</li>
-                    <li>• Victory celebration zone</li>
+                    <li>• Calculate team totals</li>
+                    <li>• Sort by points</li>
+                    <li>• Week over week tracking</li>
+                    <li>• Hope formulas don&apos;t break</li>
                   </ul>
                 </div>
               </div>
               
               <div className="bg-muted p-6 rounded-lg overflow-x-auto mb-8 border border-border relative">
                 <div className="absolute top-2 right-2 text-xs text-muted-foreground bg-muted-foreground/10 px-2 py-1 rounded">
-                  excel_nightmare.xlsx
+                  playoff_fantasy_2024.xlsx
                 </div>
                 <code className="text-sm font-mono text-primary block leading-relaxed">
                   =IF(AND(VLOOKUP(B2,PlayerStats!$A:$Z,15,FALSE)&gt;0,<br/>
@@ -489,22 +487,22 @@ export default function BlogPost() {
               </div>
               
               <p className="text-lg leading-relaxed mb-8 text-muted-foreground italic text-center">
-                ↑ This is an actual formula from our spreadsheet. I&apos;m not proud of it, but it works.
+                This is a real formula from our spreadsheet. It works but barely.
               </p>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">🔍</span> The Search for Sanity
+                <span className="text-4xl">🔍</span> Looking for Alternatives
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                Before deciding to build something from scratch, I did what any reasonable person would do: 
-                I spent <em>hours</em> searching for existing solutions. Surely someone else has solved playoff fantasy football, right?
+                Before building anything, I spent time looking for existing options. 
+                Maybe someone already solved playoff fantasy football?
               </p>
 
               {/* Platform Comparison */}
               <div className="bg-gradient-to-br from-red-500/5 to-red-500/10 p-8 rounded-xl border border-red-500/20 my-8">
                 <h4 className="font-bold text-xl mb-6 text-red-500 flex items-center gap-2">
-                  <span>❌</span> The Great Platform Search
+                  <span>❌</span> What I Found
                 </h4>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-center justify-between py-2 border-b border-red-500/20">
@@ -513,70 +511,66 @@ export default function BlogPost() {
                   </div>
                   <div className="flex items-center justify-between py-2 border-b border-red-500/20">
                     <strong className="text-red-600">FanDuel</strong>
-                    <span className="text-sm text-muted-foreground">Occasional contests</span>
+                    <span className="text-sm text-muted-foreground">Some contests but inconsistent</span>
                   </div>
                   <div className="flex items-center justify-between py-2 border-b border-red-500/20">
                     <strong className="text-red-600">ESPN Fantasy</strong>
-                    <span className="text-sm text-muted-foreground">Season ends pre-playoffs</span>
+                    <span className="text-sm text-muted-foreground">Ends before playoffs</span>
                   </div>
                   <div className="flex items-center justify-between py-2 border-b border-red-500/20">
                     <strong className="text-red-600">Yahoo Fantasy</strong>
-                    <span className="text-sm text-muted-foreground">Same story</span>
+                    <span className="text-sm text-muted-foreground">Same problem</span>
                   </div>
                 </div>
                 <p className="text-red-600 font-semibold mt-4 text-center">
-                  Result: <span className="text-2xl">🤷‍♂️</span> NOTHING exists for playoff-specific fantasy
+                  Nothing focused specifically on playoff fantasy
                 </p>
               </div>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                This blew my mind. The NFL playoffs are the <strong className="text-primary">most exciting games of the year</strong>. 
-                This is when casual fans tune in, when legendary performances happen, when careers are made. 
-                Yet every major fantasy platform just... gives up?
+                This surprised me. The playoffs are when the best games happen. Casual fans actually watch. 
+                Big performances matter more. But all the major platforms basically stop at the regular season.
               </p>
               
-              <div className="bg-primary/5 p-6 rounded-lg border border-primary/20 my-8">
-                <h4 className="text-primary font-bold text-lg mb-3">💡 The Market Gap</h4>
-                <p className="text-muted-foreground">
-                  Most fantasy platforms end before playoffs begin, despite playoffs being when casual fans are 
-                  most engaged and player performances are most memorable. This felt like a real opportunity.
-                </p>
-              </div>
+              <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                After looking everywhere, I realized there just isn&apos;t a good solution for what we want to do. 
+                That started me thinking about building something myself.
+              </p>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">⚔️</span> Why This Is Actually Hard
+                <span className="text-4xl">⚔️</span> Technical Reality Check
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                &quot;Just build a fantasy app&quot; sounds simple until you realize what you&apos;re actually building. 
-                This isn&apos;t just another CRUD app—there are some genuinely challenging technical problems here.
+                Building this properly is more complicated than it first seems. The basic idea is simple, 
+                but there are some real technical problems to solve.
               </p>
 
               {/* Technical Challenges */}
               <div className="space-y-6 my-10">
                 <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-6 rounded-lg border-l-4 border-orange-500">
                   <h4 className="font-bold text-orange-600 mb-3 flex items-center gap-2">
-                    <span>🕷️</span> Web Scraping Nightmare
+                    <span>🕷️</span> Getting Player Data
                   </h4>
                   <p className="text-muted-foreground mb-3">
-                    Player data for individual games is surprisingly hard to get reliably. I tried scraping ESPN, NFL.com, 
-                    and other sites, but they all use complex UUIDs for players that change unpredictably.
+                    Getting reliable game stats is harder than expected. Sites like ESPN and NFL.com use random 
+                    IDs for players that change unpredictably. Scraping becomes a nightmare.
                   </p>
                   <div className="bg-muted/50 p-4 rounded font-mono text-sm">
-                    <span className="text-muted-foreground">{'// What I expected:'}</span><br/>
+                    <span className="text-muted-foreground">{'// What you want:'}</span><br/>
                     <span className="text-green-400">/players/josh-allen/stats</span><br/><br/>
-                    <span className="text-muted-foreground">{'// What I actually get:'}</span><br/>
+                    <span className="text-muted-foreground">{'// What you get:'}</span><br/>
                     <span className="text-red-400">/players/4e8f9a2b-c7d3-41a5-8f6e-2b1c9d8e7f3a/stats</span>
                   </div>
                 </div>
                 
                 <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-lg border-l-4 border-blue-500">
                   <h4 className="font-bold text-blue-600 mb-3 flex items-center gap-2">
-                    <span>🔄</span> Real-time Draft Chaos
+                    <span>🔄</span> Real-time Draft System
                   </h4>
                   <p className="text-muted-foreground mb-3">
-                    Building a socket-based draft application where multiple people can pick simultaneously, with draft timers, 
-                    pick validation, and real-time updates. Oh, and it needs to work when someone&apos;s internet cuts out mid-draft.
+                    Multiple people drafting at the same time with timers, pick validation, and live updates. 
+                    Plus it needs to handle connection issues gracefully when someone&apos;s internet drops mid-draft.
                   </p>
                   <div className="bg-muted/50 p-4 rounded">
                     <div className="flex items-center gap-2 mb-2">
@@ -589,69 +583,69 @@ export default function BlogPost() {
                 
                 <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-6 rounded-lg border-l-4 border-green-500">
                   <h4 className="font-bold text-green-600 mb-3 flex items-center gap-2">
-                    <span>👥</span> User Management Hell
+                    <span>👥</span> User Experience Complexity
                   </h4>
                   <p className="text-muted-foreground mb-3">
-                    Every player needs to log in, see their team, make picks, view live scores, and trash talk. 
-                    Plus playoff-specific UI considerations that regular season apps don&apos;t need.
+                    Everyone needs to login, see their team, make picks, view scores, and interact with other players. 
+                    Playoff fantasy also has unique UI needs that regular season apps don&apos;t have.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4 mt-3">
                     <div className="bg-muted/30 p-3 rounded text-sm">
-                      <strong className="text-green-600">Playoff Bracket View</strong><br/>
-                      <span className="text-muted-foreground">Connect fantasy performance to actual playoff progression</span>
+                      <strong className="text-green-600">Playoff Bracket Integration</strong><br/>
+                      <span className="text-muted-foreground">Show how fantasy performance connects to real playoff games</span>
                     </div>
                     <div className="bg-muted/30 p-3 rounded text-sm">
                       <strong className="text-green-600">Elimination Tracking</strong><br/>
-                      <span className="text-muted-foreground">Players get eliminated as teams lose—affects strategy</span>
+                      <span className="text-muted-foreground">Players become worthless when teams lose, affects strategy</span>
                     </div>
                   </div>
                 </div>
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">🚀</span> Building the Solution
+                <span className="text-4xl">🚀</span> Building It Myself
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                As a Senior Software Engineer at HubSpot, I know I can tackle these challenges. But this isn&apos;t just about 
-                replacing a spreadsheet—it&apos;s about creating the playoff fantasy experience that <em>should</em> exist.
+                Working as a Senior Software Engineer at HubSpot means I can actually build this. 
+                The goal is to replace our spreadsheet mess with something that actually works.
               </p>
 
               {/* Tech Stack */}
               <div className="bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 p-8 rounded-xl border border-primary/20 my-10">
-                <h3 className="text-2xl font-bold mb-6 text-primary">🛠️ Technical Architecture</h3>
+                <h3 className="text-2xl font-bold mb-6 text-primary">🛠️ What I&apos;m Building With</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-bold text-foreground mb-3">Frontend Stack</h4>
+                    <h4 className="font-bold text-foreground mb-3">Frontend</h4>
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center gap-3 p-3 bg-blue-500/10 rounded border-l-4 border-blue-500">
                         <strong className="text-blue-600">React + TypeScript</strong>
-                        <span className="text-muted-foreground">Component-based UI, type safety</span>
+                        <span className="text-muted-foreground">Good for real-time UIs</span>
                       </div>
                       <div className="flex items-center gap-3 p-3 bg-purple-500/10 rounded border-l-4 border-purple-500">
-                        <strong className="text-purple-600">Socket.IO Client</strong>
-                        <span className="text-muted-foreground">Real-time draft & scoring</span>
+                        <strong className="text-purple-600">Socket.IO</strong>
+                        <span className="text-muted-foreground">Live draft updates</span>
                       </div>
                       <div className="flex items-center gap-3 p-3 bg-green-500/10 rounded border-l-4 border-green-500">
                         <strong className="text-green-600">Tailwind CSS</strong>
-                        <span className="text-muted-foreground">Responsive design</span>
+                        <span className="text-muted-foreground">Quick styling</span>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-3">Backend Stack</h4>
+                    <h4 className="font-bold text-foreground mb-3">Backend</h4>
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center gap-3 p-3 bg-yellow-500/10 rounded border-l-4 border-yellow-500">
                         <strong className="text-yellow-600">Node.js + Express</strong>
-                        <span className="text-muted-foreground">API server, socket handling</span>
+                        <span className="text-muted-foreground">API and websockets</span>
                       </div>
                       <div className="flex items-center gap-3 p-3 bg-blue-500/10 rounded border-l-4 border-blue-500">
                         <strong className="text-blue-600">PostgreSQL</strong>
-                        <span className="text-muted-foreground">Relational data integrity</span>
+                        <span className="text-muted-foreground">Reliable data storage</span>
                       </div>
                       <div className="flex items-center gap-3 p-3 bg-orange-500/10 rounded border-l-4 border-orange-500">
                         <strong className="text-orange-600">Sports Data API</strong>
-                        <span className="text-muted-foreground">Real player statistics</span>
+                        <span className="text-muted-foreground">Player stats</span>
                       </div>
                     </div>
                   </div>
@@ -660,28 +654,28 @@ export default function BlogPost() {
 
               {/* Current Progress */}
               <div className="bg-muted/30 p-8 rounded-xl border my-10">
-                <h3 className="text-2xl font-bold mb-6 text-foreground">📈 Current Progress</h3>
+                <h3 className="text-2xl font-bold mb-6 text-foreground">📈 Where I&apos;m At</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-3">
                     <h4 className="font-semibold text-green-600 flex items-center gap-2">
-                      <span>✅</span> Completed
+                      <span>✅</span> Working
                     </h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• User authentication & league creation</li>
-                      <li>• Player database with NFL roster data</li>
+                      <li>• User authentication and league creation</li>
+                      <li>• Player database with current NFL rosters</li>
                       <li>• Draft system with snake draft logic</li>
                       <li>• Basic team management interface</li>
                     </ul>
                   </div>
                   <div className="space-y-3">
                     <h4 className="font-semibold text-orange-600 flex items-center gap-2">
-                      <span>🚧</span> In Progress
+                      <span>🚧</span> Building Now
                     </h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Live scoring with sports data integration</li>
+                      <li>• Live scoring with sports data API</li>
                       <li>• Real-time leaderboard updates</li>
-                      <li>• Mobile-optimized draft interface</li>
-                      <li>• Playoff bracket visualization</li>
+                      <li>• Mobile-friendly draft interface</li>
+                      <li>• Playoff bracket view</li>
                     </ul>
                   </div>
                 </div>
@@ -692,8 +686,8 @@ export default function BlogPost() {
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                This is an active build that I&apos;m documenting as I go. My friends are the alpha users, but I&apos;m 
-                designing it to work for any group that wants to make playoffs more engaging.
+                I&apos;m building this in the open and documenting what I learn. My friend group is testing it, 
+                but it should work for anyone who wants better playoff fantasy.
               </p>
 
               {/* Roadmap */}
@@ -701,32 +695,32 @@ export default function BlogPost() {
                 <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg border-l-4 border-primary">
                   <span className="text-2xl">🎮</span>
                   <div>
-                    <h4 className="font-bold text-primary">Next Post: Real-time Draft Architecture</h4>
-                    <p className="text-sm text-muted-foreground">Deep dive into WebSocket implementation, handling disconnections, and draft timer logic</p>
+                    <h4 className="font-bold text-primary">Next Post: Real-time Draft System</h4>
+                    <p className="text-sm text-muted-foreground">How WebSockets work for live drafting, handling disconnections, and timer logic</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-4 bg-accent/5 rounded-lg border-l-4 border-accent">
                   <span className="text-2xl">📊</span>
                   <div>
-                    <h4 className="font-bold text-accent">Sports Data Integration Challenges</h4>
-                    <p className="text-sm text-muted-foreground">How I solved the player stats problem and built reliable data pipelines</p>
+                    <h4 className="font-bold text-accent">Solving the Player Stats Problem</h4>
+                    <p className="text-sm text-muted-foreground">How I got reliable sports data working properly</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-4 bg-green-500/5 rounded-lg border-l-4 border-green-500">
                   <span className="text-2xl">👥</span>
                   <div>
-                    <h4 className="font-bold text-green-600">User Testing with Real Friends</h4>
-                    <p className="text-sm text-muted-foreground">What happened when we beta tested during actual playoffs</p>
+                    <h4 className="font-bold text-green-600">Testing with Real Users</h4>
+                    <p className="text-sm text-muted-foreground">What we learned when my friends used it during actual playoffs</p>
                   </div>
                 </div>
               </div>
               
               <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-xl border border-primary/20 my-10">
                 <div className="text-center">
-                  <h4 className="text-2xl font-bold text-primary mb-4">Want to Join the Beta?</h4>
+                  <h4 className="text-2xl font-bold text-primary mb-4">Want to Try It?</h4>
                   <p className="text-muted-foreground mb-6">
-                    I&apos;m looking for groups who want to try playoff fantasy football the way it should be done. 
-                    No more spreadsheet hell, no more manual data entry, no more chaos in group chats.
+                    Looking for groups interested in better playoff fantasy. No more spreadsheets, 
+                    no more manual updates, no more chaos in group chats.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center">
                     <a 
@@ -735,15 +729,7 @@ export default function BlogPost() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-primary hover:bg-accent text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                     >
-                      <span>💬</span> Connect on LinkedIn
-                    </a>
-                    <a 
-                      href="https://twitter.com/intent/tweet?text=Interested%20in%20beta%20testing%20NFL%20playoff%20fantasy%20football%20platform%20by%20@binitr" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                    >
-                      <span>🐦</span> Tweet Interest
+                      <span>💬</span> Message me on LinkedIn
                     </a>
                   </div>
                 </div>
