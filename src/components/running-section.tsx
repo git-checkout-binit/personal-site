@@ -146,11 +146,18 @@ export function RunningSection() {
                     alt="Professional running photoshoot"
                     className="w-full h-[500px] lg:h-[600px] object-cover running-mobile-position md:object-center"
                     style={{
-                      filter: 'brightness(1.05) contrast(1.08) saturate(1.05)'
+                      filter: 'brightness(1.08) contrast(1.15) saturate(1.1) sharpen(1px)',
+                      imageRendering: 'crisp-edges',
+                      WebkitBackfaceVisibility: 'hidden',
+                      backfaceVisibility: 'hidden',
+                      WebkitTransform: 'translateZ(0)',
+                      transform: 'translateZ(0)'
                     }}
-                    initial={{ scale: 1.1 }}
+                    initial={{ scale: 1.05 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+                    loading="eager"
+                    decoding="async"
                   />
                 </motion.div>
                 
