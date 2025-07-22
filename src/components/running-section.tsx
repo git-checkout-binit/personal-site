@@ -21,7 +21,7 @@ const runningStats = [
   {
     icon: Timer,
     label: "Marathon PR",
-    value: "3:23:35",
+    value: "3:26:20",
     subtitle: "Marine Corps Marathon 2024"
   },
   {
@@ -36,7 +36,7 @@ const races = [
   {
     name: "Marine Corps Marathon",
     year: "2024", 
-    time: "3:23:35",
+    time: "3:26:20",
     placement: "1,216 / 16,168 overall",
     category: "Marathon",
     link: "https://track.rtrt.me/e/MCM-2024#/dash/RHZKA38B"
@@ -158,7 +158,7 @@ export function RunningSection() {
                   className="absolute -bottom-6 -left-6 bg-gradient-to-br from-card via-card to-card/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-border/50"
                 >
                   <div className="text-center">
-                    <div className="text-2xl font-black text-primary mb-1">3:23:35</div>
+                    <div className="text-2xl font-black text-primary mb-1">3:26:20</div>
                     <div className="text-xs text-muted-foreground font-medium">MARATHON PR</div>
                   </div>
                 </motion.div>
