@@ -140,7 +140,7 @@ export function RunningSection() {
                   <motion.img
                     src="/images/running-1.jpg"
                     alt="Professional running photoshoot"
-                    className="w-full h-[500px] lg:h-[600px] object-cover"
+                    className="w-full h-[500px] lg:h-[600px] object-cover object-left md:object-center"
                     style={{
                       filter: 'brightness(1.05) contrast(1.08) saturate(1.05)'
                     }}

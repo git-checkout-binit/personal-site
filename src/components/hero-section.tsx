@@ -23,7 +23,7 @@ export function HeroSection() {
           <img
             src="/images/hero-bg.jpg"
             alt="Behind the scenes"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-right md:object-center"
             style={{
               filter: 'contrast(1.1) brightness(0.65) saturate(0.1)'
             }}
@@ -54,7 +54,7 @@ export function HeroSection() {
 
       {/* Content Overlay */}
       <div className="relative z-10 min-h-screen flex items-center">
-        <div className="container mx-auto px-8 md:px-16">
+        <div className="container mx-auto px-8 md:px-16 pb-24 md:pb-0">
           
           {/* Left Side Content */}
           <div className="max-w-3xl">
@@ -74,7 +74,7 @@ export function HeroSection() {
 
             {/* Cinematic Name Display */}
             <motion.h1 
-              className="text-7xl md:text-8xl lg:text-9xl font-black leading-[0.85] mb-12"
+              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-[0.85] mb-12"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
@@ -187,7 +187,7 @@ export function HeroSection() {
       {/* Cinematic Scroll Indicator */}
       <motion.button
         onClick={scrollToExperience}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3 group"
+        className="absolute bottom-10 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3 group z-20"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2.5, duration: 0.8 }}
