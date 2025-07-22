@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, ArrowDown } from 'lucide-react';
+import { Linkedin, ArrowDown, Film } from 'lucide-react';
 
 export function HeroSection() {
   const scrollToExperience = () => {
@@ -52,7 +52,7 @@ export function HeroSection() {
             >
               <div className="w-12 h-px bg-gradient-to-r from-primary to-accent" />
               <span className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-medium">
-                Creative Developer
+                HubSpot Security
               </span>
             </motion.div>
 
@@ -111,24 +111,38 @@ export function HeroSection() {
             >
               <Button 
                 size="lg" 
+                asChild
                 className="group bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary transition-all duration-500 px-8 py-4 h-auto font-medium shadow-lg hover:shadow-xl"
               >
-                <Github className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
-                GitHub
+                <a 
+                  href="https://www.linkedin.com/in/binitrshrestha" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                  LinkedIn
+                </a>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="group border-2 border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 px-8 py-4 h-auto font-medium"
+                asChild
+                className="group border-2 border-border hover:border-accent hover:bg-accent/5 transition-all duration-300 px-8 py-4 h-auto font-medium"
               >
-                <Linkedin className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                LinkedIn
+                <a 
+                  href="https://www.imdb.com/name/nm15282353/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Film className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                  IMDB
+                </a>
               </Button>
             </motion.div>
           </motion.div>
         </div>
 
-        {/* Right Side - Visual Element */}
+        {/* Right Side - Globe Visual */}
         <div className="flex items-center justify-center p-8 lg:p-16">
           <motion.div
             className="relative w-full max-w-md aspect-square"
@@ -136,60 +150,102 @@ export function HeroSection() {
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ delay: 1.2, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            {/* Geometric Shape Container */}
+            {/* Globe Container */}
             <div className="relative w-full h-full">
               
-              {/* Outer Ring */}
+              {/* Outer Orbital Ring */}
               <motion.div
-                className="absolute inset-0 border-2 border-primary/30 rounded-full"
+                className="absolute inset-0 border-2 border-primary/20 rounded-full"
+                style={{ borderStyle: 'dashed' }}
                 animate={{ rotate: 360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
               />
               
-              {/* Inner Rotating Elements */}
-              <motion.div
-                className="absolute inset-8 border border-accent/40 rounded-full"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
-              
-              {/* Center Content */}
-              <div className="absolute inset-16 bg-gradient-to-br from-card via-card/80 to-card/60 backdrop-blur-sm rounded-full border border-border/50 flex items-center justify-center">
+              {/* Globe Base */}
+              <div className="absolute inset-8 bg-gradient-to-br from-card via-card/90 to-card/60 backdrop-blur-sm rounded-full border-2 border-border/30 shadow-2xl overflow-hidden">
+                
+                {/* Globe Grid Lines */}
+                <div className="absolute inset-0 rounded-full">
+                  {/* Longitude lines */}
+                  {[...Array(6)].map((_, i) => (
+                    <motion.div
+                      key={`long-${i}`}
+                      className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent transform -translate-x-1/2 origin-bottom"
+                      style={{ transform: `translateX(-50%) rotateZ(${i * 30}deg)` }}
+                      animate={{ opacity: [0.3, 0.6, 0.3] }}
+                      transition={{ duration: 4, repeat: Infinity, delay: i * 0.2 }}
+                    />
+                  ))}
+                  
+                  {/* Latitude lines */}
+                  {[...Array(4)].map((_, i) => (
+                    <div
+                      key={`lat-${i}`}
+                      className="absolute left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"
+                      style={{ top: `${25 + i * 16.67}%` }}
+                    />
+                  ))}
+                </div>
+                
+                {/* Brooklyn Pin */}
                 <motion.div
-                  className="text-center"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute w-4 h-4 bg-gradient-to-br from-red-400 to-red-600 rounded-full shadow-lg border-2 border-white"
+                  style={{ top: '45%', left: '52%' }}
+                  animate={{ 
+                    scale: [1, 1.3, 1],
+                    boxShadow: [
+                      '0 0 0 0 rgba(239, 68, 68, 0.7)',
+                      '0 0 0 8px rgba(239, 68, 68, 0)',
+                      '0 0 0 0 rgba(239, 68, 68, 0)'
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <div className="text-4xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                    NYC
+                  <div className="absolute -top-1 -left-1 w-6 h-6 bg-red-500/20 rounded-full animate-ping" />
+                </motion.div>
+                
+                {/* Location Label */}
+                <motion.div
+                  className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center"
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <div className="text-lg font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
+                    BROOKLYN
                   </div>
-                  <div className="text-sm text-muted-foreground tracking-widest">
-                    BASED
+                  <div className="text-xs text-muted-foreground tracking-widest">
+                    NEW YORK
                   </div>
                 </motion.div>
               </div>
               
-              {/* Floating Elements */}
+              {/* Floating Satellites */}
               {[...Array(3)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-3 h-3 bg-gradient-to-br from-primary to-accent rounded-full"
+                  className="absolute w-2 h-2 bg-gradient-to-br from-accent to-accent/80 rounded-full shadow-lg"
                   style={{
-                    top: `${20 + i * 30}%`,
-                    right: `${10 + i * 15}%`,
+                    top: `${15 + i * 25}%`,
+                    right: `${5 + i * 10}%`,
                   }}
                   animate={{
-                    y: [0, -20, 0],
-                    opacity: [0.6, 1, 0.6]
+                    rotate: 360,
+                    scale: [0.8, 1.2, 0.8]
                   }}
                   transition={{
-                    duration: 3 + i,
-                    repeat: Infinity,
-                    delay: i * 0.5,
-                    ease: "easeInOut"
+                    rotate: { duration: 10 + i * 3, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 2 + i * 0.5, repeat: Infinity, ease: "easeInOut" }
                   }}
                 />
               ))}
+              
+              {/* Data Streams */}
+              <motion.div
+                className="absolute inset-12 border border-accent/30 rounded-full"
+                style={{ borderStyle: 'dotted' }}
+                animate={{ rotate: -360 }}
+                transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+              />
             </div>
           </motion.div>
         </div>
