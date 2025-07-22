@@ -13,9 +13,7 @@ export function LogoReveal() {
   useEffect(() => {
     const handleScroll = () => {
       // Expand when user has scrolled down at least 50px (reduced for mobile)
-      const scrolled = window.scrollY > 50;
-      console.log('Scroll position:', window.scrollY, 'Expanded:', scrolled); // Debug log
-      setIsExpanded(scrolled);
+      setIsExpanded(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
