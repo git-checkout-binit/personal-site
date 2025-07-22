@@ -41,18 +41,7 @@ export function Navigation() {
 
   return (
     <nav
-      className="mobile-nav-fix bg-card/95 backdrop-blur-xl border-b border-border/50"
-      style={{ 
-        position: 'fixed', 
-        top: '0px', 
-        left: '0px',
-        right: '0px',
-        zIndex: 99999, 
-        width: '100%',
-        height: 'auto',
-        transform: 'translate3d(0,0,0)',
-        willChange: 'transform'
-      }}
+      className="mobile-nav-sticky bg-card/95 backdrop-blur-xl border-b border-border/50"
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">

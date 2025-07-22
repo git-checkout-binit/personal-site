@@ -165,6 +165,34 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <style>{`
+          * { -webkit-overflow-scrolling: touch; }
+          html, body { 
+            position: relative; 
+            overflow-x: hidden; 
+            -webkit-text-size-adjust: 100%;
+          }
+          .mobile-nav-sticky {
+            position: -webkit-sticky !important;
+            position: sticky !important;
+            position: fixed !important;
+            top: 0px !important;
+            left: 0px !important;
+            right: 0px !important;
+            width: 100vw !important;
+            z-index: 2147483647 !important;
+            transform: translate3d(0,0,0) !important;
+            -webkit-transform: translate3d(0,0,0) !important;
+          }
+          @supports (-webkit-touch-callout: none) {
+            .mobile-nav-sticky {
+              position: -webkit-sticky !important;
+              position: sticky !important;
+              top: 0px !important;
+            }
+          }
+        `}</style>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
