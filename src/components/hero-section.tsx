@@ -25,14 +25,14 @@ export function HeroSection() {
             alt="Behind the scenes"
             className="w-full h-full object-cover"
             style={{
-              filter: 'contrast(1.2) brightness(0.4) saturate(0)'
+              filter: 'contrast(1.1) brightness(0.65) saturate(0.1)'
             }}
           />
         </motion.div>
 
         {/* Cinematic Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
         
         {/* Film grain effect */}
         <motion.div
