@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { LogoReveal } from '@/components/logo-reveal';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -48,7 +49,7 @@ export function Navigation() {
           </div>
           
           <div className="hidden md:flex items-center space-x-2">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <div key={item.name}>
                 <Button
                   variant={activeSection === item.href.slice(1) ? 'default' : 'ghost'}
