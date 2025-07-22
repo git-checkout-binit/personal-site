@@ -256,3 +256,18 @@
   0%, 20%, 21%, 62%, 63%, 99%, 100% { transform: translate(0) }
   21%, 62% { transform: translate(2px, 2px) }
 }
+
+/* Enhanced Image Rendering */
+.professional-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.professional-image img {
+  image-rendering: high-quality;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}

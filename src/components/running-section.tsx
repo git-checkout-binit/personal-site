@@ -126,7 +126,7 @@ export function RunningSection() {
             >
               <div className="relative">
                 {/* Photo Container with Effects */}
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl professional-image">
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 z-10"
                     initial={{ opacity: 0 }}
@@ -136,7 +136,10 @@ export function RunningSection() {
                   <motion.img
                     src="/images/running-photoshoot.jpg"
                     alt="Professional running photoshoot"
-                    className="w-full h-[500px] lg:h-[600px] object-cover"
+                    className="w-full h-[500px] lg:h-[600px] object-cover filter brightness-110 contrast-110 saturate-110 sharpen"
+                    style={{
+                      filter: 'brightness(1.05) contrast(1.08) saturate(1.05)'
+                    }}
                     initial={{ scale: 1.1 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
