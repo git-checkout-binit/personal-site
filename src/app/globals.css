@@ -359,4 +359,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  
+  /* Ensure navigation stays on top on mobile */
+  nav[class*="fixed"] {
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 999 !important;
+    width: 100% !important;
+  }
 }
