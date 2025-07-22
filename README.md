@@ -6,7 +6,7 @@ A modern, cinematic personal portfolio website built with Next.js 15, showcasing
 
 ## 🎬 Design Philosophy
 
-**A24-Inspired Cinematic Aesthetic**: The site draws inspiration from A24's visual storytelling, featuring dramatic black-and-white photography, sophisticated typography, and subtle animations that create a film-like experience.
+**Cinematic Aesthetic**: Features dramatic black-and-white photography, sophisticated typography, and subtle animations that create a film-like experience.
 
 **Color Palette**: Shifted from generic blue/green to a sophisticated cinematic neutral palette:
 - **Primary**: Warm amber/gold (`oklch(0.7 0.15 80)`)
@@ -111,7 +111,7 @@ A modern, cinematic personal portfolio website built with Next.js 15, showcasing
 
 ### Key Iterations
 1. **Initial Setup**: Next.js 15 with basic structure
-2. **A24 Aesthetic**: Cinematic design direction established
+2. **Cinematic Aesthetic**: Film-inspired design direction established
 3. **Real Data Integration**: Authentic personal/professional information
 4. **Photo Integration**: Multiple rounds of image optimization
 5. **Color Scheme Overhaul**: Blue/green → cinematic amber/copper
@@ -167,26 +167,28 @@ Cinematic color system using OKLCH color space for better perceptual uniformity 
 ## 🎯 Future Roadmap
 
 ### High Priority
-1. **Performance Investigation**: Address mobile lag issues
-2. **Domain Setup**: Complete binshr.me DNS configuration
-3. **Image Optimization**: Implement Next.js Image components
-4. **SEO Optimization**: Meta tags, structured data, sitemap
+1. **Project Portfolio Expansion**: Add more creative and technical projects to showcase breadth of work
+2. **SEO Optimization**: Implement comprehensive meta tags, structured data, sitemap, and search optimization
 
 ### Medium Priority
-- **Accessibility Audit**: WCAG compliance review
-- **Analytics Integration**: User behavior tracking
-- **Content Management**: Easy content updates
-- **Browser Testing**: Cross-browser compatibility
+- **Performance Monitoring**: Implement analytics and performance tracking
+- **Content Management System**: Build admin interface for easy content updates
+- **Accessibility Enhancement**: Complete WCAG compliance audit and improvements
+- **Browser Compatibility**: Cross-browser testing and optimization
 
 ### Low Priority
-- **Dark Mode**: Complete dark theme implementation
-- **Additional Sections**: Blog, detailed case studies
-- **Internationalization**: Multi-language support
+- **Interactive Features**: Add comment system or contact forms
+- **Blog Integration**: Technical writing and thought leadership content
+- **Micro-animations**: Enhanced hover states and scroll-triggered animations
+- **Progressive Web App**: Offline functionality and app-like features
+- **Multilingual Support**: Spanish translation for broader audience reach
+- **Advanced Analytics**: Heat mapping and user behavior tracking
+- **Email Newsletter**: Automated updates on new projects and achievements
 
 ## 👥 Collaboration Notes
 
 ### For Future Claude Sessions
-- Project follows A24 cinematic aesthetic principles
+- Project follows cinematic aesthetic principles
 - User prefers authentic, non-corporate language
 - Brooklyn-based identity is central to messaging
 - Performance issues are known and high priority
@@ -230,4 +232,4 @@ npm run build && npm run export
 
 ---
 
-*Built with Next.js 15 and deployed on Cloudflare Pages. Designed for authentic personal branding with a cinematic aesthetic inspired by A24's visual storytelling approach.*
+*Built with Next.js 15 and deployed on Cloudflare Pages. Designed for authentic personal branding with a sophisticated cinematic aesthetic.*
