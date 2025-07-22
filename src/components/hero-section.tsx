@@ -72,63 +72,58 @@ export function HeroSection() {
               </span>
             </motion.div>
 
-            {/* Cinematic Name Display with Letter Animation */}
+            {/* Cinematic Name Display with Letter-by-Letter Animation */}
             <motion.h1 
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black leading-[0.85] mb-6 md:mb-8 lg:mb-12"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <span className="block text-white drop-shadow-2xl">
-                {/* First name animation: BIN -> BINIT */}
-                {"BIN".split("").map((letter, index) => (
-                  <motion.span
-                    key={`first-${index}`}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.5 + index * 0.1, duration: 0.3 }}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-                {/* Expanding letters for BINIT */}
-                {"IT".split("").map((letter, index) => (
-                  <motion.span
-                    key={`first-expand-${index}`}
-                    initial={{ opacity: 0, width: 0, display: 'inline-block' }}
-                    animate={{ opacity: 1, width: 'auto' }}
-                    transition={{ delay: 2.2 + index * 0.15, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-                    style={{ overflow: 'hidden' }}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-              </span>
-              <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
-                {/* Last name animation: SHR -> SHRESTHA */}
-                {"SHR".split("").map((letter, index) => (
-                  <motion.span
-                    key={`last-${index}`}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.8 + index * 0.1, duration: 0.3 }}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-                {/* Expanding letters for SHRESTHA */}
-                {"ESTHA".split("").map((letter, index) => (
-                  <motion.span
-                    key={`last-expand-${index}`}
-                    initial={{ opacity: 0, width: 0, display: 'inline-block' }}
-                    animate={{ opacity: 1, width: 'auto' }}
-                    transition={{ delay: 2.6 + index * 0.12, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-                    style={{ overflow: 'hidden' }}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-              </span>
+              {/* Reserve space to prevent layout shift */}
+              <div className="invisible select-none pointer-events-none">
+                <span className="block text-white drop-shadow-2xl">BINIT</span>
+                <span className="block">SHRESTHA</span>
+              </div>
+              
+              {/* Actual animated content positioned absolutely */}
+              <div className="absolute inset-0">
+                <span className="block text-white drop-shadow-2xl">
+                  {/* Each letter of BINIT appears one by one */}
+                  {"BINIT".split("").map((letter, index) => (
+                    <motion.span
+                      key={`binit-${index}`}
+                      className="inline-block"
+                      initial={{ opacity: 0, y: 30, rotateX: -90 }}
+                      animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                      transition={{ 
+                        delay: 2.0 + index * 0.3, 
+                        duration: 0.6, 
+                        ease: [0.25, 0.1, 0.25, 1] 
+                      }}
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+                </span>
+                <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
+                  {/* Each letter of SHRESTHA appears one by one with alternating pattern */}
+                  {"SHRESTHA".split("").map((letter, index) => (
+                    <motion.span
+                      key={`shrestha-${index}`}
+                      className="inline-block"
+                      initial={{ opacity: 0, y: 30, rotateX: -90 }}
+                      animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                      transition={{ 
+                        delay: 2.2 + index * 0.25, 
+                        duration: 0.6, 
+                        ease: [0.25, 0.1, 0.25, 1] 
+                      }}
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+                </span>
+              </div>
             </motion.h1>
 
             {/* Artistic Descriptors */}
