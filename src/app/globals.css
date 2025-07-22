@@ -287,3 +287,15 @@
     object-position: center center;
   }
 }
+
+/* Better scaling for smaller laptops (13-14" screens) */
+@media (min-width: 768px) and (max-width: 1024px) and (max-height: 800px) {
+  .hero-section {
+    min-height: 90vh;
+  }
+  
+  .hero-content {
+    transform: scale(0.9);
+    transform-origin: left center;
+  }
+}

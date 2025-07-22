@@ -10,7 +10,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden">
+    <section id="home" className="min-h-screen hero-section relative overflow-hidden">
       {/* Cinematic Background */}
       <div className="absolute inset-0">
         {/* Black and white background image */}
@@ -53,11 +53,11 @@ export function HeroSection() {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 min-h-screen flex items-center py-8 md:py-0">
-        <div className="container mx-auto px-6 md:px-16 pb-32 md:pb-16">
+      <div className="relative z-10 min-h-screen flex items-center py-6 md:py-8 lg:py-0">
+        <div className="container mx-auto px-6 md:px-12 lg:px-16 pb-28 sm:pb-32 md:pb-20 lg:pb-16">
           
           {/* Left Side Content */}
-          <div className="max-w-3xl">
+          <div className="max-w-3xl hero-content">
             
             {/* Pre-title with Film Aesthetic */}
             <motion.div
@@ -67,14 +67,14 @@ export function HeroSection() {
               transition={{ delay: 0.5, duration: 0.8 }}
             >
               <div className="w-16 h-px bg-gradient-to-r from-white/60 to-primary/60" />
-              <span className="text-sm uppercase tracking-[0.4em] text-white/70 font-bold">
+              <span className="text-xs sm:text-sm uppercase tracking-[0.3em] md:tracking-[0.4em] text-white/70 font-bold">
                 BUILDER BASED IN BROOKLYN, NYC
               </span>
             </motion.div>
 
             {/* Cinematic Name Display */}
             <motion.h1 
-              className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black leading-[0.85] mb-8 md:mb-12"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black leading-[0.85] mb-6 md:mb-8 lg:mb-12"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
@@ -89,7 +89,7 @@ export function HeroSection() {
 
             {/* Artistic Descriptors */}
             <motion.div 
-              className="space-y-4 md:space-y-6 mb-8 md:mb-16"
+              className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 mb-6 md:mb-12 lg:mb-16"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
@@ -119,7 +119,7 @@ export function HeroSection() {
                       ease: "easeInOut"
                     }}
                   />
-                  <span className="text-lg md:text-2xl font-light tracking-[0.2em] text-white/90">
+                  <span className="text-base sm:text-lg md:text-xl lg:text-2xl font-light tracking-[0.15em] md:tracking-[0.2em] text-white/90">
                     {item.label}
                   </span>
                 </motion.div>
