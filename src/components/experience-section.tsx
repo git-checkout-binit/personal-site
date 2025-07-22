@@ -12,10 +12,10 @@ const experiences = [
     companyUrl: "https://www.hubspot.com",
     logo: "hubspot",
     position: "Senior Software Engineer I, Infrastructure Security",
-    location: "Cambridge, MA",
+    location: "Brooklyn, NYC",
     duration: "Nov 2023 - Present",
     description: "Engineering security automation and vulnerability management systems at scale.",
-    technologies: ["Java", "Python", "AWS", "Brinqa", "Puppet", "Docker"],
+    technologies: ["Java", "Python", "AWS", "Rapid7", "Puppet", "Docker"],
     achievements: [
       "Built automation for 1.2M+ vulnerability analysis across 24K hosts",
       "Executed major migration updating 9.5K deployables",
