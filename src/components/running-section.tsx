@@ -329,7 +329,7 @@ export function RunningSection() {
                   transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                 />
               </div>
-              <p className="text-center text-muted-foreground font-medium px-2 sm:px-4">
+              <p className="text-center text-muted-foreground font-medium px-4 sm:px-6 text-sm sm:text-base leading-relaxed">
                 Relentless consistency across 365 days
               </p>
             </CardHeader>
