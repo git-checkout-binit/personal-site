@@ -50,19 +50,19 @@ const races = [
     link: "https://nycruns.com/race-results?race=nycruns-brooklyn-experience-half-marathon-2025&result=2444284"
   },
   {
-    name: "5th Ave Mile",
-    year: "2024",
-    time: "5:39",
-    placement: "Mile PR",
-    category: "1 Mile"
-  },
-  {
     name: "Brooklyn Experience Half (5K split)",
     year: "2025",
     time: "20:14",
     placement: "5K PR",
     category: "5K",
     link: "https://nycruns.com/race-results?race=nycruns-brooklyn-experience-half-marathon-2025&result=2444284"
+  },
+  {
+    name: "5th Ave Mile",
+    year: "2024",
+    time: "5:39",
+    placement: "Mile PR",
+    category: "1 Mile"
   }
 ];
 
