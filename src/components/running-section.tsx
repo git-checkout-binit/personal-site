@@ -322,7 +322,7 @@ export function RunningSection() {
                   transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                 />
               </div>
-              <p className="text-center text-muted-foreground font-medium">
+              <p className="text-center text-muted-foreground font-medium px-2 sm:px-4">
                 Relentless consistency across 365 days
               </p>
             </CardHeader>
@@ -347,7 +347,7 @@ export function RunningSection() {
                   </div>
                   <div className="text-4xl font-black text-primary mb-2">276</div>
                   <div className="text-sm font-bold tracking-wide text-muted-foreground">ACTIVITIES</div>
-                  <div className="text-xs text-muted-foreground mt-1">11.4 per month avg</div>
+                  <div className="text-xs text-muted-foreground mt-1">23 per month avg</div>
                 </motion.div>
 
                 {/* Distance */}
