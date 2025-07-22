@@ -7,22 +7,22 @@ import { Timer, Trophy, Target, Activity } from 'lucide-react';
 
 const runningStats = [
   {
-    icon: Timer,
-    label: "Marathon PR",
-    value: "3:23:35",
-    subtitle: "Marine Corps Marathon 2024"
-  },
-  {
-    icon: Activity,
-    label: "2024 Distance",
-    value: "1,697 mi",
-    subtitle: "276 activities"
-  },
-  {
     icon: Trophy,
     label: "Half Marathon PR",
     value: "1:28:32",
     subtitle: "Brooklyn Experience"
+  },
+  {
+    icon: Target,
+    label: "Half Marathon Ranking",
+    value: "Top 1.3%",
+    subtitle: "315 / 24,590 overall"
+  },
+  {
+    icon: Timer,
+    label: "Marathon PR",
+    value: "3:23:35",
+    subtitle: "Marine Corps Marathon 2024"
   },
   {
     icon: Target,
@@ -78,7 +78,7 @@ export function RunningSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Running Journey</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-bold tracking-wide">
-            &quot;SUFFERING IS THE TRUE TEST OF LIFE. MOST PEOPLE TAP OUT. I DON&apos;T.&quot;
+            &quot;WHEN THE ENDING IS UNKNOWN AND THE DISTANCE IS UNKNOWN THAT&apos;S WHEN YOU KNOW WHO THE FUCK YOU ARE&quot;
           </p>
           <p className="text-sm text-muted-foreground/70 mt-2 font-medium">
             - David Goggins
@@ -242,13 +242,6 @@ export function RunningSection() {
                       transition={{ duration: 4, repeat: Infinity }}
                     >
                       <Activity className="w-10 h-10 text-white" />
-                    </motion.div>
-                    <motion.div
-                      className="absolute -top-1 -right-1 w-6 h-6 bg-accent rounded-full flex items-center justify-center"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <span className="text-xs font-bold text-white">!</span>
                     </motion.div>
                   </div>
                   <div className="text-4xl font-black text-primary mb-2">276</div>
