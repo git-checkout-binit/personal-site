@@ -72,7 +72,7 @@ export function HeroSection() {
               </span>
             </motion.div>
 
-            {/* Cinematic Name Display with Letter-by-Letter Animation */}
+            {/* Cinematic Name Display - BIN SHR expanding to BINIT SHRESTHA */}
             <motion.h1 
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black leading-[0.85] mb-6 md:mb-8 lg:mb-12"
               initial={{ opacity: 0, y: 100 }}
@@ -88,16 +88,32 @@ export function HeroSection() {
               {/* Actual animated content positioned absolutely */}
               <div className="absolute inset-0">
                 <span className="block text-white drop-shadow-2xl">
-                  {/* Each letter of BINIT appears one by one */}
-                  {"BINIT".split("").map((letter, index) => (
+                  {/* Start with "BIN" appearing first */}
+                  {"BIN".split("").map((letter, index) => (
                     <motion.span
-                      key={`binit-${index}`}
+                      key={`bin-${index}`}
                       className="inline-block"
                       initial={{ opacity: 0, y: 30, rotateX: -90 }}
                       animate={{ opacity: 1, y: 0, rotateX: 0 }}
                       transition={{ 
-                        delay: 2.0 + index * 0.3, 
-                        duration: 0.6, 
+                        delay: 2.0 + index * 0.2, 
+                        duration: 0.5, 
+                        ease: [0.25, 0.1, 0.25, 1] 
+                      }}
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+                  {/* Then "IT" expands in after a pause */}
+                  {"IT".split("").map((letter, index) => (
+                    <motion.span
+                      key={`it-${index}`}
+                      className="inline-block"
+                      initial={{ opacity: 0, scaleX: 0, transformOrigin: 'left' }}
+                      animate={{ opacity: 1, scaleX: 1 }}
+                      transition={{ 
+                        delay: 3.5 + index * 0.15, 
+                        duration: 0.4, 
                         ease: [0.25, 0.1, 0.25, 1] 
                       }}
                     >
@@ -106,16 +122,32 @@ export function HeroSection() {
                   ))}
                 </span>
                 <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
-                  {/* Each letter of SHRESTHA appears one by one with alternating pattern */}
-                  {"SHRESTHA".split("").map((letter, index) => (
+                  {/* Start with "SHR" appearing */}
+                  {"SHR".split("").map((letter, index) => (
                     <motion.span
-                      key={`shrestha-${index}`}
+                      key={`shr-${index}`}
                       className="inline-block"
                       initial={{ opacity: 0, y: 30, rotateX: -90 }}
                       animate={{ opacity: 1, y: 0, rotateX: 0 }}
                       transition={{ 
-                        delay: 2.2 + index * 0.25, 
-                        duration: 0.6, 
+                        delay: 2.8 + index * 0.2, 
+                        duration: 0.5, 
+                        ease: [0.25, 0.1, 0.25, 1] 
+                      }}
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+                  {/* Then "ESTHA" expands in */}
+                  {"ESTHA".split("").map((letter, index) => (
+                    <motion.span
+                      key={`estha-${index}`}
+                      className="inline-block"
+                      initial={{ opacity: 0, scaleX: 0, transformOrigin: 'left' }}
+                      animate={{ opacity: 1, scaleX: 1 }}
+                      transition={{ 
+                        delay: 4.2 + index * 0.12, 
+                        duration: 0.3, 
                         ease: [0.25, 0.1, 0.25, 1] 
                       }}
                     >
