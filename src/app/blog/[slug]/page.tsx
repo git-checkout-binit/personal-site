@@ -138,16 +138,16 @@ export default function BlogPost() {
               {/* Hero Image */}
               <div className="relative rounded-xl overflow-hidden shadow-2xl my-12">
                 <img
-                  src="https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=1200&h=600&fit=crop&crop=center"
-                  alt="NFL stadium during playoffs - the excitement we want to capture in fantasy format"
+                  src="/images/nfl-fantasy-pff.webp"
+                  alt="Pro Football Focus fantasy football analytics - the data-driven approach we're building"
                   className="w-full h-[400px] object-cover"
                   style={{
-                    filter: 'brightness(0.7) contrast(1.2) saturate(1.1)'
+                    filter: 'brightness(0.8) contrast(1.1) saturate(1.05)'
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 text-white">
-                  <p className="text-sm opacity-80">The playoffs: where legends are made, but fantasy tools disappear</p>
+                  <p className="text-sm opacity-80">Fantasy football analytics: the data-driven experience we&apos;re building</p>
                 </div>
               </div>
               
