@@ -8,58 +8,58 @@ import { Timer, Trophy, Target, Activity } from 'lucide-react';
 const runningStats = [
   {
     icon: Timer,
-    label: "Personal Best",
-    value: "3:25:42",
-    subtitle: "Marathon PR"
+    label: "Marathon PR",
+    value: "3:23:35",
+    subtitle: "Marine Corps Marathon 2024"
   },
   {
     icon: Activity,
-    label: "Weekly Miles",
-    value: "45-60",
-    subtitle: "Average training volume"
+    label: "2024 Distance",
+    value: "1,697 mi",
+    subtitle: "276 activities"
   },
   {
     icon: Trophy,
-    label: "Races Completed",
-    value: "25+",
-    subtitle: "Various distances"
+    label: "Half Marathon PR",
+    value: "1:28:32",
+    subtitle: "Brooklyn Experience"
   },
   {
     icon: Target,
     label: "Next Goal",
-    value: "Sub 3:20",
-    subtitle: "Marathon target"
+    value: "Sub 3:00",
+    subtitle: "Chicago Marathon 2025"
   }
 ];
 
 const races = [
   {
-    name: "Boston Marathon",
-    year: "2024",
-    time: "3:25:42",
-    placement: "Top 15%",
+    name: "Marine Corps Marathon",
+    year: "2024", 
+    time: "3:23:35",
+    placement: "Personal Best",
     category: "Marathon"
   },
   {
-    name: "NYC Half Marathon",
+    name: "Brooklyn Experience Half",
     year: "2024",
-    time: "1:35:20",
-    placement: "Top 10%",
+    time: "1:28:32", 
+    placement: "PR",
     category: "Half Marathon"
   },
   {
-    name: "Chicago Marathon",
-    year: "2023",
-    time: "3:28:15",
-    placement: "Top 20%",
-    category: "Marathon"
+    name: "5th Ave Mile",
+    year: "2024",
+    time: "5:39",
+    placement: "Mile PR",
+    category: "1 Mile"
   },
   {
-    name: "Local 10K",
-    year: "2023",
-    time: "42:30",
-    placement: "1st Place",
-    category: "10K"
+    name: "5K Personal Best",
+    year: "2024",
+    time: "20:14",
+    placement: "5K PR",
+    category: "5K"
   }
 ];
 
@@ -153,20 +153,56 @@ export function RunningSection() {
           </div>
         </motion.div>
 
+        {/* 2024 Strava Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-16 max-w-4xl mx-auto"
+        >
+          <Card className="bg-gradient-to-br from-card via-card/90 to-card/70 border-2 border-primary/20">
+            <CardHeader className="text-center pb-4">
+              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                2024 Strava Stats
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-2xl font-black text-primary mb-1">276</div>
+                  <div className="text-sm text-muted-foreground">Activities</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-black text-accent mb-1">1,697 mi</div>
+                  <div className="text-sm text-muted-foreground">Distance</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-black text-primary mb-1">268h 43m</div>
+                  <div className="text-sm text-muted-foreground">Time</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-black text-accent mb-1">39,442 ft</div>
+                  <div className="text-sm text-muted-foreground">Elevation</div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
         {/* Training Philosophy */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 max-w-3xl mx-auto text-center"
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-12 max-w-3xl mx-auto text-center"
         >
           <Card>
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Training Philosophy</h3>
               <p className="text-muted-foreground leading-relaxed">
-                &quot;Consistency over intensity. Every mile is a building block toward the next goal. 
-                Running has taught me discipline, resilience, and the power of incremental progress - 
-                lessons that translate directly into my approach to software development and problem-solving.&quot;
+                &quot;Consistency over intensity. Chasing the sub-3:00 marathon through disciplined training 
+                and smart recovery. Running teaches patience, resilience, and the power of incremental progress - 
+                lessons that translate directly to solving complex problems in security engineering.&quot;
               </p>
             </CardContent>
           </Card>
