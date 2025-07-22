@@ -9,6 +9,7 @@ import { Calendar, MapPin } from 'lucide-react';
 const experiences = [
   {
     company: "HubSpot",
+    companyUrl: "https://www.hubspot.com",
     logo: "hubspot",
     position: "Senior Software Engineer I, Infrastructure Security",
     location: "Cambridge, MA",
@@ -23,6 +24,7 @@ const experiences = [
   },
   {
     company: "HubSpot",
+    companyUrl: "https://www.hubspot.com",
     logo: "hubspot",
     position: "Senior DevSecOps Engineer, Corporate Security",
     location: "Cambridge, MA", 
@@ -37,6 +39,7 @@ const experiences = [
   },
   {
     company: "HubSpot",
+    companyUrl: "https://www.hubspot.com",
     logo: "hubspot",
     position: "Security Software Engineer",
     location: "Cambridge, MA",
@@ -51,6 +54,7 @@ const experiences = [
   },
   {
     company: "TripAdvisor",
+    companyUrl: "https://www.tripadvisor.com",
     logo: "tripadvisor",
     position: "Core Product Team Intern",
     location: "Needham, MA",
@@ -68,6 +72,7 @@ const experiences = [
 const education = [
   {
     company: "Tufts University",
+    companyUrl: "https://www.tufts.edu",
     logo: "tufts",
     position: "Master of Science, Computer Science",
     location: "Medford, MA",
@@ -83,6 +88,7 @@ const education = [
   },
   {
     company: "Tufts University",
+    companyUrl: "https://www.tufts.edu",
     logo: "tufts",
     position: "Bachelor of Science, Computer Science (Cum Laude)",
     location: "Medford, MA",
@@ -197,9 +203,14 @@ export function ExperienceSection() {
                           <CardTitle className="text-2xl md:text-3xl font-black tracking-tight group-hover:text-primary transition-colors duration-300">
                             {exp.position}
                           </CardTitle>
-                          <p className="text-xl font-light text-muted-foreground mt-1">
+                          <a 
+                            href={exp.companyUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-xl font-light text-muted-foreground mt-1 hover:text-primary transition-colors duration-300 inline-block"
+                          >
                             {exp.company}
-                          </p>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -301,9 +312,14 @@ export function ExperienceSection() {
                             <CardTitle className="text-2xl md:text-3xl font-black tracking-tight group-hover:text-accent transition-colors duration-300">
                               {edu.position}
                             </CardTitle>
-                            <p className="text-xl font-light text-muted-foreground mt-1">
+                            <a 
+                              href={edu.companyUrl} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-xl font-light text-muted-foreground mt-1 hover:text-accent transition-colors duration-300 inline-block"
+                            >
                               {edu.company}
-                            </p>
+                            </a>
                           </div>
                         </div>
                       </div>

@@ -157,79 +157,34 @@ export function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Right Side - Barcelona Beach Photo */}
+        {/* Right Side - Clean Barcelona Photo */}
         <div className="flex items-center justify-center p-8 lg:p-16">
           <motion.div
-            className="relative w-full max-w-sm"
-            initial={{ opacity: 0, scale: 0.8, x: 50 }}
+            className="relative w-full max-w-md"
+            initial={{ opacity: 0, scale: 0.9, x: 30 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ delay: 1.2, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <div className="relative">
-              <motion.div
-                className="relative overflow-hidden rounded-3xl shadow-2xl"
-                initial={{ y: 20 }}
-                animate={{ y: 0 }}
-                transition={{ delay: 1.4, duration: 0.8 }}
-              >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-accent/30 z-10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.8, duration: 1 }}
-                />
-                <motion.img
-                  src="/images/hero-barcelona.jpg"
-                  alt="Working from Barcelona Beach"
-                  className="w-full h-[500px] lg:h-[600px] object-cover professional-image"
-                  style={{
-                    filter: 'brightness(1.05) contrast(1.08) saturate(1.05)'
-                  }}
-                  initial={{ scale: 1.1 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 1.4, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-                />
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2, duration: 0.6 }}
-                  className="absolute bottom-6 left-6 bg-gradient-to-r from-card/90 via-card/95 to-card/90 backdrop-blur-md rounded-2xl px-4 py-3 shadow-xl border border-border/50 z-20"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-gradient-to-r from-primary to-accent rounded-full animate-pulse" />
-                    <div>
-                      <div className="text-sm font-bold text-foreground">Barcelona Beach</div>
-                      <div className="text-xs text-muted-foreground font-medium">Remote Work Life</div>
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
+            <motion.div
+              className="relative overflow-hidden rounded-2xl shadow-2xl"
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <motion.img
+                src="/images/hero-barcelona.jpg"
+                alt="Barcelona Beach"
+                className="w-full h-[600px] lg:h-[700px] object-cover professional-image"
+                style={{
+                  filter: 'brightness(1.02) contrast(1.05) saturate(1.03)'
+                }}
+                initial={{ scale: 1.05 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 1.4, duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
+              />
               
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 2.2, duration: 0.6 }}
-                className="absolute -top-4 -right-4 bg-gradient-to-br from-card via-card/95 to-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-border/50"
-              >
-                <div className="text-center">
-                  <div className="text-lg font-black text-accent mb-1">💻</div>
-                  <div className="text-xs text-muted-foreground font-medium">DIGITAL NOMAD</div>
-                </div>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 2.4, duration: 0.6 }}
-                className="absolute -bottom-4 -left-4 bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-primary/30"
-              >
-                <div className="text-center">
-                  <div className="text-lg font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">NYC</div>
-                  <div className="text-xs text-muted-foreground font-medium">HOME BASE</div>
-                </div>
-              </motion.div>
-            </div>
+              {/* Subtle overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+            </motion.div>
           </motion.div>
         </div>
       </div>
