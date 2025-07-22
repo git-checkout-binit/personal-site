@@ -68,7 +68,7 @@ export function HeroSection() {
             >
               <div className="w-16 h-px bg-gradient-to-r from-white/60 to-primary/60" />
               <span className="text-xs sm:text-sm uppercase tracking-[0.3em] md:tracking-[0.4em] text-white/70 font-bold">
-                BUILDER BASED IN BROOKLYN, NYC
+                CREATOR BASED IN BROOKLYN, NYC
               </span>
             </motion.div>
 
@@ -96,7 +96,7 @@ export function HeroSection() {
             >
               {[
                 { label: "ENGINEER", accent: "primary" },
-                { label: "CREATOR", accent: "accent" },
+                { label: "PROBLEM SOLVER", accent: "accent" },
                 { label: "MARATHONER", accent: "white" }
               ].map((item, index) => (
                 <motion.div
