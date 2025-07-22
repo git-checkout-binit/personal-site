@@ -8,42 +8,55 @@ import { Calendar, MapPin } from 'lucide-react';
 
 const experiences = [
   {
-    company: "Your Current Company",
-    position: "Senior Software Engineer",
-    location: "Remote / San Francisco, CA",
-    duration: "2022 - Present",
-    description: "Leading frontend development initiatives and mentoring junior developers. Built scalable React applications serving millions of users.",
-    technologies: ["React", "TypeScript", "Node.js", "AWS", "GraphQL"],
+    company: "HubSpot",
+    position: "Senior Software Engineer I, Infrastructure Security",
+    location: "Cambridge, MA",
+    duration: "Nov 2023 - Present",
+    description: "Engineering security automation and vulnerability management systems at scale.",
+    technologies: ["Java", "Python", "AWS", "Brinqa", "Puppet", "Docker"],
     achievements: [
-      "Improved application performance by 40%",
-      "Led a team of 5 developers",
-      "Architected microservices infrastructure"
+      "Built automation for 1.2M+ vulnerability analysis across 24K hosts",
+      "Executed major migration updating 9.5K deployables",
+      "Resolved 78+ high-risk vulnerabilities via infrastructure automation"
     ]
   },
   {
-    company: "Previous Company",
-    position: "Software Engineer",
-    location: "Boston, MA",
-    duration: "2020 - 2022",
-    description: "Developed full-stack web applications and contributed to product architecture decisions.",
-    technologies: ["JavaScript", "Python", "Docker", "PostgreSQL", "Redis"],
+    company: "HubSpot",
+    position: "Senior DevSecOps Engineer, Corporate Security",
+    location: "Cambridge, MA", 
+    duration: "Apr 2022 - Nov 2023",
+    description: "Developed security pipelines and data ingestion systems for enterprise-scale monitoring.",
+    technologies: ["Python", "Java", "Kafka", "Splunk", "AWS"],
     achievements: [
-      "Built real-time data processing pipeline",
-      "Reduced deployment time by 60%",
-      "Implemented automated testing suite"
+      "Built Chrome extension analysis pipeline for 5K+ machines",
+      "Managed 1TB Splunk license data ingestion infrastructure",
+      "Improved AWS security readiness from 75% to 95%"
     ]
   },
   {
-    company: "First Company",
-    position: "Junior Developer",
-    location: "New York, NY",
-    duration: "2018 - 2020",
-    description: "Started career focusing on frontend development and learning best practices.",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Git"],
+    company: "HubSpot",
+    position: "Security Software Engineer",
+    location: "Cambridge, MA",
+    duration: "Jun 2018 - Apr 2022", 
+    description: "Built security microservices and automated threat detection systems.",
+    technologies: ["Java", "Python", "Splunk", "GitHub API", "Microservices"],
     achievements: [
-      "Delivered 15+ client projects",
-      "Learned modern development practices",
-      "Contributed to open source projects"
+      "Established GitHub partnership for API key exposure prevention",
+      "Deployed security microservices for incident response automation",
+      "Created fraud detection and abuse prevention systems"
+    ]
+  },
+  {
+    company: "TripAdvisor",
+    position: "Core Product Team Intern",
+    location: "Needham, MA",
+    duration: "Jun 2015 - Aug 2015",
+    description: "Optimized product ranking algorithms for attraction booking platform.",
+    technologies: ["Python", "Ranking Algorithms", "Data Analysis"],
+    achievements: [
+      "Developed Viator product ranking system",
+      "Increased bookings by 15% through algorithm optimization",
+      "Created technical documentation for future teams"
     ]
   }
 ];
