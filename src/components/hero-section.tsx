@@ -53,8 +53,8 @@ export function HeroSection() {
       </div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 min-h-screen flex items-center">
-        <div className="container mx-auto px-8 md:px-16 pb-24 md:pb-0">
+      <div className="relative z-10 min-h-screen flex items-center py-8 md:py-0">
+        <div className="container mx-auto px-6 md:px-16 pb-32 md:pb-16">
           
           {/* Left Side Content */}
           <div className="max-w-3xl">
@@ -74,7 +74,7 @@ export function HeroSection() {
 
             {/* Cinematic Name Display */}
             <motion.h1 
-              className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-[0.85] mb-12"
+              className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black leading-[0.85] mb-8 md:mb-12"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
@@ -89,7 +89,7 @@ export function HeroSection() {
 
             {/* Artistic Descriptors */}
             <motion.div 
-              className="space-y-6 mb-16"
+              className="space-y-4 md:space-y-6 mb-8 md:mb-16"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
@@ -119,7 +119,7 @@ export function HeroSection() {
                       ease: "easeInOut"
                     }}
                   />
-                  <span className="text-xl md:text-2xl font-light tracking-[0.2em] text-white/90">
+                  <span className="text-lg md:text-2xl font-light tracking-[0.2em] text-white/90">
                     {item.label}
                   </span>
                 </motion.div>
@@ -128,7 +128,7 @@ export function HeroSection() {
 
             {/* CTA Buttons with Cinematic Style */}
             <motion.div
-              className="flex flex-wrap gap-6"
+              className="flex flex-wrap gap-3 md:gap-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.8, duration: 0.8 }}
@@ -136,7 +136,7 @@ export function HeroSection() {
               <Button 
                 size="lg" 
                 asChild
-                className="group bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary transition-all duration-500 px-10 py-5 h-auto font-bold shadow-2xl hover:shadow-primary/50 border border-primary/30"
+                className="group bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary transition-all duration-500 px-6 md:px-10 py-3 md:py-5 h-auto font-bold shadow-2xl hover:shadow-primary/50 border border-primary/30 text-sm md:text-base"
               >
                 <a 
                   href="https://www.linkedin.com/in/binitrshrestha" 
@@ -152,7 +152,7 @@ export function HeroSection() {
                 size="lg" 
                 variant="outline" 
                 asChild
-                className="group border-2 border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-accent transition-all duration-300 px-10 py-5 h-auto font-bold text-white"
+                className="group border-2 border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-accent transition-all duration-300 px-6 md:px-10 py-3 md:py-5 h-auto font-bold text-white text-sm md:text-base"
               >
                 <a 
                   href="https://www.imdb.com/name/nm15282353/" 
@@ -168,7 +168,7 @@ export function HeroSection() {
                 size="lg" 
                 variant="outline" 
                 asChild
-                className="group border-2 border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-primary transition-all duration-300 px-10 py-5 h-auto font-bold text-white"
+                className="group border-2 border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-primary transition-all duration-300 px-6 md:px-10 py-3 md:py-5 h-auto font-bold text-white text-sm md:text-base"
               >
                 <a 
                   href="https://www.strava.com/athletes/64573648" 
@@ -187,17 +187,17 @@ export function HeroSection() {
       {/* Cinematic Scroll Indicator */}
       <motion.button
         onClick={scrollToExperience}
-        className="absolute bottom-10 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3 group z-20"
+        className="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 md:gap-3 group z-20"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2.5, duration: 0.8 }}
       >
-        <span className="text-xs uppercase tracking-[0.3em] text-white/60 group-hover:text-primary transition-colors duration-300 font-bold">
+        <span className="text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/60 group-hover:text-primary transition-colors duration-300 font-bold">
           EXPLORE WORK
         </span>
         <motion.div
-          className="p-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-300"
-          animate={{ y: [0, 10, 0] }}
+          className="p-3 md:p-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-300"
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
         >
           <ArrowDown className="w-5 h-5 text-white/80 group-hover:text-primary transition-colors duration-300" />
