@@ -8,40 +8,22 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: "AI-Powered Task Manager",
-    description: "A modern task management application with AI-powered prioritization and smart scheduling features.",
+    title: "Medford High School Class of 2014 Reunion",
+    description: "Organized my high school reunion, created this site using Netlify, Cloudflare, and simple JS/HTML. Helped organize the venue, used Mailchimp to collect and send messaging, did it all for free and made +$10k in profit for the venue for the night.",
     image: "/api/placeholder/400/250",
-    technologies: ["Next.js", "TypeScript", "OpenAI", "Prisma", "PostgreSQL"],
-    githubUrl: "https://github.com/yourusername/project1",
-    liveUrl: "https://project1.com",
+    technologies: ["HTML", "JavaScript", "Netlify", "Cloudflare", "Mailchimp"],
+    githubUrl: null,
+    liveUrl: "https://mhs2014reunion.com/",
     featured: true
   },
   {
-    title: "Real-time Analytics Dashboard",
-    description: "Dashboard for monitoring key business metrics with real-time updates and interactive visualizations.",
+    title: "Cyber Security Business Podcast - Episode 4",
+    description: "Featured as a guest in 2019 discussing the security environment through the eyes of emerging security professionals alongside Chris McLellan (CSO, HubSpot).",
     image: "/api/placeholder/400/250",
-    technologies: ["React", "D3.js", "WebSocket", "Node.js", "Redis"],
-    githubUrl: "https://github.com/yourusername/project2",
-    liveUrl: "https://project2.com",
+    technologies: ["Public Speaking", "Cybersecurity", "Professional Development"],
+    githubUrl: null,
+    liveUrl: "https://www.klogixsecurity.com/blog/episode-4-binit-shrestha-chris-mclellan-hubspot",
     featured: true
-  },
-  {
-    title: "Mobile Fitness Tracker",
-    description: "Cross-platform mobile app for tracking workouts, nutrition, and health metrics.",
-    image: "/api/placeholder/400/250",
-    technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
-    githubUrl: "https://github.com/yourusername/project3",
-    liveUrl: "https://project3.com",
-    featured: false
-  },
-  {
-    title: "E-commerce Platform",
-    description: "Full-stack e-commerce solution with payment processing and inventory management.",
-    image: "/api/placeholder/400/250",
-    technologies: ["Vue.js", "Express", "MongoDB", "Stripe API"],
-    githubUrl: "https://github.com/yourusername/project4",
-    liveUrl: "https://project4.com",
-    featured: false
   }
 ];
 
@@ -108,14 +90,22 @@ export function ProjectsSection() {
                   </div>
                   
                   <div className="flex gap-3">
-                    <Button size="sm" className="flex-1">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
-                    </Button>
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button>
+                    {project.githubUrl && (
+                      <Button size="sm" className="flex-1" asChild>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
+                    {project.liveUrl && (
+                      <Button size="sm" variant="outline" className={`${project.githubUrl ? 'flex-1' : 'w-full'}`} asChild>
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          {project.githubUrl ? 'Live Demo' : 'View Project'}
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -123,17 +113,6 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <Button variant="outline" size="lg">
-            <Github className="w-5 h-5 mr-2" />
-            View More on GitHub
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
