@@ -72,91 +72,20 @@ export function HeroSection() {
               </span>
             </motion.div>
 
-            {/* Cinematic Name Display - BIN SHR expanding to BINIT SHRESTHA */}
-            <div className="relative">
-              {/* Reserve space to prevent layout shift */}
-              <div className="invisible select-none pointer-events-none text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black leading-[0.85] mb-6 md:mb-8 lg:mb-12">
-                <span className="block">BINIT</span>
-                <span className="block">SHRESTHA</span>
-              </div>
-              
-              {/* Actual animated content positioned absolutely */}
-              <motion.h1 
-                className="absolute top-0 left-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black leading-[0.85] mb-6 md:mb-8 lg:mb-12"
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-              >
-                <span className="block text-white drop-shadow-2xl">
-                  {/* "BIN" appears simultaneously */}
-                  {"BIN".split("").map((letter, index) => (
-                    <motion.span
-                      key={`bin-${index}`}
-                      className="inline-block"
-                      initial={{ opacity: 0, y: 30, rotateX: -90 }}
-                      animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                      transition={{ 
-                        delay: 2.0, 
-                        duration: 0.5, 
-                        ease: [0.25, 0.1, 0.25, 1] 
-                      }}
-                    >
-                      {letter}
-                    </motion.span>
-                  ))}
-                  {/* "IT" expands simultaneously with "ESTHA" */}
-                  {"IT".split("").map((letter, index) => (
-                    <motion.span
-                      key={`it-${index}`}
-                      className="inline-block"
-                      initial={{ opacity: 0, scaleX: 0, transformOrigin: 'left' }}
-                      animate={{ opacity: 1, scaleX: 1 }}
-                      transition={{ 
-                        delay: 3.5 + index * 0.1, 
-                        duration: 0.4, 
-                        ease: [0.25, 0.1, 0.25, 1] 
-                      }}
-                    >
-                      {letter}
-                    </motion.span>
-                  ))}
-                </span>
-                <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
-                  {/* "SHR" appears simultaneously with "BIN" */}
-                  {"SHR".split("").map((letter, index) => (
-                    <motion.span
-                      key={`shr-${index}`}
-                      className="inline-block"
-                      initial={{ opacity: 0, y: 30, rotateX: -90 }}
-                      animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                      transition={{ 
-                        delay: 2.0, 
-                        duration: 0.5, 
-                        ease: [0.25, 0.1, 0.25, 1] 
-                      }}
-                    >
-                      {letter}
-                    </motion.span>
-                  ))}
-                  {/* "ESTHA" expands simultaneously with "IT" */}
-                  {"ESTHA".split("").map((letter, index) => (
-                    <motion.span
-                      key={`estha-${index}`}
-                      className="inline-block"
-                      initial={{ opacity: 0, scaleX: 0, transformOrigin: 'left' }}
-                      animate={{ opacity: 1, scaleX: 1 }}
-                      transition={{ 
-                        delay: 3.5 + index * 0.08, 
-                        duration: 0.4, 
-                        ease: [0.25, 0.1, 0.25, 1] 
-                      }}
-                    >
-                      {letter}
-                    </motion.span>
-                  ))}
-                </span>
-              </motion.h1>
-            </div>
+            {/* Cinematic Name Display - Simple and Clean */}
+            <motion.h1 
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black leading-[0.85] mb-6 md:mb-8 lg:mb-12"
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              <span className="block text-white drop-shadow-2xl">
+                BINIT
+              </span>
+              <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
+                SHRESTHA
+              </span>
+            </motion.h1>
 
             {/* Artistic Descriptors */}
             <motion.div 
