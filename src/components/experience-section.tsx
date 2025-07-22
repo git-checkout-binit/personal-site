@@ -45,7 +45,7 @@ const experiences = [
     location: "Cambridge, MA",
     duration: "Jun 2018 - Apr 2022", 
     description: "Built security microservices and automated threat detection systems.",
-    technologies: ["Java", "Python", "Splunk", "GitHub API", "Microservices"],
+    technologies: ["Java", "Python", "Splunk", "GitHub Token Scanning", "Microservices"],
     achievements: [
       "Established GitHub partnership for API key exposure prevention",
       "Deployed security microservices for incident response automation",
