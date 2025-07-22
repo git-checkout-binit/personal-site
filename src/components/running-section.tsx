@@ -77,8 +77,11 @@ export function RunningSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Running Journey</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-medium">
-            &quot;When you think you&apos;re done, you&apos;re only at 40% of your capability&quot;
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-bold tracking-wide">
+            &quot;SUFFERING IS THE TRUE TEST OF LIFE. MOST PEOPLE TAP OUT. I DON&apos;T.&quot;
+          </p>
+          <p className="text-sm text-muted-foreground/70 mt-2 font-medium">
+            - David Goggins
           </p>
         </motion.div>
 
