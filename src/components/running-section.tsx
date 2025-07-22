@@ -57,11 +57,12 @@ const races = [
     category: "1 Mile"
   },
   {
-    name: "NYC Half Marathon (5K split)",
+    name: "Brooklyn Experience Half (5K split)",
     year: "2024",
     time: "20:14",
     placement: "5K PR",
-    category: "5K"
+    category: "5K",
+    link: "https://nycruns.com/race-results?race=nycruns-brooklyn-experience-half-marathon-2025&result=2444284"
   }
 ];
 
@@ -76,8 +77,8 @@ export function RunningSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Running Journey</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Passionate about endurance running and constantly pushing personal limits
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-medium">
+            &quot;When you think you&apos;re done, you&apos;re only at 40% of your capability&quot;
           </p>
         </motion.div>
 
@@ -185,60 +186,144 @@ export function RunningSection() {
           </div>
         </motion.div>
 
-        {/* 2024 Strava Stats */}
+        {/* 2024 Strava Stats - Elite Level Performance */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 max-w-4xl mx-auto"
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16 max-w-6xl mx-auto relative"
         >
-          <Card className="bg-gradient-to-br from-card via-card/90 to-card/70 border-2 border-primary/20">
-            <CardHeader className="text-center pb-4">
-              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                2024 Strava Stats
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div className="text-center">
-                  <div className="text-2xl font-black text-primary mb-1">276</div>
-                  <div className="text-sm text-muted-foreground">Activities</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-accent mb-1">1,697 mi</div>
-                  <div className="text-sm text-muted-foreground">Distance</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-primary mb-1">268h 43m</div>
-                  <div className="text-sm text-muted-foreground">Time</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-accent mb-1">39,442 ft</div>
-                  <div className="text-sm text-muted-foreground">Elevation</div>
-                </div>
+          {/* Background Effects */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 rounded-3xl blur-3xl" />
+          <div className="absolute top-4 right-4 w-32 h-32 bg-accent/10 rounded-full blur-2xl" />
+          <div className="absolute bottom-4 left-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
+          
+          <Card className="relative bg-gradient-to-br from-card via-card/95 to-card/80 backdrop-blur-sm border-2 border-gradient-to-r border-primary/30 shadow-2xl overflow-hidden">
+            
+            {/* Header with animated elements */}
+            <CardHeader className="relative pb-8">
+              <div className="flex items-center justify-center mb-4">
+                <motion.div
+                  className="w-16 h-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full mr-4"
+                  animate={{ scaleX: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+                <CardTitle className="text-3xl font-black bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent tracking-wide">
+                  2024 PERFORMANCE DATA
+                </CardTitle>
+                <motion.div
+                  className="w-16 h-1 bg-gradient-to-r from-accent via-primary to-accent rounded-full ml-4"
+                  animate={{ scaleX: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                />
               </div>
+              <p className="text-center text-muted-foreground font-medium">
+                Relentless consistency across 365 days
+              </p>
+            </CardHeader>
+            
+            <CardContent className="pb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                {/* Activities */}
+                <motion.div 
+                  className="text-center group"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="relative mb-4">
+                    <motion.div
+                      className="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-primary/60 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
+                      animate={{ rotate: [0, 5, 0, -5, 0] }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                    >
+                      <Activity className="w-10 h-10 text-white" />
+                    </motion.div>
+                    <motion.div
+                      className="absolute -top-1 -right-1 w-6 h-6 bg-accent rounded-full flex items-center justify-center"
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <span className="text-xs font-bold text-white">!</span>
+                    </motion.div>
+                  </div>
+                  <div className="text-4xl font-black text-primary mb-2">276</div>
+                  <div className="text-sm font-bold tracking-wide text-muted-foreground">ACTIVITIES</div>
+                  <div className="text-xs text-muted-foreground mt-1">11.4 per month avg</div>
+                </motion.div>
+
+                {/* Distance */}
+                <motion.div 
+                  className="text-center group"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="relative mb-4">
+                    <motion.div
+                      className="w-20 h-20 mx-auto bg-gradient-to-br from-accent to-accent/60 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
+                      animate={{ y: [0, -5, 0, 5, 0] }}
+                      transition={{ duration: 3, repeat: Infinity }}
+                    >
+                      <Target className="w-10 h-10 text-white" />
+                    </motion.div>
+                  </div>
+                  <div className="text-4xl font-black text-accent mb-2">1,697</div>
+                  <div className="text-sm font-bold tracking-wide text-muted-foreground">MILES</div>
+                  <div className="text-xs text-muted-foreground mt-1">4.6 miles daily avg</div>
+                </motion.div>
+
+                {/* Time */}
+                <motion.div 
+                  className="text-center group"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="relative mb-4">
+                    <motion.div
+                      className="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
+                      animate={{ rotate: [0, 360] }}
+                      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    >
+                      <Timer className="w-10 h-10 text-white" />
+                    </motion.div>
+                  </div>
+                  <div className="text-4xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">269</div>
+                  <div className="text-sm font-bold tracking-wide text-muted-foreground">HOURS</div>
+                  <div className="text-xs text-muted-foreground mt-1">44 min daily avg</div>
+                </motion.div>
+
+                {/* Elevation */}
+                <motion.div 
+                  className="text-center group"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="relative mb-4">
+                    <motion.div
+                      className="w-20 h-20 mx-auto bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow"
+                      animate={{ scale: [1, 1.1, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    >
+                      <Trophy className="w-10 h-10 text-white" />
+                    </motion.div>
+                  </div>
+                  <div className="text-4xl font-black text-accent mb-2">39.4K</div>
+                  <div className="text-sm font-bold tracking-wide text-muted-foreground">ELEVATION FT</div>
+                  <div className="text-xs text-muted-foreground mt-1">7.5 Empire State Buildings</div>
+                </motion.div>
+
+              </div>
+              
+              {/* Bottom accent */}
+              <motion.div
+                className="mt-8 h-2 bg-gradient-to-r from-primary via-accent to-primary rounded-full"
+                animate={{ opacity: [0.7, 1, 0.7] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
             </CardContent>
           </Card>
         </motion.div>
 
-        {/* Training Philosophy */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-12 max-w-3xl mx-auto text-center"
-        >
-          <Card>
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">Training Philosophy</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                &quot;Consistency over intensity. Every mile builds toward the next goal through disciplined training 
-                and smart recovery. Running teaches patience, resilience, and the power of incremental progress - 
-                lessons that translate directly to solving complex problems in security engineering.&quot;
-              </p>
-            </CardContent>
-          </Card>
-        </motion.div>
       </div>
     </section>
   );

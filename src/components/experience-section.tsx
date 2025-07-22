@@ -65,6 +65,35 @@ const experiences = [
   }
 ];
 
+const education = [
+  {
+    company: "Tufts University",
+    logo: "tufts",
+    position: "Master of Science, Computer Science",
+    location: "Medford, MA",
+    duration: "2020 - 2023",
+    description: "School of Engineering",
+    technologies: [],
+    achievements: [
+      "3.83 GPA",
+      "Advanced coursework in algorithms, systems, and software engineering"
+    ]
+  },
+  {
+    company: "Tufts University",
+    logo: "tufts",
+    position: "Bachelor of Science, Computer Science",
+    location: "Medford, MA",
+    duration: "2014 - 2018",
+    description: "School of Arts & Sciences • Minor in Entrepreneurship",
+    technologies: [],
+    achievements: [
+      "3.64 GPA",
+      "Major in Computer Science with Entrepreneurship Minor"
+    ]
+  }
+];
+
 // Company Logo Components
 const CompanyLogo = ({ type }: { type: string }) => {
   if (type === 'hubspot') {
@@ -79,6 +108,14 @@ const CompanyLogo = ({ type }: { type: string }) => {
     return (
       <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
         <div className="text-white font-black text-lg">TA</div>
+      </div>
+    );
+  }
+  
+  if (type === 'tufts') {
+    return (
+      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg">
+        <div className="text-white font-black text-lg">T</div>
       </div>
     );
   }
@@ -108,8 +145,22 @@ export function ExperienceSection() {
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto space-y-12">
-          {experiences.map((exp, index) => (
+        {/* Experience Section */}
+        <div className="max-w-5xl mx-auto mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h3 className="text-3xl md:text-4xl font-black mb-2 tracking-tight text-center">
+              PROFESSIONAL EXPERIENCE
+            </h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+          </motion.div>
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 60 }}
@@ -194,7 +245,92 @@ export function ExperienceSection() {
                 </CardContent>
               </Card>
             </motion.div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h3 className="text-3xl md:text-4xl font-black mb-2 tracking-tight text-center">
+              EDUCATION
+            </h3>
+            <div className="w-16 h-1 bg-gradient-to-r from-accent to-primary mx-auto rounded-full" />
+          </motion.div>
+          <div className="space-y-8">
+            {education.map((edu, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+                viewport={{ once: true }}
+              >
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-card via-card to-card/50 backdrop-blur-sm overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <CardHeader className="pb-6 relative z-10">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-4">
+                          <CompanyLogo type={edu.logo} />
+                          <div className="w-2 h-8 bg-gradient-to-b from-accent to-primary rounded-full" />
+                          <div>
+                            <CardTitle className="text-2xl md:text-3xl font-black tracking-tight group-hover:text-accent transition-colors duration-300">
+                              {edu.position}
+                            </CardTitle>
+                            <p className="text-xl font-light text-muted-foreground mt-1">
+                              {edu.company}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-3 text-sm">
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <Calendar className="w-4 h-4 text-accent" />
+                          <span className="font-medium">{edu.duration}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <MapPin className="w-4 h-4 text-primary" />
+                          <span className="font-medium">{edu.location}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  
+                  <CardContent className="pt-0 relative z-10">
+                    <p className="text-muted-foreground mb-6 text-lg leading-relaxed font-light">
+                      {edu.description}
+                    </p>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-bold mb-4 text-lg tracking-wide">ACHIEVEMENTS</h4>
+                      <ul className="space-y-2">
+                        {edu.achievements.map((achievement, idx) => (
+                          <motion.li 
+                            key={idx}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.1 + idx * 0.1, duration: 0.5 }}
+                            className="flex items-start gap-3 text-muted-foreground"
+                          >
+                            <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                            <span className="font-medium">{achievement}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
