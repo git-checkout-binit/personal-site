@@ -157,94 +157,78 @@ export function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Right Side - Simple Globe */}
+        {/* Right Side - Barcelona Beach Photo */}
         <div className="flex items-center justify-center p-8 lg:p-16">
           <motion.div
-            className="relative w-full max-w-md aspect-square"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            className="relative w-full max-w-sm"
+            initial={{ opacity: 0, scale: 0.8, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ delay: 1.2, duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            {/* Globe Container */}
-            <div className="relative w-full h-full flex items-center justify-center">
-              
-              {/* Outer Ring */}
+            <div className="relative">
               <motion.div
-                className="absolute inset-0 border-2 border-primary/20 rounded-full"
-                style={{ borderStyle: 'dashed' }}
-                animate={{ rotate: 360 }}
-                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              />
-              
-              {/* Inner Ring */}
-              <motion.div
-                className="absolute inset-8 border border-accent/30 rounded-full"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
-              
-              {/* Globe Base */}
-              <div className="w-48 h-48 bg-gradient-to-br from-card via-card/90 to-card/60 backdrop-blur-sm rounded-full border-2 border-border/30 shadow-2xl flex items-center justify-center relative overflow-hidden">
-                
-                {/* Globe Grid */}
-                <div className="absolute inset-0 rounded-full">
-                  {/* Longitude lines */}
-                  {[...Array(6)].map((_, i) => (
-                    <motion.div
-                      key={`long-${i}`}
-                      className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary/15 to-transparent transform -translate-x-1/2"
-                      style={{ transform: `translateX(-50%) rotateZ(${i * 30}deg)` }}
-                      animate={{ opacity: [0.3, 0.6, 0.3] }}
-                      transition={{ duration: 4, repeat: Infinity, delay: i * 0.2 }}
-                    />
-                  ))}
-                  
-                  {/* Latitude lines */}
-                  {[...Array(3)].map((_, i) => (
-                    <div
-                      key={`lat-${i}`}
-                      className="absolute left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/15 to-transparent"
-                      style={{ top: `${30 + i * 20}%` }}
-                    />
-                  ))}
-                </div>
-                
-                {/* Center Content */}
+                className="relative overflow-hidden rounded-3xl shadow-2xl"
+                initial={{ y: 20 }}
+                animate={{ y: 0 }}
+                transition={{ delay: 1.4, duration: 0.8 }}
+              >
                 <motion.div
-                  className="text-center z-10"
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-accent/30 z-10"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.8, duration: 1 }}
+                />
+                <motion.img
+                  src="/images/hero-barcelona.jpg"
+                  alt="Working from Barcelona Beach"
+                  className="w-full h-[500px] lg:h-[600px] object-cover professional-image"
+                  style={{
+                    filter: 'brightness(1.05) contrast(1.08) saturate(1.05)'
+                  }}
+                  initial={{ scale: 1.1 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 1.4, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+                />
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 2, duration: 0.6 }}
+                  className="absolute bottom-6 left-6 bg-gradient-to-r from-card/90 via-card/95 to-card/90 backdrop-blur-md rounded-2xl px-4 py-3 shadow-xl border border-border/50 z-20"
                 >
-                  <div className="text-2xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
-                    BROOKLYN
-                  </div>
-                  <div className="text-sm text-muted-foreground tracking-widest">
-                    NYC
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-gradient-to-r from-primary to-accent rounded-full animate-pulse" />
+                    <div>
+                      <div className="text-sm font-bold text-foreground">Barcelona Beach</div>
+                      <div className="text-xs text-muted-foreground font-medium">Remote Work Life</div>
+                    </div>
                   </div>
                 </motion.div>
-              </div>
+              </motion.div>
               
-              {/* Floating Elements */}
-              {[...Array(3)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-2 h-2 bg-gradient-to-br from-accent to-accent/80 rounded-full shadow-lg"
-                  style={{
-                    top: `${25 + i * 20}%`,
-                    right: `${15 + i * 10}%`,
-                  }}
-                  animate={{
-                    y: [0, -10, 0],
-                    opacity: [0.6, 1, 0.6]
-                  }}
-                  transition={{
-                    duration: 3 + i * 0.5,
-                    repeat: Infinity,
-                    delay: i * 0.8,
-                    ease: "easeInOut"
-                  }}
-                />
-              ))}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 2.2, duration: 0.6 }}
+                className="absolute -top-4 -right-4 bg-gradient-to-br from-card via-card/95 to-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-border/50"
+              >
+                <div className="text-center">
+                  <div className="text-lg font-black text-accent mb-1">💻</div>
+                  <div className="text-xs text-muted-foreground font-medium">DIGITAL NOMAD</div>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 2.4, duration: 0.6 }}
+                className="absolute -bottom-4 -left-4 bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-primary/30"
+              >
+                <div className="text-center">
+                  <div className="text-lg font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">NYC</div>
+                  <div className="text-xs text-muted-foreground font-medium">HOME BASE</div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

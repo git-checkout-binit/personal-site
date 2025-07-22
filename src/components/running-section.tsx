@@ -117,26 +117,31 @@ export function RunningSection() {
               </motion.div>
             </motion.div>
 
-            {/* Right Side - Professional Photo */}
+            {/* Right Side - Dual Professional Photos */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
               className="relative"
             >
-              <div className="relative">
-                {/* Photo Container with Effects */}
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl professional-image">
+              <div className="relative space-y-6">
+                {/* Primary Photo */}
+                <motion.div
+                  className="relative overflow-hidden rounded-3xl shadow-2xl professional-image"
+                  initial={{ y: 30 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.8 }}
+                >
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20 z-10"
+                    className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-accent/15 z-10"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 1 }}
                   />
                   <motion.img
-                    src="/images/running-photoshoot.jpg"
-                    alt="Professional running photoshoot"
-                    className="w-full h-[500px] lg:h-[600px] object-cover filter brightness-110 contrast-110 saturate-110 sharpen"
+                    src="/images/running-1.jpg"
+                    alt="Professional running photoshoot - Action shot"
+                    className="w-full h-[350px] object-cover"
                     style={{
                       filter: 'brightness(1.05) contrast(1.08) saturate(1.05)'
                     }}
@@ -144,31 +149,58 @@ export function RunningSection() {
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
                   />
-                </div>
-                
-                {/* Floating Stats */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8, duration: 0.6 }}
-                  className="absolute -bottom-6 -left-6 bg-gradient-to-br from-card via-card to-card/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-border/50"
-                >
-                  <div className="text-center">
-                    <div className="text-2xl font-black text-primary mb-1">3:23:35</div>
-                    <div className="text-xs text-muted-foreground font-medium">MARATHON PR</div>
-                  </div>
+                  
+                  {/* Marathon PR Stat */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.8, duration: 0.6 }}
+                    className="absolute -bottom-4 -left-4 bg-gradient-to-br from-card via-card to-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-border/50"
+                  >
+                    <div className="text-center">
+                      <div className="text-xl font-black text-primary mb-1">3:23:35</div>
+                      <div className="text-xs text-muted-foreground font-medium">MARATHON PR</div>
+                    </div>
+                  </motion.div>
                 </motion.div>
-                
+
+                {/* Secondary Photo */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1, duration: 0.6 }}
-                  className="absolute -top-6 -right-6 bg-gradient-to-br from-card via-card to-card/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-border/50"
+                  className="relative overflow-hidden rounded-3xl shadow-2xl professional-image"
+                  initial={{ y: 30 }}
+                  whileInView={{ y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.8 }}
                 >
-                  <div className="text-center">
-                    <div className="text-2xl font-black text-accent mb-1">1,697</div>
-                    <div className="text-xs text-muted-foreground font-medium">MILES 2024</div>
-                  </div>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-accent/15 via-transparent to-primary/15 z-10"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.8, duration: 1 }}
+                  />
+                  <motion.img
+                    src="/images/running-2.jpg"
+                    alt="Professional running photoshoot - Portrait"
+                    className="w-full h-[280px] object-cover"
+                    style={{
+                      filter: 'brightness(1.05) contrast(1.08) saturate(1.05)'
+                    }}
+                    initial={{ scale: 1.1 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+                  />
+                  
+                  {/* 2024 Miles Stat */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1, duration: 0.6 }}
+                    className="absolute -top-4 -right-4 bg-gradient-to-br from-card via-card to-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-border/50"
+                  >
+                    <div className="text-center">
+                      <div className="text-xl font-black text-accent mb-1">1,697</div>
+                      <div className="text-xs text-muted-foreground font-medium">MILES 2024</div>
+                    </div>
+                  </motion.div>
                 </motion.div>
               </div>
             </motion.div>
