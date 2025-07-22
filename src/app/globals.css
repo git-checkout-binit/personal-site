@@ -274,11 +274,11 @@
 
 /* Mobile Image Positioning */
 .hero-mobile-position {
-  object-position: 60% center;
+  object-position: 55% center;
 }
 
 .running-mobile-position {
-  object-position: 40% center;
+  object-position: 45% center;
 }
 
 @media (min-width: 768px) {
