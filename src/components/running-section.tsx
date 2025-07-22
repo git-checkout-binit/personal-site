@@ -43,7 +43,7 @@ const races = [
   },
   {
     name: "Brooklyn Experience Half",
-    year: "2024",
+    year: "2025",
     time: "1:28:32", 
     placement: "315 / 24,590 overall",
     category: "Half Marathon",
@@ -58,7 +58,7 @@ const races = [
   },
   {
     name: "Brooklyn Experience Half (5K split)",
-    year: "2024",
+    year: "2025",
     time: "20:14",
     placement: "5K PR",
     category: "5K",
