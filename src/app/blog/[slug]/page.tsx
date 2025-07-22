@@ -27,7 +27,17 @@ export default function BlogPost() {
     const slug = params?.slug as string;
     
     // For now, hardcode the blog post data
-    if (slug === 'nfl-fantasy-spreadsheet-to-web') {
+    if (slug === 'muay-thai-bangkok-fight-camp') {
+      setPost({
+        slug: 'muay-thai-bangkok-fight-camp',
+        title: 'From Marathons to Muay Thai: One Week of Pain, Sweat, and Noodles',
+        description: 'How I accidentally joined a Muay Thai fight camp in Bangkok during a solo backpacking trip. Three lessons learned from training with real fighters in sweltering heat.',
+        date: '2025-02-15',
+        author: 'Binit Shrestha',
+        tags: ['Travel', 'Martial Arts', 'Personal Growth', 'Bangkok', 'Challenge'],
+        readingTime: '6 min read',
+      });
+    } else if (slug === 'nfl-fantasy-spreadsheet-to-web') {
       setPost({
         slug: 'nfl-fantasy-spreadsheet-to-web',
         title: 'From Spreadsheet Chaos to Web Platform: Building NFL Playoff Fantasy',
@@ -131,9 +141,235 @@ export default function BlogPost() {
             className="prose prose-lg max-w-none"
           >
             <div className="space-y-8">
-              <p className="text-xl leading-relaxed text-muted-foreground italic border-l-4 border-primary/30 pl-6 py-4 bg-primary/5 rounded-r-lg">
-                &quot;There are no tools that let us do this nicely out there that I can see.&quot;
-              </p>
+              {post?.slug === 'muay-thai-bangkok-fight-camp' && (
+                <>
+                  <p className="text-xl leading-relaxed text-muted-foreground italic border-l-4 border-primary/30 pl-6 py-4 bg-primary/5 rounded-r-lg">
+                    &quot;You are going to die.&quot; — My cab driver, Google Translated
+                  </p>
+                  
+                  {/* Hero Image */}
+                  <div className="relative rounded-xl overflow-hidden shadow-2xl my-12">
+                    <img
+                      src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=1200&h=600&fit=crop&crop=center"
+                      alt="Muay Thai training in Bangkok - intense martial arts workout in sweltering heat"
+                      className="w-full h-[400px] object-cover"
+                      style={{
+                        filter: 'brightness(0.7) contrast(1.3) saturate(1.1)'
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-6 left-6 text-white">
+                      <p className="text-sm opacity-80">Training at a Bangkok Muay Thai camp: where marathon endurance meets combat reality</p>
+                    </div>
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
+                    <span className="text-4xl">🥊</span> The Accidental Fighter
+                  </h2>
+                  
+                  <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                    This summer, I joined a Muay Thai fight camp in Bangkok—alone, in the sweltering heat, and entirely unqualified. 
+                    It was an impulsive decision on a solo backpacking trip. I wanted a challenge. This sounded like one.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+                    I wasn&apos;t a total beginner: I have a black belt in Taekwondo and run marathons—but that didn&apos;t exactly 
+                    translate to Muay Thai credibility. The cab driver who picked me up couldn&apos;t believe where I was going. 
+                    Midway through the ride, he Google Translated something that roughly meant: <em>&quot;You are going to die.&quot;</em>
+                  </p>
+
+                  {/* Daily Schedule */}
+                  <div className="bg-gradient-to-br from-orange-500/5 to-red-500/5 p-8 rounded-xl border border-orange-500/20 my-8">
+                    <h4 className="font-bold text-xl mb-6 text-orange-600 flex items-center gap-2">
+                      <span>⏰</span> Fighter&apos;s Daily Schedule
+                    </h4>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div className="space-y-2">
+                        <div className="flex justify-between py-2 border-b border-orange-500/20">
+                          <span className="font-semibold">6:00 AM</span>
+                          <span className="text-muted-foreground">Wake up, light breakfast</span>
+                        </div>
+                        <div className="flex justify-between py-2 border-b border-orange-500/20">
+                          <span className="font-semibold">6:30 AM</span>
+                          <span className="text-muted-foreground">50km morning run</span>
+                        </div>
+                        <div className="flex justify-between py-2 border-b border-orange-500/20">
+                          <span className="font-semibold">9:00 AM</span>
+                          <span className="text-muted-foreground">Breakfast & rest</span>
+                        </div>
+                        <div className="flex justify-between py-2 border-b border-orange-500/20">
+                          <span className="font-semibold">3:00 PM</span>
+                          <span className="text-muted-foreground">Pad work & technique</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between py-2 border-b border-orange-500/20">
+                          <span className="font-semibold">4:00 PM</span>
+                          <span className="text-muted-foreground">Heavy bag training</span>
+                        </div>
+                        <div className="flex justify-between py-2 border-b border-orange-500/20">
+                          <span className="font-semibold">5:00 PM</span>
+                          <span className="text-muted-foreground">Sparring sessions</span>
+                        </div>
+                        <div className="flex justify-between py-2 border-b border-orange-500/20">
+                          <span className="font-semibold">6:00 PM</span>
+                          <span className="text-muted-foreground">Conditioning & stretching</span>
+                        </div>
+                        <div className="flex justify-between py-2 border-b border-orange-500/20">
+                          <span className="font-semibold">8:00 PM</span>
+                          <span className="text-muted-foreground">Dinner & recovery</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-orange-600 font-medium mt-4 text-center">
+                      <span className="text-lg">💀</span> I wasn&apos;t there for the tourist class—I was living like the fighters
+                    </p>
+                  </div>
+                  
+                  <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                    When I arrived, they handed me a schedule, showed me to my room, and gave me the full fighter itinerary. 
+                    They teased me, but I kept showing up.
+                  </p>
+                  
+                  <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground">
+                    Three Lessons from the Ring
+                  </h2>
+                  
+                  <div className="space-y-12 my-10">
+                    <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-xl border-l-4 border-red-500">
+                      <h3 className="text-2xl font-bold text-red-600 mb-4 flex items-center gap-3">
+                        <span className="text-3xl">💪</span> Lesson 1: Sweat Now, Bleed Less Later
+                      </h3>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        This phrase took on new meaning during the week. These fighters weren&apos;t training for fun—many were 
+                        doing this to escape poverty. Their lives depended on this discipline.
+                      </p>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        The training was brutal. On day one, I asked how far we&apos;d run—they said 50 kilometers. I thought 
+                        they were joking. They weren&apos;t. It was during these runs that I realized how far from their world I was. 
+                        But the effort earned me their respect.
+                      </p>
+                      <div className="bg-red-500/5 p-4 rounded-lg border border-red-500/20 mt-4">
+                        <p className="font-semibold text-red-600">The Takeaway:</p>
+                        <p className="text-muted-foreground text-sm mt-1">
+                          Put everything into your preparation. Whatever you&apos;re doing, front-load the suffering so 
+                          when it really counts, you&apos;re ready.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-8 rounded-xl border-l-4 border-green-500">
+                      <h3 className="text-2xl font-bold text-green-600 mb-4 flex items-center gap-3">
+                        <span className="text-3xl">❤️</span> Lesson 2: Kindness is Universal
+                      </h3>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        These were some of the most dangerous people I&apos;ve ever met—and the kindest. One fighter, 
+                        <strong className="text-green-600"> Petch Morakot</strong> (former #1 in his weight class), 
+                        trained with us every day.
+                      </p>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        On runs, he&apos;d say hi to everyone. In the gym, he was serious but generous. They invited me 
+                        out to dinner after sessions. They included me. I still keep in touch with some of them today.
+                      </p>
+                      <div className="bg-green-500/5 p-4 rounded-lg border border-green-500/20 mt-4">
+                        <p className="font-semibold text-green-600">The Takeaway:</p>
+                        <p className="text-muted-foreground text-sm mt-1">
+                          Kindness transcends language, culture, and yes—combat. The strongest people are often 
+                          the most generous with their strength.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-8 rounded-xl border-l-4 border-blue-500">
+                      <h3 className="text-2xl font-bold text-blue-600 mb-4 flex items-center gap-3">
+                        <span className="text-3xl">📅</span> Lesson 3: Set a Fight Date
+                      </h3>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        Every fighter at the camp was training for a specific date: their next fight. That date gave their 
+                        training urgency, structure, and meaning. I realized we all need that—a &quot;fight day.&quot;
+                      </p>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                        It might be a race, a deadline, a performance—but it gives shape to your effort. Since then, 
+                        I&apos;ve been setting dates for myself—whether in fitness, writing, or life—and training like it&apos;s a fight.
+                      </p>
+                      <div className="bg-blue-500/5 p-4 rounded-lg border border-blue-500/20 mt-4">
+                        <p className="font-semibold text-blue-600">The Takeaway:</p>
+                        <p className="text-muted-foreground text-sm mt-1">
+                          A moment on the calendar gives purpose to your preparation. Set your date, then train like 
+                          your life depends on it.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Photo section */}
+                  <div className="bg-muted/30 p-8 rounded-xl border my-10">
+                    <div className="text-center">
+                      <h4 className="text-lg font-semibold mb-4 text-foreground">Training with Champions</h4>
+                      <div className="relative rounded-lg overflow-hidden shadow-lg mb-4">
+                        <img
+                          src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=800&h=500&fit=crop&crop=center"
+                          alt="Muay Thai fighters training - the brotherhood of the ring"
+                          className="w-full h-[300px] object-cover"
+                          style={{
+                            filter: 'brightness(0.8) contrast(1.1) sepia(0.3)'
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                      </div>
+                      <p className="text-sm text-muted-foreground italic">
+                        Training alongside former champions like Petch Morakot taught me that true strength includes kindness
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
+                    <span className="text-4xl">🥋</span> The Fighter Mindset
+                  </h2>
+                  
+                  <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                    I went in pretending to be a fighter. I came out feeling a little more like one. You don&apos;t have to be 
+                    in a ring to take the fighter mindset with you.
+                  </p>
+                  
+                  <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-xl border border-primary/20 my-8">
+                    <h4 className="text-xl font-bold text-primary mb-4">The Three Principles</h4>
+                    <ul className="space-y-3 text-muted-foreground">
+                      <li className="flex items-start gap-3">
+                        <span className="text-primary font-bold">1.</span>
+                        <span><strong>Respect the sweat:</strong> Front-load your preparation and suffering</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-primary font-bold">2.</span>
+                        <span><strong>Lead with kindness:</strong> Strength and generosity go hand in hand</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="text-primary font-bold">3.</span>
+                        <span><strong>Always set your date:</strong> Give your effort a target worth fighting for</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-orange-500/5 to-red-500/5 p-6 rounded-lg border border-orange-500/20 my-8">
+                    <h4 className="text-orange-600 font-bold text-lg mb-3 flex items-center gap-2">
+                      <span>✈️</span> Thinking of Doing This Yourself?
+                    </h4>
+                    <ul className="text-sm text-muted-foreground space-y-2">
+                      <li>• Start running NOW. Seriously. The cardio requirements are insane.</li>
+                      <li>• Learn basic Thai phrases. &quot;Thank you&quot; (kob khun) goes a long way.</li>
+                      <li>• Bring extra everything: wraps, shorts, electrolytes.</li>
+                      <li>• Don&apos;t expect to be good. Expect to be humbled. Then show up anyway.</li>
+                      <li>• The heat is no joke. Hydrate like your life depends on it (it does).</li>
+                    </ul>
+                  </div>
+                </>
+              )}
+              
+              {post?.slug === 'nfl-fantasy-spreadsheet-to-web' && (
+                <>
+                  <p className="text-xl leading-relaxed text-muted-foreground italic border-l-4 border-primary/30 pl-6 py-4 bg-primary/5 rounded-r-lg">
+                    &quot;There are no tools that let us do this nicely out there that I can see.&quot;
+                  </p>
               
               {/* Hero Image */}
               <div className="relative rounded-xl overflow-hidden shadow-2xl my-12">
@@ -512,6 +748,8 @@ export default function BlogPost() {
                   </div>
                 </div>
               </div>
+                </>
+              )}
             </div>
           </motion.div>
         </div>

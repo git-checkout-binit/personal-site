@@ -21,9 +21,18 @@ export default function BlogPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // For now, we'll hardcode the first blog post data
+    // For now, we'll hardcode the blog post data
     // In the future, this could be fetched from an API or CMS
     const hardcodedPosts = [
+      {
+        slug: 'muay-thai-bangkok-fight-camp',
+        title: 'From Marathons to Muay Thai: One Week of Pain, Sweat, and Noodles',
+        description: 'How I accidentally joined a Muay Thai fight camp in Bangkok during a solo backpacking trip. Three lessons learned from training with real fighters in sweltering heat.',
+        date: '2025-02-15',
+        author: 'Binit Shrestha',
+        tags: ['Travel', 'Martial Arts', 'Personal Growth', 'Bangkok', 'Challenge'],
+        readingTime: '6 min read',
+      },
       {
         slug: 'nfl-fantasy-spreadsheet-to-web',
         title: 'From Spreadsheet Chaos to Web Platform: Building NFL Playoff Fantasy',
