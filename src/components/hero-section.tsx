@@ -23,7 +23,7 @@ export function HeroSection() {
           <img
             src="/images/hero-bg.jpg"
             alt="Behind the scenes"
-            className="w-full h-full object-cover object-right md:object-center"
+            className="w-full h-full object-cover hero-mobile-position md:object-center"
             style={{
               filter: 'contrast(1.1) brightness(0.65) saturate(0.1)'
             }}

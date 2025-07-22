@@ -271,3 +271,19 @@
   backface-visibility: hidden;
   transform: translateZ(0);
 }
+
+/* Mobile Image Positioning */
+.hero-mobile-position {
+  object-position: 65% center;
+}
+
+.running-mobile-position {
+  object-position: 35% center;
+}
+
+@media (min-width: 768px) {
+  .hero-mobile-position,
+  .running-mobile-position {
+    object-position: center center;
+  }
+}
