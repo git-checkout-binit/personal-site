@@ -172,6 +172,45 @@ Cinematic color system using OKLCH color space for better perceptual uniformity 
 - **Social Integration**: Added Instagram to footer alongside LinkedIn
 - **Alt Text Optimization**: SEO-rich descriptions for all images with professional context
 
+## ⚠️ Known Issues
+
+### Mobile Navigation Header (iOS Safari)
+**Issue**: Navigation header disappears/gets lost during scrolling on mobile devices, specifically iOS Safari.
+
+**Status**: UNRESOLVED after extensive debugging attempts.
+
+**Symptoms**:
+- Header stays visible on desktop
+- Logo expansion animation works (can be glimpsed during scroll)
+- Header becomes invisible/lost behind content when scrolling on mobile
+- Issue persists across different iOS Safari versions
+
+**Attempted Solutions** (January 2025):
+1. **Z-index escalation**: Tried z-50 → z-[100] → z-[9999] → 99999 → 2147483647
+2. **CSS !important overrides**: Multiple aggressive positioning declarations
+3. **Hardware acceleration**: `translateZ(0)`, `translate3d(0,0,0)`, `will-change: transform`
+4. **Framer Motion removal**: Completely eliminated animations from navigation component
+5. **iOS-specific fixes**: `-webkit-sticky`, `position: sticky` with `fixed` fallbacks
+6. **Viewport optimization**: Added `viewport-fit=cover`, disabled user scaling
+7. **Multiple positioning strategies**: Fixed → Sticky → Hybrid approaches
+
+**Technical Details**:
+- Current z-index: `2147483647` (maximum 32-bit integer)
+- Position: Hybrid sticky/fixed with webkit prefixes
+- Transform: Hardware accelerated with translate3d
+- Navigation component simplified (no Framer Motion)
+
+**Hypothesis**: 
+- iOS Safari viewport handling conflict
+- Possible framework interaction (Next.js/React)
+- May require completely different navigation architecture
+
+**Workaround**: Navigation remains functional via logo click (scrolls to top). Desktop experience unaffected.
+
+**Priority**: Medium (affects mobile UX but site remains fully functional)
+
+---
+
 ## 🎯 Strategic Roadmap - Value vs. Effort Analysis
 
 *As your tech advisor: Focus on high-impact, low-maintenance wins that advance your career and personal brand.*
