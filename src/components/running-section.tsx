@@ -10,7 +10,7 @@ const runningStats = [
     icon: Trophy,
     label: "Half Marathon PR",
     value: "1:28:32",
-    subtitle: "Brooklyn Experience"
+    subtitle: "Brooklyn Experience Half Marathon 2025"
   },
   {
     icon: Target,
