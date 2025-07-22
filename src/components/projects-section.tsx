@@ -48,7 +48,7 @@ export function ProjectsSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Some of the projects I&apos;ve worked on, showcasing different technologies and problem-solving approaches
+            Creative endeavors spanning film production, community organizing, and thought leadership in cybersecurity
           </p>
         </motion.div>
 
@@ -80,9 +80,6 @@ export function ProjectsSection() {
                   <div className="flex items-start justify-between">
                     <CardTitle className="text-xl group-hover:text-primary transition-colors">
                       {project.title}
-                      {project.featured && (
-                        <Badge className="ml-2" variant="default">Featured</Badge>
-                      )}
                     </CardTitle>
                   </div>
                 </CardHeader>
