@@ -26,9 +26,9 @@ const runningStats = [
   },
   {
     icon: Target,
-    label: "Next Goal",
-    value: "Sub 3:00",
-    subtitle: "Chicago Marathon 2025"
+    label: "Marathon Ranking",
+    value: "Top 8%",
+    subtitle: "1,216 / 16,168 overall"
   }
 ];
 
@@ -37,15 +37,17 @@ const races = [
     name: "Marine Corps Marathon",
     year: "2024", 
     time: "3:23:35",
-    placement: "Personal Best",
-    category: "Marathon"
+    placement: "1,216 / 16,168 overall",
+    category: "Marathon",
+    link: "https://track.rtrt.me/e/MCM-2024#/dash/RHZKA38B"
   },
   {
     name: "Brooklyn Experience Half",
     year: "2024",
     time: "1:28:32", 
-    placement: "PR",
-    category: "Half Marathon"
+    placement: "315 / 24,590 overall",
+    category: "Half Marathon",
+    link: "https://nycruns.com/race-results?race=nycruns-brooklyn-experience-half-marathon-2025&result=2444284"
   },
   {
     name: "5th Ave Mile",
@@ -55,7 +57,7 @@ const races = [
     category: "1 Mile"
   },
   {
-    name: "5K Personal Best",
+    name: "NYC Half Marathon (5K split)",
     year: "2024",
     time: "20:14",
     placement: "5K PR",
@@ -123,30 +125,60 @@ export function RunningSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="group hover:shadow-lg transition-all duration-300">
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between">
-                      <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                        {race.name}
-                      </CardTitle>
-                      <Badge variant="outline">{race.category}</Badge>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <div className="text-2xl font-bold text-primary">
-                          {race.time}
+                <Card className={`group transition-all duration-300 ${race.link ? 'hover:shadow-lg cursor-pointer' : 'hover:shadow-md'}`}>
+                  {race.link ? (
+                    <a href={race.link} target="_blank" rel="noopener noreferrer" className="block">
+                      <CardHeader className="pb-3">
+                        <div className="flex items-center justify-between">
+                          <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                            {race.name}
+                          </CardTitle>
+                          <Badge variant="outline">{race.category}</Badge>
                         </div>
-                        <div className="text-sm text-muted-foreground">
-                          {race.year} • {race.placement}
+                      </CardHeader>
+                      <CardContent>
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <div className="text-2xl font-bold text-primary">
+                              {race.time}
+                            </div>
+                            <div className="text-sm text-muted-foreground">
+                              {race.year} • {race.placement}
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <Trophy className="w-8 h-8 text-yellow-500 mx-auto mb-1" />
+                          </div>
                         </div>
-                      </div>
-                      <div className="text-right">
-                        <Trophy className="w-8 h-8 text-yellow-500 mx-auto mb-1" />
-                      </div>
-                    </div>
-                  </CardContent>
+                      </CardContent>
+                    </a>
+                  ) : (
+                    <>
+                      <CardHeader className="pb-3">
+                        <div className="flex items-center justify-between">
+                          <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                            {race.name}
+                          </CardTitle>
+                          <Badge variant="outline">{race.category}</Badge>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <div className="text-2xl font-bold text-primary">
+                              {race.time}
+                            </div>
+                            <div className="text-sm text-muted-foreground">
+                              {race.year} • {race.placement}
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <Trophy className="w-8 h-8 text-yellow-500 mx-auto mb-1" />
+                          </div>
+                        </div>
+                      </CardContent>
+                    </>
+                  )}
                 </Card>
               </motion.div>
             ))}
@@ -200,7 +232,7 @@ export function RunningSection() {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Training Philosophy</h3>
               <p className="text-muted-foreground leading-relaxed">
-                &quot;Consistency over intensity. Chasing the sub-3:00 marathon through disciplined training 
+                &quot;Consistency over intensity. Every mile builds toward the next goal through disciplined training 
                 and smart recovery. Running teaches patience, resilience, and the power of incremental progress - 
                 lessons that translate directly to solving complex problems in security engineering.&quot;
               </p>
