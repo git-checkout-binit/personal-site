@@ -8,6 +8,15 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
+    title: "Help, I'm Smiling! (Executive Producer)",
+    description: "Executive producer for this 15-minute 2023 short film. After captivating the nation with a viral dance-challenge, a millennial daughter takes advantage of her aging father to seek out clout and internet stardom.",
+    image: "https://i.ytimg.com/vi/QrTM3MWyRMQ/maxresdefault.jpg",
+    technologies: ["Film Production", "Executive Producer", "Short Film", "Comedy"],
+    githubUrl: null,
+    liveUrl: "https://www.youtube.com/watch?v=QrTM3MWyRMQ",
+    featured: true
+  },
+  {
     title: "Medford High School Class of 2014 Reunion",
     description: "Organized my high school reunion, created this site using Netlify, Cloudflare, and simple JS/HTML. Helped organize the venue, used Mailchimp to collect and send messaging, did it all for free and made +$10k in profit for the venue for the night.",
     image: "/images/reunion-website.png",
