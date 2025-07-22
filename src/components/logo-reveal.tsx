@@ -11,12 +11,13 @@ export function LogoReveal() {
   };
 
   useEffect(() => {
-    // Auto-expand after a delay
-    const timer = setTimeout(() => {
-      setIsExpanded(true);
-    }, 2000);
+    const handleScroll = () => {
+      // Expand when user has scrolled down at least 100px
+      setIsExpanded(window.scrollY > 100);
+    };
 
-    return () => clearTimeout(timer);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -54,9 +55,14 @@ export function LogoReveal() {
             <motion.div
               animate={{ opacity: isExpanded ? 0 : 1 }}
               transition={{ duration: 0.3 }}
-              className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent"
+              className="whitespace-nowrap"
             >
-              binshr.me
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                binshr.
+              </span>
+              <span className="text-muted-foreground/70">
+                me
+              </span>
             </motion.div>
           )}
         </div>
