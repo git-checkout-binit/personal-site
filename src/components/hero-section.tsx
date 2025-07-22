@@ -88,7 +88,7 @@ export function HeroSection() {
                 transition={{ delay: 0.7, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
               >
                 <span className="block text-white drop-shadow-2xl">
-                  {/* Start with "BIN" appearing first */}
+                  {/* "BIN" appears simultaneously */}
                   {"BIN".split("").map((letter, index) => (
                     <motion.span
                       key={`bin-${index}`}
@@ -96,7 +96,7 @@ export function HeroSection() {
                       initial={{ opacity: 0, y: 30, rotateX: -90 }}
                       animate={{ opacity: 1, y: 0, rotateX: 0 }}
                       transition={{ 
-                        delay: 2.0 + index * 0.2, 
+                        delay: 2.0, 
                         duration: 0.5, 
                         ease: [0.25, 0.1, 0.25, 1] 
                       }}
@@ -104,7 +104,7 @@ export function HeroSection() {
                       {letter}
                     </motion.span>
                   ))}
-                  {/* Then "IT" expands in after a pause */}
+                  {/* "IT" expands simultaneously with "ESTHA" */}
                   {"IT".split("").map((letter, index) => (
                     <motion.span
                       key={`it-${index}`}
@@ -112,7 +112,7 @@ export function HeroSection() {
                       initial={{ opacity: 0, scaleX: 0, transformOrigin: 'left' }}
                       animate={{ opacity: 1, scaleX: 1 }}
                       transition={{ 
-                        delay: 3.5 + index * 0.15, 
+                        delay: 3.5 + index * 0.1, 
                         duration: 0.4, 
                         ease: [0.25, 0.1, 0.25, 1] 
                       }}
@@ -122,7 +122,7 @@ export function HeroSection() {
                   ))}
                 </span>
                 <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
-                  {/* Start with "SHR" appearing */}
+                  {/* "SHR" appears simultaneously with "BIN" */}
                   {"SHR".split("").map((letter, index) => (
                     <motion.span
                       key={`shr-${index}`}
@@ -130,7 +130,7 @@ export function HeroSection() {
                       initial={{ opacity: 0, y: 30, rotateX: -90 }}
                       animate={{ opacity: 1, y: 0, rotateX: 0 }}
                       transition={{ 
-                        delay: 2.8 + index * 0.2, 
+                        delay: 2.0, 
                         duration: 0.5, 
                         ease: [0.25, 0.1, 0.25, 1] 
                       }}
@@ -138,7 +138,7 @@ export function HeroSection() {
                       {letter}
                     </motion.span>
                   ))}
-                  {/* Then "ESTHA" expands in */}
+                  {/* "ESTHA" expands simultaneously with "IT" */}
                   {"ESTHA".split("").map((letter, index) => (
                     <motion.span
                       key={`estha-${index}`}
@@ -146,8 +146,8 @@ export function HeroSection() {
                       initial={{ opacity: 0, scaleX: 0, transformOrigin: 'left' }}
                       animate={{ opacity: 1, scaleX: 1 }}
                       transition={{ 
-                        delay: 4.2 + index * 0.12, 
-                        duration: 0.3, 
+                        delay: 3.5 + index * 0.08, 
+                        duration: 0.4, 
                         ease: [0.25, 0.1, 0.25, 1] 
                       }}
                     >
