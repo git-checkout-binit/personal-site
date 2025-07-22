@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Medford High School Class of 2014 Reunion",
     description: "Organized my high school reunion, created this site using Netlify, Cloudflare, and simple JS/HTML. Helped organize the venue, used Mailchimp to collect and send messaging, did it all for free and made +$10k in profit for the venue for the night.",
-    image: "/api/placeholder/400/250",
+    image: "/images/reunion-website.png",
     technologies: ["HTML", "JavaScript", "Netlify", "Cloudflare", "Mailchimp"],
     githubUrl: null,
     liveUrl: "https://mhs2014reunion.com/",
@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Cyber Security Business Podcast - Episode 4",
     description: "Featured as a guest in 2019 discussing the security environment through the eyes of emerging security professionals alongside Chris McLellan (CSO, HubSpot).",
-    image: "/api/placeholder/400/250",
+    image: "/images/podcast-thumbnail.png",
     technologies: ["Public Speaking", "Cybersecurity", "Professional Development"],
     githubUrl: null,
     liveUrl: "https://www.klogixsecurity.com/blog/episode-4-binit-shrestha-chris-mclellan-hubspot",
@@ -54,15 +54,17 @@ export function ProjectsSection() {
             >
               <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden h-full">
                 <div className="aspect-video bg-muted relative overflow-hidden">
-                  <motion.div
-                    className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center"
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover professional-image"
+                    style={{
+                      filter: 'brightness(1.05) contrast(1.08) saturate(1.05)'
+                    }}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
-                  >
-                    <span className="text-lg font-medium opacity-60">
-                      {project.title}
-                    </span>
-                  </motion.div>
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 
                 <CardHeader>
