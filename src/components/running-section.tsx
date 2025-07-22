@@ -108,13 +108,8 @@ export function RunningSection() {
                   <span className="text-primary">&quot;</span>
                   <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                     WHEN THE ENDING IS UNKNOWN AND THE DISTANCE IS UNKNOWN THAT&apos;S WHEN YOU KNOW WHO THE{' '}
-                    <span className="relative inline-block group">
-                      <span className="blur-sm group-hover:blur-none transition-all duration-300 cursor-pointer">
-                        F***
-                      </span>
-                      <span className="absolute inset-0 flex items-center justify-center text-primary/30 group-hover:opacity-0 transition-opacity duration-300">
-                        ⚡
-                      </span>
+                    <span className="text-primary font-black">
+                      F*CK
                     </span>
                     {' '}YOU ARE
                   </span>
