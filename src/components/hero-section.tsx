@@ -72,20 +72,68 @@ export function HeroSection() {
               </span>
             </motion.div>
 
-            {/* Cinematic Name Display - Simple and Clean */}
-            <motion.h1 
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black leading-[0.85] mb-6 md:mb-8 lg:mb-12"
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-            >
-              <span className="block text-white drop-shadow-2xl">
-                BINIT
-              </span>
-              <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
-                SHRESTHA
-              </span>
-            </motion.h1>
+            {/* Cinematic Name Display with Auto-Expanding Animation */}
+            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black leading-[0.85] mb-6 md:mb-8 lg:mb-12">
+              <div className="relative">
+                {/* Reserve space to prevent layout shift */}
+                <div className="opacity-0 pointer-events-none whitespace-nowrap">
+                  <span className="block">BINIT</span>
+                  <span className="block">SHRESTHA</span>
+                </div>
+                
+                {/* Actual animated content */}
+                <motion.div 
+                  className="absolute inset-0"
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7, duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+                >
+                  <motion.div
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 0 }}
+                    transition={{ delay: 3.0, duration: 0.3 }}
+                    className="absolute inset-0"
+                  >
+                    {/* Initial state: BIN SHR */}
+                    <span className="block text-white drop-shadow-2xl">
+                      BIN
+                    </span>
+                    <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
+                      SHR
+                    </span>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 3.0, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="absolute inset-0"
+                  >
+                    {/* Expanded state: BINIT SHRESTHA */}
+                    <span className="block text-white drop-shadow-2xl">
+                      <motion.span
+                        initial={{ width: "3ch" }}
+                        animate={{ width: "5ch" }}
+                        transition={{ delay: 3.2, duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                        className="inline-block overflow-hidden"
+                      >
+                        BINIT
+                      </motion.span>
+                    </span>
+                    <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-lg">
+                      <motion.span
+                        initial={{ width: "3ch" }}
+                        animate={{ width: "8ch" }}
+                        transition={{ delay: 3.4, duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                        className="inline-block overflow-hidden"
+                      >
+                        SHRESTHA
+                      </motion.span>
+                    </span>
+                  </motion.div>
+                </motion.div>
+              </div>
+            </div>
 
             {/* Artistic Descriptors */}
             <motion.div 
