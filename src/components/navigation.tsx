@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { LogoReveal } from '@/components/logo-reveal';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -51,9 +52,8 @@ export function Navigation() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-2xl font-black tracking-tight bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
           >
-            binshr.me
+            <LogoReveal />
           </motion.div>
           
           <div className="hidden md:flex items-center space-x-2">
