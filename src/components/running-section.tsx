@@ -128,8 +128,9 @@ export function RunningSection() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="h-full flex"
               >
-                <Card className={`group transition-all duration-300 ${race.link ? 'hover:shadow-lg cursor-pointer' : 'hover:shadow-md'}`}>
+                <Card className={`h-full w-full group transition-all duration-300 ${race.link ? 'hover:shadow-lg cursor-pointer' : 'hover:shadow-md'}`}>
                   {race.link ? (
                     <a href={race.link} target="_blank" rel="noopener noreferrer" className="block">
                       <CardHeader className="pb-3">
