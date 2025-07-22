@@ -360,20 +360,24 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Ensure navigation stays on top on mobile */
-  nav[class*="fixed"],
-  nav {
+  /* Mobile navigation fix - bulletproof approach */
+  .mobile-nav-fix {
     position: fixed !important;
-    top: 0px !important;
-    left: 0px !important;
-    right: 0px !important;
-    z-index: 99999 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     width: 100% !important;
-    transform: translateZ(0) !important;
+    z-index: 999999 !important;
+    transform: translate3d(0, 0, 0) !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    will-change: transform !important;
   }
   
-  /* Force navigation above everything */
-  .fixed {
-    z-index: 99999 !important;
+  /* Additional mobile nav overrides */
+  nav {
+    position: fixed !important;
+    z-index: 999999 !important;
   }
 }
