@@ -116,13 +116,34 @@ export function CalendarView({ events }: CalendarViewProps) {
   if (isMobile) {
     return (
       <div className="max-w-2xl mx-auto px-4">
-        {/* Current Status */}
+        {/* Current Status - Cool Design */}
         {currentEvent && (
-          <div className="mb-12 text-center">
-            <div className="inline-block">
-              <div className="text-sm text-gray-500 mb-1">Currently</div>
-              <div className="text-2xl font-light tracking-wide">{currentEvent.location}</div>
-              <div className="w-8 h-px bg-gray-300 mx-auto mt-3"></div>
+          <div className="mb-12 flex justify-center">
+            <div className="relative">
+              {/* Gradient background card */}
+              <div className="bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-3xl p-[2px] shadow-xl">
+                <div className="bg-white/95 backdrop-blur-sm rounded-3xl px-8 py-6">
+                  {/* Status indicator */}
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></div>
+                    <div className="text-xs text-gray-500 uppercase tracking-widest font-medium">Currently</div>
+                  </div>
+                  
+                  {/* Location with emoji */}
+                  <div className="text-center">
+                    <div className="text-2xl font-light text-gray-900 mb-1">
+                      🗽 {currentEvent.location}
+                    </div>
+                    <div className="text-xs text-gray-600">
+                      Home base • Brooklyn/Manhattan
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-75"></div>
             </div>
           </div>
         )}
@@ -183,13 +204,35 @@ export function CalendarView({ events }: CalendarViewProps) {
   // Desktop view
   return (
     <div className="max-w-5xl mx-auto">
-      {/* Current Status */}
+      {/* Current Status - Cool Design for Desktop */}
       {currentEvent && (
-        <div className="mb-16 text-center">
-          <div className="inline-block">
-            <div className="text-sm text-gray-500 mb-2 tracking-wider uppercase">Current Location</div>
-            <div className="text-3xl font-light tracking-wide">{currentEvent.location}</div>
-            <div className="w-12 h-px bg-gray-300 mx-auto mt-4"></div>
+        <div className="mb-16 flex justify-center">
+          <div className="relative">
+            {/* Gradient background card */}
+            <div className="bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 rounded-3xl p-[3px] shadow-2xl">
+              <div className="bg-white/95 backdrop-blur-sm rounded-3xl px-12 py-8">
+                {/* Status indicator */}
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse mr-3"></div>
+                  <div className="text-sm text-gray-500 uppercase tracking-widest font-medium">Current Location</div>
+                </div>
+                
+                {/* Location with emoji */}
+                <div className="text-center">
+                  <div className="text-4xl font-light text-gray-900 mb-2">
+                    🗽 {currentEvent.location}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    Home base • Working from Brooklyn/Manhattan
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div>
+            <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-75"></div>
+            <div className="absolute top-1/2 -left-3 w-2 h-2 bg-pink-400 rounded-full animate-pulse delay-150"></div>
           </div>
         </div>
       )}
