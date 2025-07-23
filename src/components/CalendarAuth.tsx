@@ -75,11 +75,11 @@ function CalendarAuthContent() {
             {/* Funny description */}
             <div className="bg-black/20 rounded-2xl p-6 mb-6 border border-white/10">
               <p className="text-lg text-white text-center leading-relaxed">
-                <span className="italic text-purple-200 block mb-4">
-                  &quot;My schedule&apos;s busier than a bee in spring, got races to run and celebrations to bring&quot;
+                <span className="italic text-yellow-300 block mb-4 text-xl font-medium">
+                  &quot;Different type of energy, I don&apos;t follow trends&quot;
                 </span>
-                <span className="text-xs text-purple-300 block mb-4">
-                  - Original Binit bars 🎤
+                <span className="text-xs text-yellow-400 block mb-4 font-mono">
+                  - Binit&apos;s Original Flow 🔥
                 </span>
                 <span className="block mt-3 text-purple-300 font-semibold">
                   What&apos;s the passcode to see his private calendar? 🗓️
