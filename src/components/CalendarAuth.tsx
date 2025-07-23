@@ -89,7 +89,7 @@ function CalendarAuthContent() {
                   placeholder="Enter the secret code..."
                   value={inputKey}
                   onChange={(e) => setInputKey(e.target.value)}
-                  className="w-full h-12 bg-white/10 border-white/30 text-white placeholder-white/60 text-lg rounded-xl backdrop-blur-sm focus:border-purple-400 focus:ring-purple-400"
+                  className="w-full h-12 bg-white/20 border-white/40 text-white placeholder-white/80 text-lg rounded-xl backdrop-blur-sm focus:border-purple-400 focus:ring-purple-400"
                   autoFocus
                 />
               </div>
