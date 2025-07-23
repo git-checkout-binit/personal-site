@@ -154,7 +154,8 @@ export default function BlogPost() {
                       alt="At Bangkok Muay Thai fight camp with championship belts"
                       className="w-full h-[400px] object-cover"
                       style={{
-                        filter: 'brightness(0.8) contrast(1.2) saturate(1.1)'
+                        filter: 'brightness(0.8) contrast(1.2) saturate(1.1)',
+                        objectPosition: 'center top'
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -331,14 +332,20 @@ export default function BlogPost() {
                         because it was building toward something real.
                       </p>
                       
-                      <div className="bg-gradient-to-br from-blue-500/5 to-purple-500/5 p-6 rounded-lg border border-blue-500/20 my-6">
-                        <p className="text-blue-600 font-semibold mb-2 flex items-center gap-2">
-                          <span>🥊</span> Training Reality Check
-                        </p>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
-                          During light sparring sessions, I quickly learned the difference between having a black belt in Taekwondo 
-                          and actually knowing how to fight. These guys were patient with me, but the skill gap was humbling.
-                        </p>
+                      {/* Sparring Video - YouTube Short */}
+                      <div className="relative rounded-lg overflow-hidden shadow-lg my-6 max-w-md mx-auto">
+                        <div className="relative w-full h-0 pb-[177.78%]">
+                          <iframe
+                            src="https://www.youtube.com/embed/-I_bdw2h7O8?si=0&rel=0&showinfo=0&modestbranding=1"
+                            title="Light sparring session at Bangkok Muay Thai camp"
+                            className="absolute top-0 left-0 w-full h-full border border-border rounded-lg"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen
+                          />
+                        </div>
+                        <div className="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-1 rounded text-sm z-10 pointer-events-none">
+                          Light sparring session - this is me getting schooled
+                        </div>
                       </div>
                       
                       <p className="text-muted-foreground mb-4 leading-relaxed">
