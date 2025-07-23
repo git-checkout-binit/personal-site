@@ -2,6 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import { CalendarView } from '@/components/CalendarView';
 import { Input } from '@/components/ui/input';
 import calendarData from '../../data/calendar.json';
@@ -74,7 +75,10 @@ function CalendarAuthContent() {
             {/* Funny description */}
             <div className="bg-black/20 rounded-2xl p-6 mb-6 border border-white/10">
               <p className="text-lg text-white text-center leading-relaxed">
-                Behind here is a peek at my life — where I&apos;m running, 
+                <span className="italic text-purple-200 block mb-2">
+                  &quot;They want to know where I be at, check the calendar app&quot;
+                </span>
+                Behind here is a peek at my life: where I&apos;m running, 
                 who I&apos;m celebrating with, and what I&apos;m actually up to. 
                 <span className="block mt-3 text-purple-300 font-semibold">
                   What&apos;s the passcode to see his private calendar? 🗓️
@@ -139,13 +143,13 @@ function CalendarAuthContent() {
             <p className="text-sm text-gray-500">Where I&apos;ll be and what I&apos;m up to</p>
           </div>
           <div className="flex items-center space-x-3">
-            <a
+            <Link
               href="/"
               className="text-sm text-gray-600 hover:text-gray-900 transition-colors px-3 py-1 rounded-lg hover:bg-gray-100 flex items-center space-x-1"
             >
               <span>←</span>
               <span>Back to Site</span>
-            </a>
+            </Link>
             <button
               onClick={handleSignOut}
               className="text-sm text-gray-600 hover:text-gray-900 transition-colors px-3 py-1 rounded-lg hover:bg-gray-100"
