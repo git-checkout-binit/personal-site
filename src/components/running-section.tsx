@@ -330,7 +330,9 @@ export function RunningSection() {
                 />
               </div>
               <p className="text-center text-muted-foreground font-medium px-4 sm:px-6 text-sm sm:text-base leading-relaxed">
-                Relentless consistency across 365 days
+                <span className="block sm:inline">Relentless consistency</span>
+                <span className="hidden sm:inline"> </span>
+                <span className="block sm:inline">across 365 days</span>
               </p>
             </CardHeader>
             
