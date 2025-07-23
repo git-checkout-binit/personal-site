@@ -67,7 +67,7 @@ export function Footer() {
             
             <Button variant="ghost" size="sm" asChild>
               <a 
-                href="https://www.strava.com/athletes/binit_shrestha" 
+                href="https://www.strava.com/athletes/64573648" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-[#FC4C02] transition-colors"
