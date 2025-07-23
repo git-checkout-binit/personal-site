@@ -24,9 +24,10 @@ const blogPosts = {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+  const resolvedParams = await params;
+  const post = blogPosts[resolvedParams.slug as keyof typeof blogPosts];
   
   if (!post) {
     return {
@@ -36,7 +37,7 @@ export async function generateMetadata({
   }
 
   const baseUrl = 'https://binshr.me';
-  const url = `${baseUrl}/blog/${params.slug}`;
+  const url = `${baseUrl}/blog/${resolvedParams.slug}`;
 
   return {
     title: `${post.title} | Binit Shrestha`,

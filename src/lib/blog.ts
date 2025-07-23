@@ -62,7 +62,7 @@ export function getBlogPost(slug: string): BlogPost | null {
       readingTime: readingTime(content).text,
       content,
     }
-  } catch (error) {
+  } catch {
     return null
   }
 }
