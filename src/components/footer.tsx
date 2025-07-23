@@ -120,6 +120,9 @@ export function Footer() {
           
           <div className="text-sm text-muted-foreground">
             © 2025 Binit Shrestha. All rights reserved.
+            <Link href="/calendar" className="ml-4 text-xs opacity-30 hover:opacity-100 transition-opacity">
+              📅
+            </Link>
           </div>
         </motion.div>
       </div>

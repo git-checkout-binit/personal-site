@@ -1,0 +1,37 @@
+[
+  {
+    "id": "nyc-work-1",
+    "title": "In NYC 🗽",
+    "start": "2025-01-20",
+    "end": "2025-01-24",
+    "location": "New York",
+    "note": "Working remotely from Manhattan",
+    "color": "#3B82F6"
+  },
+  {
+    "id": "boston-family",
+    "title": "Boston Trip 🦞",
+    "start": "2025-02-01",
+    "end": "2025-02-03",
+    "location": "Boston",
+    "note": "Visiting family, possible Sox game",
+    "color": "#EF4444"
+  },
+  {
+    "id": "birthday-alex",
+    "title": "Alex's Birthday 🎂",
+    "start": "2025-02-15",
+    "location": "Brooklyn",
+    "note": "Birthday dinner at that spot in Park Slope",
+    "color": "#10B981"
+  },
+  {
+    "id": "la-work",
+    "title": "LA Conference ☀️",
+    "start": "2025-03-10",
+    "end": "2025-03-13",
+    "location": "Los Angeles",
+    "note": "Tech conference + some meetings",
+    "color": "#F59E0B"
+  }
+]
