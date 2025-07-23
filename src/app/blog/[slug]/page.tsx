@@ -331,17 +331,14 @@ export default function BlogPost() {
                         because it was building toward something real.
                       </p>
                       
-                      {/* Sparring Video */}
-                      <div className="relative rounded-lg overflow-hidden shadow-lg my-6">
-                        <video
-                          src="/images/muay-thai-sparring.mov"
-                          className="w-full h-[300px] object-cover border border-border"
-                          controls
-                          preload="metadata"
-                        />
-                        <div className="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-1 rounded text-sm">
-                          Light sparring session - this is me getting schooled
-                        </div>
+                      <div className="bg-gradient-to-br from-blue-500/5 to-purple-500/5 p-6 rounded-lg border border-blue-500/20 my-6">
+                        <p className="text-blue-600 font-semibold mb-2 flex items-center gap-2">
+                          <span>🥊</span> Training Reality Check
+                        </p>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          During light sparring sessions, I quickly learned the difference between having a black belt in Taekwondo 
+                          and actually knowing how to fight. These guys were patient with me, but the skill gap was humbling.
+                        </p>
                       </div>
                       
                       <p className="text-muted-foreground mb-4 leading-relaxed">

@@ -77,28 +77,56 @@ export default function BlogPage() {
               </Button>
             </Link>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.9] mb-6">
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                THOUGHTS
-              </span>
-            </h1>
+            <div className="relative">
+              {/* Floating background elements */}
+              <div className="absolute -top-20 left-1/4 w-32 h-32 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-xl animate-pulse" />
+              <div className="absolute -top-10 right-1/3 w-24 h-24 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-xl animate-pulse delay-1000" />
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.9] mb-6 relative">
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                  THOUGHTS
+                </span>
+                <div className="absolute -right-4 -top-2 text-2xl animate-bounce delay-2000">💭</div>
+              </h1>
+            </div>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Technical insights, project journeys, and lessons learned building software in Brooklyn
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-4">
+              Stories from building things, breaking things, and learning stuff along the way
             </p>
             
-            <div className="flex items-center justify-center gap-6 mt-8 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Software Engineering
+            <p className="text-lg text-muted-foreground/80 max-w-2xl mx-auto leading-relaxed mb-8">
+              From spreadsheet chaos to Bangkok fight camps - the unexpected places where the best lessons happen
+            </p>
+            
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-8 text-sm">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 rounded-full border border-primary/20">
+                <span className="text-lg">🏗️</span>
+                <span className="text-primary font-medium">Building Things</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                Product Development
+              <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/10 to-green-500/5 px-4 py-2 rounded-full border border-green-500/20">
+                <span className="text-lg">🌱</span>
+                <span className="text-green-600 font-medium">Personal Growth</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                Brooklyn Tech Scene
+              <div className="flex items-center gap-2 bg-gradient-to-r from-orange-500/10 to-orange-500/5 px-4 py-2 rounded-full border border-orange-500/20">
+                <span className="text-lg">⚡</span>
+                <span className="text-orange-600 font-medium">Unexpected Adventures</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-blue-500/10 to-blue-500/5 px-4 py-2 rounded-full border border-blue-500/20">
+                <span className="text-lg">🧠</span>
+                <span className="text-blue-600 font-medium">Hard-Won Lessons</span>
+              </div>
+            </div>
+            
+            {/* Creative quote section */}
+            <div className="mt-12 max-w-2xl mx-auto">
+              <div className="bg-gradient-to-r from-muted/30 to-muted/10 p-6 rounded-xl border border-muted-foreground/10 relative">
+                <div className="absolute -top-3 left-6 bg-background px-3 py-1 rounded-full border border-muted-foreground/20">
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Currently Writing About</span>
+                </div>
+                <p className="text-muted-foreground leading-relaxed text-center mt-2">
+                  How a TikTok led me to train with professional fighters in Bangkok, and why Excel formulas 
+                  are somehow connected to everything I've learned about building software.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -172,20 +200,21 @@ export default function BlogPage() {
               transition={{ duration: 0.6 }}
               className="max-w-2xl mx-auto text-center"
             >
-              <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+              <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center relative">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent animate-pulse" />
+                <div className="absolute -top-2 -right-2 text-2xl animate-bounce">✨</div>
               </div>
               
-              <h2 className="text-2xl font-bold mb-4">First Thoughts Coming Soon</h2>
+              <h2 className="text-2xl font-bold mb-4">Stories Loading...</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Currently crafting the first post about building a fantasy football platform 
-                from scratch. Check back soon for technical insights and project learnings.
+                Putting together tales of spreadsheet battles, Bangkok training camps, 
+                and the weird places where the best ideas come from.
               </p>
               
               <Button asChild variant="outline">
                 <Link href="/">
                   <ArrowLeft className="w-4 h-4 mr-2" />
-                  Explore Other Work
+                  Back to Main Story
                 </Link>
               </Button>
             </motion.div>
