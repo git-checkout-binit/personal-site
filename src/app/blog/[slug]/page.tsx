@@ -639,7 +639,7 @@ export default function BlogPost() {
                   <div className="bg-muted/50 p-4 rounded">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm text-muted-foreground">Mike is drafting... (15s remaining)</span>
+                      <span className="text-sm text-muted-foreground">Sean is drafting... (15s remaining)</span>
                     </div>
                     <div className="text-sm text-muted-foreground">4 players connected • Draft pick 23/48</div>
                   </div>
@@ -671,125 +671,95 @@ export default function BlogPost() {
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                This isn&apos;t just about replacing a spreadsheet... it&apos;s about creating the playoff fantasy experience that should exist.
+                Here&apos;s the thing: this isn&apos;t just about replacing our spreadsheet. It&apos;s about building the playoff fantasy 
+                experience that should have existed all along.
               </p>
               
-              <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                Go into detail about how we can tackle it but be broad. First, we need a way to have a service that can get 
-                performance of a player, once we have that we can create a UI that can pull on this information. I want a possible 
-                solution, but I haven&apos;t started yet and I am far from it. I want to have something by next fantasy playoffs season.
+              <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+                I&apos;ve been sketching out what this could look like. Picture opening an app in January and seeing a clean, 
+                intuitive draft interface. No more group chat chaos. Real-time scoring that updates as games happen. 
+                Leaderboards that actually make sense. A playoff bracket that shows which of your players are still alive.
               </p>
 
-              {/* Tech Stack */}
+              {/* Vision Section */}
               <div className="bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 p-8 rounded-xl border border-primary/20 my-10">
-                <h3 className="text-2xl font-bold mb-6 text-primary">🛠️ What I&apos;m Building With</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-bold text-foreground mb-3">Frontend</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center gap-3 p-3 bg-blue-500/10 rounded border-l-4 border-blue-500">
-                        <strong className="text-blue-600">React + TypeScript</strong>
-                        <span className="text-muted-foreground">Good for real-time UIs</span>
-                      </div>
-                      <div className="flex items-center gap-3 p-3 bg-purple-500/10 rounded border-l-4 border-purple-500">
-                        <strong className="text-purple-600">Socket.IO</strong>
-                        <span className="text-muted-foreground">Live draft updates</span>
-                      </div>
-                      <div className="flex items-center gap-3 p-3 bg-green-500/10 rounded border-l-4 border-green-500">
-                        <strong className="text-green-600">Tailwind CSS</strong>
-                        <span className="text-muted-foreground">Quick styling</span>
-                      </div>
+                <h3 className="text-2xl font-bold mb-6 text-primary">💡 The Vision</h3>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-primary font-bold">1</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-foreground mb-2">Draft Like Pros</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Clean interface, timer-based picks, real-time updates. No more &quot;wait, who picked who?&quot;
+                      </p>
                     </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-foreground mb-3">Backend</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center gap-3 p-3 bg-yellow-500/10 rounded border-l-4 border-yellow-500">
-                        <strong className="text-yellow-600">Node.js + Express</strong>
-                        <span className="text-muted-foreground">API and websockets</span>
-                      </div>
-                      <div className="flex items-center gap-3 p-3 bg-blue-500/10 rounded border-l-4 border-blue-500">
-                        <strong className="text-blue-600">PostgreSQL</strong>
-                        <span className="text-muted-foreground">Reliable data storage</span>
-                      </div>
-                      <div className="flex items-center gap-3 p-3 bg-orange-500/10 rounded border-l-4 border-orange-500">
-                        <strong className="text-orange-600">Sports Data API</strong>
-                        <span className="text-muted-foreground">Player stats</span>
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-accent font-bold">2</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-foreground mb-2">Live Everything</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Scores update automatically. Leaderboards refresh in real-time. No more manual spreadsheet hell.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-green-600 font-bold">3</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-foreground mb-2">Playoff-First Design</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Built specifically for playoff dynamics. Elimination tracking, bracket integration, the works.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Current Progress */}
+              <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+                I&apos;m targeting January 2026 for launch. That gives me almost a year to build something that actually works well. 
+                My friends will be the beta testers, but the goal is to create something any group can use.
+              </p>
+
+              {/* Reality Check */}
               <div className="bg-muted/30 p-8 rounded-xl border my-10">
-                <h3 className="text-2xl font-bold mb-6 text-foreground">📈 Where I&apos;m At</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-green-600 flex items-center gap-2">
-                      <span>✅</span> Working
-                    </h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• User authentication and league creation</li>
-                      <li>• Player database with current NFL rosters</li>
-                      <li>• Draft system with snake draft logic</li>
-                      <li>• Basic team management interface</li>
-                    </ul>
-                  </div>
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-orange-600 flex items-center gap-2">
-                      <span>🚧</span> Building Now
-                    </h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Live scoring with sports data API</li>
-                      <li>• Real-time leaderboard updates</li>
-                      <li>• Mobile-friendly draft interface</li>
-                      <li>• Playoff bracket view</li>
-                    </ul>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-bold mb-6 text-foreground">🎯 The Reality</h3>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  I haven&apos;t written the first line of code yet. But I&apos;ve spent enough time researching the technical challenges 
+                  to know it&apos;s doable. The hardest parts will be reliable sports data integration and handling real-time draft coordination.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  The market research is done (turns out, it really doesn&apos;t exist). The user research is done (me and my friends, 
+                  suffering through spreadsheets for years). Now it&apos;s time to build.
+                </p>
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">🎯</span> What&apos;s Next
+                <span className="text-4xl">📈</span> What Success Looks Like
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                I&apos;m building this in the open and documenting what I learn. My friend group is testing it, 
-                but it should work for anyone who wants better playoff fantasy.
+                Success isn&apos;t competing with DraftKings. Success is next January when my friends open the app instead 
+                of starting a group text. When other friend groups discover it and realize playoff fantasy doesn&apos;t have to suck.
               </p>
 
-              {/* Roadmap */}
-              <div className="space-y-4 my-8">
-                <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg border-l-4 border-primary">
-                  <span className="text-2xl">🎮</span>
-                  <div>
-                    <h4 className="font-bold text-primary">Next Post: Real-time Draft System</h4>
-                    <p className="text-sm text-muted-foreground">How WebSockets work for live drafting, handling disconnections, and timer logic</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 bg-accent/5 rounded-lg border-l-4 border-accent">
-                  <span className="text-2xl">📊</span>
-                  <div>
-                    <h4 className="font-bold text-accent">Solving the Player Stats Problem</h4>
-                    <p className="text-sm text-muted-foreground">How I got reliable sports data working properly</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 bg-green-500/5 rounded-lg border-l-4 border-green-500">
-                  <span className="text-2xl">👥</span>
-                  <div>
-                    <h4 className="font-bold text-green-600">Testing with Real Users</h4>
-                    <p className="text-sm text-muted-foreground">What we learned when my friends used it during actual playoffs</p>
-                  </div>
-                </div>
-              </div>
-              
+              <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+                If I can solve this problem well for 50 groups in year one, that&apos;s a win. If it grows from there, even better. 
+                But first, I need to build something that actually works.
+              </p>
+
+              {/* Follow the Journey */}
               <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-xl border border-primary/20 my-10">
                 <div className="text-center">
-                  <h4 className="text-2xl font-bold text-primary mb-4">Want to Try It?</h4>
+                  <h4 className="text-2xl font-bold text-primary mb-4">Follow the Build</h4>
                   <p className="text-muted-foreground mb-6">
-                    Looking for groups interested in better playoff fantasy. No more spreadsheets, 
-                    no more manual updates, no more chaos in group chats.
+                    I&apos;m documenting this entire process. The technical decisions, the setbacks, the breakthroughs. 
+                    If you&apos;re interested in the journey, let&apos;s connect.
                   </p>
                   <div className="flex flex-wrap gap-4 justify-center">
                     <a 
@@ -798,7 +768,7 @@ export default function BlogPost() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-primary hover:bg-accent text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                     >
-                      <span>💬</span> Message me on LinkedIn
+                      <span>💬</span> Connect on LinkedIn
                     </a>
                   </div>
                 </div>
