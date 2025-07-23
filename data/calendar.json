@@ -10,38 +10,84 @@
     "display": "background"
   },
   {
-    "id": "rhode-island-trip",
-    "title": "Rhode Island 🏖️",
-    "start": "2025-08-23",
-    "end": "2025-08-24",
-    "location": "Rhode Island",
-    "note": "Weekend getaway",
-    "color": "#06B6D4"
+    "id": "brooklyn-mile",
+    "title": "Brooklyn Mile 🏃‍♂️",
+    "start": "2025-08-03",
+    "location": "Brooklyn",
+    "note": "Race day - 1 mile sprint",
+    "color": "#EF4444",
+    "type": "race"
   },
   {
-    "id": "birthday-alex",
-    "title": "Alex's Birthday 🎂",
-    "start": "2025-02-15",
-    "location": "Brooklyn",
-    "note": "Birthday dinner at that spot in Park Slope",
+    "id": "mass-visit-home",
+    "title": "Visit Home 🏠",
+    "start": "2025-08-14",
+    "end": "2025-08-22",
+    "location": "Massachusetts",
+    "note": "Family time - still planning details",
     "color": "#10B981"
   },
   {
-    "id": "boston-family",
-    "title": "Boston Trip 🦞",
-    "start": "2025-09-15",
-    "end": "2025-09-17",
-    "location": "Boston",
-    "note": "Visiting family, possible Sox game",
-    "color": "#EF4444"
+    "id": "jared-wedding",
+    "title": "Jared's Wedding 💒",
+    "start": "2025-08-22",
+    "end": "2025-08-23",
+    "location": "Rhode Island",
+    "note": "Wedding celebration weekend",
+    "color": "#F59E0B"
   },
   {
-    "id": "thanksgiving-travel",
-    "title": "Thanksgiving 🦃",
-    "start": "2025-11-27",
-    "end": "2025-11-30",
-    "location": "Family Visit",
-    "note": "Annual family gathering",
+    "id": "bronx-10-mile-volunteer",
+    "title": "Bronx 10 Mile Volunteer 🙋‍♂️",
+    "start": "2025-09-14",
+    "location": "Bronx",
+    "note": "Volunteering at the race - helping runners",
+    "color": "#8B5CF6",
+    "type": "volunteer"
+  },
+  {
+    "id": "nicky-wedding",
+    "title": "Nicky's Wedding 💍",
+    "start": "2025-09-20",
+    "end": "2025-09-21",
+    "location": "Massachusetts",
+    "note": "Another wedding celebration",
     "color": "#F59E0B"
+  },
+  {
+    "id": "jersey-city-5k",
+    "title": "Jersey City 5K 🏃‍♂️",
+    "start": "2025-10-05",
+    "location": "Jersey City",
+    "note": "5K race across the Hudson",
+    "color": "#EF4444",
+    "type": "race"
+  },
+  {
+    "id": "chicago-marathon-trip",
+    "title": "Chicago Marathon Trip ✈️",
+    "start": "2025-10-09",
+    "end": "2025-10-13",
+    "location": "Illinois",
+    "note": "Marathon weekend in the Windy City",
+    "color": "#06B6D4"
+  },
+  {
+    "id": "chicago-marathon",
+    "title": "Chicago Marathon 🏃‍♂️",
+    "start": "2025-10-12",
+    "location": "Chicago",
+    "note": "26.2 miles through Chicago - race day!",
+    "color": "#EF4444",
+    "type": "race"
+  },
+  {
+    "id": "west-palm-beach-marathon",
+    "title": "West Palm Beach Marathon 🏃‍♂️",
+    "start": "2025-12-14",
+    "location": "West Palm Beach",
+    "note": "Marathon in sunny Florida",
+    "color": "#EF4444",
+    "type": "race"
   }
 ]

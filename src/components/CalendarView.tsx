@@ -14,6 +14,7 @@ interface CalendarEvent {
   note: string;
   color: string;
   display?: string;
+  type?: 'race' | 'volunteer';
 }
 
 interface CalendarViewProps {
@@ -94,6 +95,24 @@ export function CalendarView({ events }: CalendarViewProps) {
     }
   };
 
+  const getEventIcon = (event: CalendarEvent) => {
+    if (event.type === 'race') return '🏃‍♂️';
+    if (event.type === 'volunteer') return '🙋‍♂️';
+    if (event.title.includes('Wedding')) return '💒';
+    if (event.title.includes('Home')) return '🏠';
+    if (event.title.includes('Marathon Trip')) return '✈️';
+    return '📍';
+  };
+
+  const getEventGradient = (event: CalendarEvent) => {
+    if (event.type === 'race') return 'from-red-500 to-orange-500';
+    if (event.type === 'volunteer') return 'from-purple-500 to-pink-500';
+    if (event.title.includes('Wedding')) return 'from-yellow-400 to-orange-400';
+    if (event.title.includes('Home')) return 'from-green-500 to-emerald-500';
+    if (event.title.includes('Marathon Trip')) return 'from-cyan-500 to-blue-500';
+    return 'from-gray-500 to-gray-600';
+  };
+
   if (isMobile) {
     return (
       <div className="max-w-2xl mx-auto px-4">
@@ -114,14 +133,39 @@ export function CalendarView({ events }: CalendarViewProps) {
           
           <div className="space-y-4">
             {getUpcomingEvents().map((event) => (
-              <div key={event.id} className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="text-base font-medium text-gray-900">{event.location}</div>
-                  <div className="text-sm text-gray-500 font-mono">
-                    {formatDateRange(event.start, event.end)}
+              <div key={event.id} className="relative overflow-hidden bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                {/* Gradient accent bar */}
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${getEventGradient(event)}`}></div>
+                
+                <div className="p-5">
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="flex items-center space-x-3">
+                      <div className="text-2xl">{getEventIcon(event)}</div>
+                      <div>
+                        <div className="text-lg font-semibold text-gray-900">{event.location}</div>
+                        {event.type === 'race' && (
+                          <div className="inline-block px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full mt-1">
+                            RACE DAY
+                          </div>
+                        )}
+                        {event.type === 'volunteer' && (
+                          <div className="inline-block px-2 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full mt-1">
+                            VOLUNTEER
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm text-gray-500 font-mono">
+                        {formatDateRange(event.start, event.end)}
+                      </div>
+                      {event.type === 'race' && (
+                        <div className="text-xs text-red-600 font-medium mt-1">🏆 Competition</div>
+                      )}
+                    </div>
                   </div>
+                  <div className="text-sm text-gray-600 leading-relaxed">{event.note}</div>
                 </div>
-                <div className="text-sm text-gray-600">{event.note}</div>
               </div>
             ))}
           </div>
@@ -156,12 +200,25 @@ export function CalendarView({ events }: CalendarViewProps) {
           ref={calendarRef}
           plugins={[dayGridPlugin, interactionPlugin]}
           initialView="dayGridMonth"
-          events={events.map(event => ({
-            ...event,
-            color: event.display === 'background' ? '#f8f9fa' : '#000000',
-            textColor: event.display === 'background' ? '#9ca3af' : '#ffffff',
-            borderColor: event.display === 'background' ? 'transparent' : '#000000',
-          }))}
+          events={events.map(event => {
+            let eventColor = '#000000';
+            if (event.display === 'background') {
+              eventColor = '#f8f9fa';
+            } else if (event.type === 'race') {
+              eventColor = '#EF4444';
+            } else if (event.type === 'volunteer') {
+              eventColor = '#8B5CF6';
+            } else {
+              eventColor = event.color;
+            }
+            
+            return {
+              ...event,
+              color: eventColor,
+              textColor: event.display === 'background' ? '#9ca3af' : '#ffffff',
+              borderColor: event.display === 'background' ? 'transparent' : eventColor,
+            };
+          })}
           eventClick={handleEventClick}
           headerToolbar={{
             left: '',
