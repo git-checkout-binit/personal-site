@@ -76,7 +76,7 @@ function CalendarAuthContent() {
             <div className="bg-black/20 rounded-2xl p-6 mb-6 border border-white/10">
               <p className="text-lg text-white text-center leading-relaxed">
                 <span className="text-white block mb-2 text-2xl font-light">
-                  &quot;Enjoy right now, today&quot;
+                  &quot;I swear Stand out guy, him don&apos;t need no chair&quot;
                 </span>
                 <span className="text-gray-300 text-sm block mb-4">
                   - Tyler, the Creator
