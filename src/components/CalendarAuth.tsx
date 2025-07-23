@@ -79,7 +79,7 @@ function CalendarAuthContent() {
                   &quot;I swear stand out guy, him don&apos;t need no chair&quot;
                 </span>
                 <span className="text-gray-300 text-sm block mb-4">
-                  - Tyler, the Creator
+                  - Tyler, The Creator (referencing me obviously)
                 </span>
                 <span className="block mt-3 text-purple-300 font-semibold">
                   What&apos;s the passcode to see his private calendar? 🗓️
