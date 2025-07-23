@@ -58,8 +58,8 @@ export default function BlogPage() {
         author: 'Binit Shrestha',
         tags: ['Travel', 'Martial Arts', 'Personal Growth', 'Bangkok', 'Challenge'],
         readingTime: '6 min read',
-        image: '/images/muay-thai-belts.jpg',
-        imageAlt: 'Binit Shrestha at Bangkok Muay Thai fight camp with championship belts'
+        image: '/images/muay-thai-group.jpg',
+        imageAlt: 'Group photo with Muay Thai fighters including Petchmorakot Petchyindee'
       },
       {
         slug: 'nfl-fantasy-spreadsheet-to-web',
@@ -149,7 +149,7 @@ export default function BlogPage() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         style={{
                           filter: 'brightness(0.9) contrast(1.1) saturate(1.05)',
-                          objectPosition: post.slug === 'muay-thai-bangkok-fight-camp' ? 'center 40%' : 'center 60%'
+                          objectPosition: post.slug === 'muay-thai-bangkok-fight-camp' ? 'center center' : 'center 20%'
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

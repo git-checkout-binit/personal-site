@@ -8,7 +8,7 @@ const blogPosts = {
     author: 'Binit Shrestha',
     tags: ['Travel', 'Martial Arts', 'Personal Growth', 'Bangkok', 'Challenge', 'Muay Thai', 'Training'],
     readingTime: '6 min read',
-    image: '/images/muay-thai-belts.jpg'
+    image: '/images/muay-thai-group.jpg'
   },
   'nfl-fantasy-spreadsheet-to-web': {
     title: 'From Spreadsheet Chaos to Web Platform: Building NFL Playoff Fantasy',
