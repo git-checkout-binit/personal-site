@@ -13,6 +13,7 @@ interface CalendarEvent {
   location: string;
   note: string;
   color: string;
+  display?: string;
 }
 
 interface CalendarViewProps {
@@ -22,10 +23,23 @@ interface CalendarViewProps {
 export function CalendarView({ events }: CalendarViewProps) {
   const calendarRef = useRef<FullCalendar>(null);
 
-  // Find current location based on today's date
+  // Find current location based on today's date (excluding background events)
   const getCurrentLocationEvent = () => {
     const today = new Date().toISOString().split('T')[0];
+    
+    // First check for specific events (non-background)
+    const specificEvent = events.find(event => {
+      if (event.display === 'background') return false;
+      const eventStart = event.start;
+      const eventEnd = event.end || event.start;
+      return today >= eventStart && today <= eventEnd;
+    });
+    
+    if (specificEvent) return specificEvent;
+    
+    // If no specific event, check background events (like NYC default)
     return events.find(event => {
+      if (event.display !== 'background') return false;
       const eventStart = event.start;
       const eventEnd = event.end || event.start;
       return today >= eventStart && today <= eventEnd;
@@ -65,12 +79,16 @@ export function CalendarView({ events }: CalendarViewProps) {
       {/* Legend */}
       <div className="mb-6 flex flex-wrap gap-3 justify-center">
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 bg-blue-500 rounded"></div>
-          <span className="text-sm text-muted-foreground">Work Travel</span>
+          <div className="w-3 h-3 bg-gray-500 rounded"></div>
+          <span className="text-sm text-muted-foreground">Home Base (NYC)</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 bg-cyan-500 rounded"></div>
+          <span className="text-sm text-muted-foreground">Travel</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 bg-red-500 rounded"></div>
-          <span className="text-sm text-muted-foreground">Personal</span>
+          <span className="text-sm text-muted-foreground">Family</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 bg-green-500 rounded"></div>
@@ -78,7 +96,7 @@ export function CalendarView({ events }: CalendarViewProps) {
         </div>
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 bg-yellow-500 rounded"></div>
-          <span className="text-sm text-muted-foreground">Conferences</span>
+          <span className="text-sm text-muted-foreground">Holidays</span>
         </div>
       </div>
 
@@ -102,8 +120,30 @@ export function CalendarView({ events }: CalendarViewProps) {
           eventMouseEnter={(info) => {
             info.el.style.cursor = 'pointer';
           }}
-          dayCellClassNames="hover:bg-muted/50 transition-colors"
+          dayCellClassNames={(arg) => {
+            const today = new Date();
+            const cellDate = arg.date;
+            const isToday = cellDate.toDateString() === today.toDateString();
+            const isPast = cellDate < today && !isToday;
+            
+            let classes = 'hover:bg-muted/50 transition-colors';
+            if (isPast) {
+              classes += ' opacity-40 bg-muted/20';
+            }
+            return classes;
+          }}
           eventClassNames="cursor-pointer hover:opacity-80 transition-opacity"
+          dayCellDidMount={(arg) => {
+            const today = new Date();
+            const cellDate = arg.date;
+            const isToday = cellDate.toDateString() === today.toDateString();
+            const isPast = cellDate < today && !isToday;
+            
+            if (isPast) {
+              arg.el.style.color = '#9CA3AF';
+              arg.el.style.backgroundColor = 'rgba(156, 163, 175, 0.1)';
+            }
+          }}
         />
       </div>
 

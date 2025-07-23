@@ -1,21 +1,22 @@
 [
   {
-    "id": "nyc-work-1",
+    "id": "nyc-default",
     "title": "In NYC 🗽",
-    "start": "2025-01-20",
-    "end": "2025-01-24",
+    "start": "2025-01-01",
+    "end": "2025-12-31",
     "location": "New York",
-    "note": "Working remotely from Manhattan",
-    "color": "#3B82F6"
+    "note": "Home base - working from Brooklyn/Manhattan",
+    "color": "#6B7280",
+    "display": "background"
   },
   {
-    "id": "boston-family",
-    "title": "Boston Trip 🦞",
-    "start": "2025-02-01",
-    "end": "2025-02-03",
-    "location": "Boston",
-    "note": "Visiting family, possible Sox game",
-    "color": "#EF4444"
+    "id": "rhode-island-trip",
+    "title": "Rhode Island 🏖️",
+    "start": "2025-08-23",
+    "end": "2025-08-24",
+    "location": "Rhode Island",
+    "note": "Weekend getaway",
+    "color": "#06B6D4"
   },
   {
     "id": "birthday-alex",
@@ -26,12 +27,21 @@
     "color": "#10B981"
   },
   {
-    "id": "la-work",
-    "title": "LA Conference ☀️",
-    "start": "2025-03-10",
-    "end": "2025-03-13",
-    "location": "Los Angeles",
-    "note": "Tech conference + some meetings",
+    "id": "boston-family",
+    "title": "Boston Trip 🦞",
+    "start": "2025-09-15",
+    "end": "2025-09-17",
+    "location": "Boston",
+    "note": "Visiting family, possible Sox game",
+    "color": "#EF4444"
+  },
+  {
+    "id": "thanksgiving-travel",
+    "title": "Thanksgiving 🦃",
+    "start": "2025-11-27",
+    "end": "2025-11-30",
+    "location": "Family Visit",
+    "note": "Annual family gathering",
     "color": "#F59E0B"
   }
 ]
