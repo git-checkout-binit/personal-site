@@ -74,8 +74,8 @@ function CalendarAuthContent() {
             {/* Funny description */}
             <div className="bg-black/20 rounded-2xl p-6 mb-6 border border-white/10">
               <p className="text-lg text-white text-center leading-relaxed">
-                This is where I spill all my business — races I&apos;m running, 
-                weddings I&apos;m crashing, and places I&apos;m pretending to be productive at. 
+                Behind here is a peek at my life — where I&apos;m running, 
+                who I&apos;m celebrating with, and what I&apos;m actually up to. 
                 <span className="block mt-3 text-purple-300 font-semibold">
                   What&apos;s the passcode to see his private calendar? 🗓️
                 </span>
@@ -110,12 +110,6 @@ function CalendarAuthContent() {
               )}
             </form>
 
-            {/* Footer hint */}
-            <div className="mt-6 text-center">
-              <p className="text-sm text-purple-300 opacity-75">
-                Hint: You probably already know this one 😉
-              </p>
-            </div>
           </div>
 
           {/* Decorative elements */}
@@ -129,9 +123,34 @@ function CalendarAuthContent() {
     );
   }
 
+  const handleSignOut = () => {
+    setIsAuthenticated(false);
+    sessionStorage.removeItem('calendar_authenticated');
+    setInputKey('');
+  };
+
   return (
-    <div className="min-h-screen bg-background p-6">
-      <CalendarView events={calendarData as CalendarEvent[]} />
+    <div className="min-h-screen bg-background">
+      {/* Header with Sign Out */}
+      <div className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div>
+            <h1 className="text-2xl font-light text-gray-900">Calendar</h1>
+            <p className="text-sm text-gray-500">Where I&apos;ll be and what I&apos;m up to</p>
+          </div>
+          <button
+            onClick={handleSignOut}
+            className="text-sm text-gray-600 hover:text-gray-900 transition-colors px-3 py-1 rounded-lg hover:bg-gray-100"
+          >
+            Sign Out
+          </button>
+        </div>
+      </div>
+      
+      {/* Calendar Content */}
+      <div className="p-6">
+        <CalendarView events={calendarData as CalendarEvent[]} />
+      </div>
     </div>
   );
 }
