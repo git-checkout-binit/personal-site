@@ -155,7 +155,7 @@ export default function BlogPost() {
                       className="w-full h-[400px] object-cover"
                       style={{
                         filter: 'brightness(0.8) contrast(1.2) saturate(1.1)',
-                        objectPosition: 'center top'
+                        objectPosition: 'center 30%'
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -270,6 +270,9 @@ export default function BlogPost() {
                           src="/images/muay-thai-morning-run.jpg"
                           alt="Morning run with Muay Thai fighters in Bangkok"
                           className="w-full h-[300px] object-cover border border-border"
+                          style={{
+                            objectPosition: 'center 40%'
+                          }}
                         />
                       </div>
                       
@@ -344,7 +347,7 @@ export default function BlogPost() {
                           />
                         </div>
                         <div className="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-1 rounded text-sm z-10 pointer-events-none">
-                          Light sparring session - this is me getting schooled
+                          Pad work session - this is me learning the basics
                         </div>
                       </div>
                       
