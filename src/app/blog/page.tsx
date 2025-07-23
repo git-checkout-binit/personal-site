@@ -125,7 +125,7 @@ export default function BlogPage() {
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-center mt-2">
                   How a TikTok led me to train with professional fighters in Bangkok, and why Excel formulas 
-                  are somehow connected to everything I've learned about building software.
+                  are somehow connected to everything I&apos;ve learned about building software.
                 </p>
               </div>
             </div>
