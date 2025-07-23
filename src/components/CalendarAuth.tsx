@@ -75,8 +75,11 @@ function CalendarAuthContent() {
             {/* Funny description */}
             <div className="bg-black/20 rounded-2xl p-6 mb-6 border border-white/10">
               <p className="text-lg text-white text-center leading-relaxed">
-                <span className="text-white block mb-6 text-2xl font-light">
-                  Enjoy right now, today
+                <span className="text-white block mb-2 text-2xl font-light">
+                  &quot;Enjoy right now, today&quot;
+                </span>
+                <span className="text-gray-300 text-sm block mb-4">
+                  - Tyler, the Creator
                 </span>
                 <span className="block mt-3 text-purple-300 font-semibold">
                   What&apos;s the passcode to see his private calendar? 🗓️
