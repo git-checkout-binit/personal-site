@@ -41,7 +41,7 @@ export default function BlogPost() {
       setPost({
         slug: 'nfl-fantasy-spreadsheet-to-web',
         title: 'From Spreadsheet Chaos to Web Platform: Building NFL Playoff Fantasy',
-        description: 'The story of building a fantasy football platform for NFL playoffs after discovering nothing like it exists. From complex Excel formulas to a full-stack web application.',
+        description: 'The story of building a fantasy football platform for NFL playoffs after discovering nothing like it exists. From complex spreadsheet formulas to a possible full-stack web application.',
         date: '2025-01-22',
         author: 'Binit Shrestha',
         tags: ['React', 'Full-stack', 'Sports Data', 'Product Development', 'Node.js'],
@@ -386,123 +386,135 @@ export default function BlogPost() {
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">🏈</span> Why This Started
+                <span className="text-4xl">🏈</span> The Annual Ritual
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                Every January we try to do fantasy football for the NFL playoffs. The regular season ends, but the best games 
-                are just starting. Problem is, there&apos;s nothing out there for playoff fantasy.
+                Every January, the same thing happens. My friends and I gather around (virtually) for one of 
+                our favorite traditions: the NFL Playoff Fantasy Draft.
               </p>
               
               <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
-                So we improvise. Someone creates a group text and we just start calling out players. &quot;I want Josh Allen.&quot; 
-                &quot;Taking CMC.&quot; &quot;Is Mahomes gone already?&quot; It works but it&apos;s messy.
+                Picture this: We jump in a group chat and just start rattling off player names. &quot;I&apos;ll take Josh Allen!&quot; 
+                &quot;Dibs on CMC!&quot; &quot;Is Mahomes still available?&quot; It&apos;s chaotic, it&apos;s fun, and it&apos;s completely unorganized.
               </p>
 
               {/* Group Chat Screenshot Mockup */}
               <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-xl border border-primary/20 my-8">
-                <h4 className="font-bold text-lg mb-4 text-primary">📱 How We Actually Draft</h4>
+                <h4 className="font-bold text-lg mb-4 text-primary">📱 Our Draft &quot;Process&quot;</h4>
                 <div className="space-y-3 font-mono text-sm">
                   <div className="bg-blue-500/10 p-3 rounded-lg border-l-4 border-blue-500">
-                    <strong className="text-blue-400">Mike:</strong> I got Josh Allen first!
+                    <strong className="text-blue-400">Zack:</strong> I got Josh Allen first!
                   </div>
                   <div className="bg-green-500/10 p-3 rounded-lg border-l-4 border-green-500">
-                    <strong className="text-green-400">Sarah:</strong> Wait who picked CMC?? 
+                    <strong className="text-green-400">Sean:</strong> Wait who picked CMC?? 
                   </div>
                   <div className="bg-orange-500/10 p-3 rounded-lg border-l-4 border-orange-500">
                     <strong className="text-orange-400">Binit:</strong> Hold up let me check the spreadsheet...
                   </div>
                   <div className="bg-red-500/10 p-3 rounded-lg border-l-4 border-red-500">
-                    <strong className="text-red-400">Jake:</strong> This is chaos lol
+                    <strong className="text-red-400">Nate:</strong> This is chaos and I&apos;m a dad lol
                   </div>
                 </div>
               </div>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                After everyone picks their players in the group chat, I get stuck turning this mess into 
-                something trackable. Usually that means Excel.
+                Then comes my job: taking this beautiful mess and somehow turning it into a functional fantasy league 
+                using the most sophisticated tool known to mankind... Google Sheets.
               </p>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">📊</span> The Excel Problem
+                <span className="text-4xl">📊</span> Spreadsheet Hell
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                What should be simple becomes complicated fast. You need to track who drafted who, calculate scores 
-                for each game, update standings, and somehow make it not terrible to use.
+                What started as &quot;just track who has which players&quot; quickly evolved into a monster of spreadsheet engineering. 
+                We&apos;re talking multiple sheets, complex formulas, and enough conditional formatting to make a data analyst cry.
               </p>
 
               {/* Spreadsheet Breakdown */}
-              <div className="grid md:grid-cols-2 gap-6 my-10">
+              <div className="space-y-8 my-10">
                 <div className="bg-muted/50 p-6 rounded-lg border">
-                  <h4 className="font-bold text-primary mb-3">📋 Draft Sheet</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Copy player names from group chat</li>
-                    <li>• Color-code cells by team owner</li>
-                    <li>• Track positions (QB, RB, WR)</li>
-                    <li>• Try to remember draft order</li>
+                  <h4 className="font-bold text-primary mb-3">📋 Draft Tracker Sheet</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground mb-4">
+                    <li>• Player names manually typed from group chat</li>
+                    <li>• Color-coded cells for each team owner</li>
+                    <li>• Position tracking (QB, RB, WR, etc.)</li>
+                    <li>• Draft order reconstruction</li>
                   </ul>
+                  <div className="relative rounded-lg overflow-hidden shadow-lg">
+                    <img
+                      src="/images/fantasy-draft.png"
+                      alt="Fantasy football draft tracking spreadsheet"
+                      className="w-full object-cover border border-border"
+                    />
+                  </div>
                 </div>
-                <div className="bg-muted/50 p-6 rounded-lg border">
-                  <h4 className="font-bold text-primary mb-3">🎯 Scoring Sheet</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Passing TD: 4 points</li>
-                    <li>• Rushing/Receiving TD: 6 points</li>
-                    <li>• Interceptions: -2 points</li>
-                    <li>• Yards: 1 point per 10</li>
-                  </ul>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-muted/50 p-6 rounded-lg border">
+                    <h4 className="font-bold text-primary mb-3">🎯 Scoring Sheet + Leaderboard Sheet</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li>• Scoring formulas for each player performance</li>
+                      <li>• Live calculated team totals</li>
+                      <li>• Ranking by total points</li>
+                      <li>• Week-by-week progression</li>
+                      <li>• Victory celebration zone</li>
+                    </ul>
+                  </div>
+                  <div className="relative rounded-lg overflow-hidden shadow-lg">
+                    <img
+                      src="/images/fantasy-scores.png"
+                      alt="Fantasy football scoring and leaderboard spreadsheet"
+                      className="w-full object-cover border border-border"
+                    />
+                  </div>
                 </div>
+
                 <div className="bg-muted/50 p-6 rounded-lg border">
-                  <h4 className="font-bold text-primary mb-3">📈 Stats Sheet</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Manual entry after each game</li>
-                    <li>• Look up individual stats</li>
-                    <li>• Update game by game</li>
-                    <li>• Takes forever</li>
+                  <h4 className="font-bold text-primary mb-3">📈 Performance Tracker</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground mb-4">
+                    <li>• Manual data entry after each game</li>
+                    <li>• Individual player statistics</li>
+                    <li>• Game-by-game breakdown</li>
+                    <li>• We take turns updating this (painful!)</li>
                   </ul>
-                </div>
-                <div className="bg-muted/50 p-6 rounded-lg border">
-                  <h4 className="font-bold text-primary mb-3">🏆 Standings Sheet</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Calculate team totals</li>
-                    <li>• Sort by points</li>
-                    <li>• Week over week tracking</li>
-                    <li>• Hope formulas don&apos;t break</li>
-                  </ul>
+                  <div className="relative rounded-lg overflow-hidden shadow-lg">
+                    <img
+                      src="/images/fantasy-data.png"
+                      alt="Fantasy football player data tracking spreadsheet"
+                      className="w-full object-cover border border-border"
+                    />
+                  </div>
                 </div>
               </div>
               
               <div className="bg-muted p-6 rounded-lg overflow-x-auto mb-8 border border-border relative">
                 <div className="absolute top-2 right-2 text-xs text-muted-foreground bg-muted-foreground/10 px-2 py-1 rounded">
-                  playoff_fantasy_2024.xlsx
+                  excel_nightmare.xlsx
                 </div>
                 <code className="text-sm font-mono text-primary block leading-relaxed">
-                  =IF(AND(VLOOKUP(B2,PlayerStats!$A:$Z,15,FALSE)&gt;0,<br/>
-                  &nbsp;&nbsp;VLOOKUP(B2,PlayerStats!$A:$Z,2,FALSE)=$C$1),<br/>
-                  &nbsp;&nbsp;VLOOKUP(B2,PlayerStats!$A:$Z,15,FALSE)*<br/>
-                  &nbsp;&nbsp;INDEX(ScoringRules!$D:$D,MATCH(&quot;TD&quot;,ScoringRules!$C:$C,0))+<br/>
-                  &nbsp;&nbsp;(VLOOKUP(B2,PlayerStats!$A:$Z,12,FALSE)/10),<br/>
-                  &nbsp;&nbsp;&quot;Player not active&quot;)
+                  ===(E39*&apos;Main Page&apos;!$B$8)+(F39*&apos;Main Page&apos;!$B$9)+(G39*&apos;Main Page&apos;!$B$10)+(H39*&apos;Main Page&apos;!$B$11)+(I39*&apos;Main Page&apos;!$B$12)+(J39*&apos;Main Page&apos;!$B$13)+(K39*&apos;Main Page&apos;!$B$14)+(L39*&apos;Main Page&apos;!$B$15)+(M39*&apos;Main Page&apos;!$B$16)+(N39*&apos;Main Page&apos;!$B$17)+(2*O39)
                 </code>
               </div>
               
               <p className="text-lg leading-relaxed mb-8 text-muted-foreground italic text-center">
-                This is a real formula from our spreadsheet. It works but barely.
+                ↑ This is an actual formula from our spreadsheet. I&apos;m not proud of it, but it works.
               </p>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">🔍</span> Looking for Alternatives
+                <span className="text-4xl">🔍</span> The Search for Sanity
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                Before building anything, I spent time looking for existing options. 
-                Maybe someone already solved playoff fantasy football?
+                Before deciding to build something from scratch, I did what any reasonable person would do: 
+                I spent hours searching for existing solutions. Surely someone else has solved playoff fantasy football, right?
               </p>
 
               {/* Platform Comparison */}
               <div className="bg-gradient-to-br from-red-500/5 to-red-500/10 p-8 rounded-xl border border-red-500/20 my-8">
                 <h4 className="font-bold text-xl mb-6 text-red-500 flex items-center gap-2">
-                  <span>❌</span> What I Found
+                  <span>❌</span> The Great Platform Search
                 </h4>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-center justify-between py-2 border-b border-red-500/20">
@@ -511,66 +523,70 @@ export default function BlogPost() {
                   </div>
                   <div className="flex items-center justify-between py-2 border-b border-red-500/20">
                     <strong className="text-red-600">FanDuel</strong>
-                    <span className="text-sm text-muted-foreground">Some contests but inconsistent</span>
+                    <span className="text-sm text-muted-foreground">Occasional contests</span>
                   </div>
                   <div className="flex items-center justify-between py-2 border-b border-red-500/20">
                     <strong className="text-red-600">ESPN Fantasy</strong>
-                    <span className="text-sm text-muted-foreground">Ends before playoffs</span>
+                    <span className="text-sm text-muted-foreground">Season ends pre-playoffs</span>
                   </div>
                   <div className="flex items-center justify-between py-2 border-b border-red-500/20">
                     <strong className="text-red-600">Yahoo Fantasy</strong>
-                    <span className="text-sm text-muted-foreground">Same problem</span>
+                    <span className="text-sm text-muted-foreground">Same story</span>
                   </div>
                 </div>
                 <p className="text-red-600 font-semibold mt-4 text-center">
-                  Nothing focused specifically on playoff fantasy
+                  Result: <span className="text-2xl">🤷‍♂️</span> NOTHING exists for playoff-specific fantasy
                 </p>
               </div>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                This surprised me. The playoffs are when the best games happen. Casual fans actually watch. 
-                Big performances matter more. But all the major platforms basically stop at the regular season.
+                This blew my mind. The NFL playoffs are the most exciting games of the year. 
+                This is when casual fans tune in, when legendary performances happen, when careers are made. 
+                Yet every major fantasy platform just... gives up?
               </p>
               
-              <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                After looking everywhere, I realized there just isn&apos;t a good solution for what we want to do. 
-                That started me thinking about building something myself.
-              </p>
+              <div className="bg-primary/5 p-6 rounded-lg border border-primary/20 my-8">
+                <h4 className="text-primary font-bold text-lg mb-3">💡 The Market Gap</h4>
+                <p className="text-muted-foreground">
+                  Most fantasy platforms end before playoffs begin, despite playoffs being when casual fans are 
+                  most engaged and player performances are most memorable. This felt like a real opportunity.
+                </p>
+              </div>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">⚔️</span> Technical Reality Check
+                <span className="text-4xl">⚔️</span> Why This Is Actually Hard
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                Building this properly is more complicated than it first seems. The basic idea is simple, 
-                but there are some real technical problems to solve.
+                &quot;Just build a fantasy app&quot; sounds simple until you realize what you&apos;re actually building. 
+                This isn&apos;t just another CRUD app and there are some genuinely challenging technical problems here.
               </p>
 
               {/* Technical Challenges */}
               <div className="space-y-6 my-10">
                 <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 p-6 rounded-lg border-l-4 border-orange-500">
                   <h4 className="font-bold text-orange-600 mb-3 flex items-center gap-2">
-                    <span>🕷️</span> Getting Player Data
+                    <span>🕷️</span> Web Scraping Nightmare
                   </h4>
                   <p className="text-muted-foreground mb-3">
-                    Getting reliable game stats is harder than expected. Sites like ESPN and NFL.com use random 
-                    IDs for players that change unpredictably. Scraping becomes a nightmare.
+                    Player data for individual games is surprisingly hard to get reliably. I tried scraping ESPN, NFL.com, 
+                    and other sites, but they all use complex UUIDs for players that change unpredictably.
                   </p>
                   <div className="bg-muted/50 p-4 rounded font-mono text-sm">
-                    <span className="text-muted-foreground">{'// What you want:'}</span><br/>
+                    <span className="text-muted-foreground">{'// What I expected:'}</span><br/>
                     <span className="text-green-400">/players/josh-allen/stats</span><br/><br/>
-                    <span className="text-muted-foreground">{'// What you get:'}</span><br/>
+                    <span className="text-muted-foreground">{'// What I actually get:'}</span><br/>
                     <span className="text-red-400">/players/4e8f9a2b-c7d3-41a5-8f6e-2b1c9d8e7f3a/stats</span>
                   </div>
                 </div>
                 
                 <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-lg border-l-4 border-blue-500">
                   <h4 className="font-bold text-blue-600 mb-3 flex items-center gap-2">
-                    <span>🔄</span> Real-time Draft System
+                    <span>🔄</span> Real-time Draft Chaos
                   </h4>
                   <p className="text-muted-foreground mb-3">
-                    Multiple people drafting at the same time with timers, pick validation, and live updates. 
-                    Plus it needs to handle connection issues gracefully when someone&apos;s internet drops mid-draft.
+                    Building a socket-based draft application where multiple people can pick simultaneously, with draft timers, 
+                    pick validation, and real-time updates. Oh, and it needs to work when someone&apos;s internet cuts out mid-draft.
                   </p>
                   <div className="bg-muted/50 p-4 rounded">
                     <div className="flex items-center gap-2 mb-2">
@@ -583,32 +599,37 @@ export default function BlogPost() {
                 
                 <div className="bg-gradient-to-r from-green-500/10 to-teal-500/10 p-6 rounded-lg border-l-4 border-green-500">
                   <h4 className="font-bold text-green-600 mb-3 flex items-center gap-2">
-                    <span>👥</span> User Experience Complexity
+                    <span>👥</span> User Management Hell
                   </h4>
                   <p className="text-muted-foreground mb-3">
-                    Everyone needs to login, see their team, make picks, view scores, and interact with other players. 
-                    Playoff fantasy also has unique UI needs that regular season apps don&apos;t have.
+                    Every player needs to log in, see their team, make picks, view live scores, and trash talk. 
+                    Plus playoff-specific UI considerations that regular season apps don&apos;t need.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4 mt-3">
                     <div className="bg-muted/30 p-3 rounded text-sm">
-                      <strong className="text-green-600">Playoff Bracket Integration</strong><br/>
-                      <span className="text-muted-foreground">Show how fantasy performance connects to real playoff games</span>
+                      <strong className="text-green-600">Playoff Bracket View</strong><br/>
+                      <span className="text-muted-foreground">Connect fantasy performance to actual playoff progression</span>
                     </div>
                     <div className="bg-muted/30 p-3 rounded text-sm">
                       <strong className="text-green-600">Elimination Tracking</strong><br/>
-                      <span className="text-muted-foreground">Players become worthless when teams lose, affects strategy</span>
+                      <span className="text-muted-foreground">Players get eliminated as teams lose affects strategy</span>
                     </div>
                   </div>
                 </div>
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                <span className="text-4xl">🚀</span> Building It Myself
+                <span className="text-4xl">🚀</span> Building the Solution
               </h2>
               
               <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                Working as a Senior Software Engineer at HubSpot means I can actually build this. 
-                The goal is to replace our spreadsheet mess with something that actually works.
+                This isn&apos;t just about replacing a spreadsheet... it&apos;s about creating the playoff fantasy experience that should exist.
+              </p>
+              
+              <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                Go into detail about how we can tackle it but be broad. First, we need a way to have a service that can get 
+                performance of a player, once we have that we can create a UI that can pull on this information. I want a possible 
+                solution, but I haven&apos;t started yet and I am far from it. I want to have something by next fantasy playoffs season.
               </p>
 
               {/* Tech Stack */}
@@ -752,7 +773,7 @@ export default function BlogPost() {
           >
             <h3 className="text-2xl font-bold mb-4">Thoughts on this post?</h3>
             <p className="text-muted-foreground mb-6">
-              I&apos;d love to hear your feedback or discuss the technical details further.
+              I&apos;d love to hear your feedback or discuss the technical details further. Or do you want a copy of my spreadsheet for your own league.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild>
