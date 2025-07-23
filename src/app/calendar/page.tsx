@@ -146,7 +146,7 @@ export default function CalendarPage() {
             >
               <h1 className="text-3xl md:text-4xl font-bold flex items-center gap-3">
                 <CalendarIcon className="w-8 h-8 text-primary" />
-                Binit's Calendar
+                Binit&apos;s Calendar
               </h1>
               <p className="text-muted-foreground mt-1">
                 Where I&apos;ll be and what I&apos;m up to
