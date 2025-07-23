@@ -12,7 +12,7 @@ const blogPosts = {
   },
   'nfl-fantasy-spreadsheet-to-web': {
     title: 'From Spreadsheet Chaos to Web Platform: Building NFL Playoff Fantasy',
-    description: 'The story of building a fantasy football platform for NFL playoffs after discovering nothing like it exists. From complex Excel formulas to a full-stack web application with React and Node.js.',
+    description: 'The story of building a fantasy football platform for NFL playoffs after discovering nothing like it exists. From complex spreadsheet formulas to a full-stack web application with React and Node.js.',
     date: '2025-03-08',
     author: 'Binit Shrestha',
     tags: ['React', 'Full-stack', 'Sports Data', 'Product Development', 'Node.js', 'Fantasy Football', 'Web Development'],
