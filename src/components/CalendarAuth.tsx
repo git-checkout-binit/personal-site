@@ -3,29 +3,15 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { CalendarView } from '@/components/CalendarView';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Eye, EyeOff, Lock, Calendar as CalendarIcon } from 'lucide-react';
-import { motion } from 'framer-motion';
 import calendarData from '../../data/calendar.json';
 
 const CALENDAR_KEY = process.env.NEXT_PUBLIC_CALENDAR_KEY || 'wyabinit';
 
-interface CalendarEvent {
-  id: string;
-  title: string;
-  start: string;
-  end?: string;
-  location: string;
-  note: string;
-  color: string;
-}
-
 function CalendarAuthContent() {
   const searchParams = useSearchParams();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [keyInput, setKeyInput] = useState('');
-  const [showKey, setShowKey] = useState(false);
+  const [inputKey, setInputKey] = useState('');
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -33,6 +19,7 @@ function CalendarAuthContent() {
     const urlKey = searchParams.get('key');
     if (urlKey === CALENDAR_KEY) {
       setIsAuthenticated(true);
+      sessionStorage.setItem('calendar_authenticated', 'true');
       return;
     }
 
@@ -43,135 +30,96 @@ function CalendarAuthContent() {
     }
   }, [searchParams]);
 
-  const handleKeySubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (keyInput === CALENDAR_KEY) {
+    if (inputKey === CALENDAR_KEY) {
       setIsAuthenticated(true);
       sessionStorage.setItem('calendar_authenticated', 'true');
       setError('');
     } else {
-      setError('👀 nope.');
-      setKeyInput('');
-    }
-  };
-
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    sessionStorage.removeItem('calendar_authenticated');
-    setKeyInput('');
-    // Update URL without key parameter
-    if (typeof window !== 'undefined') {
-      window.history.replaceState({}, '', '/calendar');
+      setError('Nice try! 😅 That\'s not it...');
+      setInputKey('');
     }
   };
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-6">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-md w-full"
-        >
-          <div className="text-center mb-8">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <Lock className="w-10 h-10 text-primary" />
-            </motion.div>
-            <h1 className="text-3xl font-bold mb-2">Private Calendar</h1>
-            <p className="text-muted-foreground">
-              Enter the access key to view Binit&apos;s schedule
-            </p>
-          </div>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex items-center justify-center p-4">
+        <div className="w-full max-w-lg">
+          {/* Main Card */}
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl">
+            {/* Header with emoji */}
+            <div className="text-center mb-8">
+              <div className="text-6xl mb-4">🕵️‍♂️</div>
+              <h1 className="text-3xl font-bold text-white mb-2">
+                Hold up there, detective...
+              </h1>
+              <p className="text-xl text-purple-200 font-medium">
+                So you think you really know Binit like that? 🤔
+              </p>
+            </div>
 
-          <form onSubmit={handleKeySubmit} className="space-y-4">
-            <div className="relative">
-              <Input
-                type={showKey ? 'text' : 'password'}
-                placeholder="Access key..."
-                value={keyInput}
-                onChange={(e) => setKeyInput(e.target.value)}
-                className="pr-12"
-                autoFocus
-              />
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 p-0"
-                onClick={() => setShowKey(!showKey)}
-              >
-                {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              </Button>
+            {/* Funny description */}
+            <div className="bg-black/20 rounded-2xl p-6 mb-6 border border-white/10">
+              <p className="text-lg text-white text-center leading-relaxed">
+                This is where I spill all my business — races I&apos;m running, 
+                weddings I&apos;m crashing, and places I&apos;m pretending to be productive at. 
+                <span className="block mt-3 text-purple-300 font-semibold">
+                  What&apos;s the passcode to see his private calendar? 🗓️
+                </span>
+              </p>
             </div>
             
-            {error && (
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-red-500 text-sm text-center font-medium"
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <Input
+                  type="password"
+                  placeholder="Enter the secret code..."
+                  value={inputKey}
+                  onChange={(e) => setInputKey(e.target.value)}
+                  className="w-full h-12 bg-white/10 border-white/30 text-white placeholder-white/60 text-lg rounded-xl backdrop-blur-sm focus:border-purple-400 focus:ring-purple-400"
+                  autoFocus
+                />
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full h-12 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
               >
-                {error}
-              </motion.p>
-            )}
-            
-            <Button type="submit" className="w-full">
-              <CalendarIcon className="w-4 h-4 mr-2" />
-              Access Calendar
-            </Button>
-          </form>
+                Unlock Binit&apos;s Schedule 🔓
+              </button>
+              
+              {error && (
+                <div className="bg-red-500/20 border border-red-500/30 rounded-xl p-3">
+                  <p className="text-red-200 text-center font-medium">
+                    {error}
+                  </p>
+                </div>
+              )}
+            </form>
 
-          <div className="mt-8 text-center text-xs text-muted-foreground">
-            <p>This calendar is private and requires authentication</p>
+            {/* Footer hint */}
+            <div className="mt-6 text-center">
+              <p className="text-sm text-purple-300 opacity-75">
+                Hint: You probably already know this one 😉
+              </p>
+            </div>
           </div>
-        </motion.div>
+
+          {/* Decorative elements */}
+          <div className="flex justify-center mt-6 space-x-2">
+            <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse delay-75"></div>
+            <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse delay-150"></div>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <div className="border-b border-border">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex items-center justify-between">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-3xl md:text-4xl font-bold flex items-center gap-3">
-                <CalendarIcon className="w-8 h-8 text-primary" />
-                Binit&apos;s Calendar
-              </h1>
-              <p className="text-muted-foreground mt-1">
-                Where I&apos;ll be and what I&apos;m up to
-              </p>
-            </motion.div>
-            
-            <Button variant="outline" onClick={handleLogout} size="sm">
-              <Lock className="w-4 h-4 mr-2" />
-              Logout
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Calendar Content */}
-      <div className="container mx-auto px-6 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <CalendarView events={calendarData as CalendarEvent[]} />
-        </motion.div>
-      </div>
+    <div className="min-h-screen bg-background p-6">
+      <CalendarView events={calendarData} />
     </div>
   );
 }
