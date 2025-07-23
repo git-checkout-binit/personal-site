@@ -148,7 +148,8 @@ export default function BlogPage() {
                         alt={post.imageAlt}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         style={{
-                          filter: 'brightness(0.9) contrast(1.1) saturate(1.05)'
+                          filter: 'brightness(0.9) contrast(1.1) saturate(1.05)',
+                          objectPosition: post.slug === 'muay-thai-bangkok-fight-camp' ? 'center 40%' : 'center 60%'
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
