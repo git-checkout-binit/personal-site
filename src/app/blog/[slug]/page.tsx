@@ -9,7 +9,16 @@ import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 // Structured Data for Blog Posts
-const generateStructuredData = (post: any, slug: string) => {
+interface BlogPost {
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  tags: string[];
+  readingTime: string;
+}
+
+const generateStructuredData = (post: BlogPost, slug: string) => {
   const baseUrl = 'https://binshr.me';
   return {
     '@context': 'https://schema.org',
