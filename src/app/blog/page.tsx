@@ -8,6 +8,30 @@ import { Calendar, Clock, ArrowLeft, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+// Structured Data for Blog Listing Page
+const blogStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Binit Shrestha Blog',
+  description: 'Stories from building things and the unexpected places where the best lessons happen',
+  url: 'https://binshr.me/blog',
+  author: {
+    '@type': 'Person',
+    name: 'Binit Shrestha',
+    url: 'https://binshr.me',
+    sameAs: [
+      'https://www.linkedin.com/in/binitrshrestha',
+      'https://www.instagram.com/binitshrestharealdeal/',
+      'https://www.strava.com/athletes/64573648',
+      'https://www.imdb.com/name/nm15282353/'
+    ]
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://binshr.me/blog'
+  }
+};
+
 export default function BlogPage() {
   const [posts, setPosts] = useState<Array<{
     slug: string;
@@ -58,6 +82,14 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogStructuredData)
+        }}
+      />
+      
       {/* Cinematic Header */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />

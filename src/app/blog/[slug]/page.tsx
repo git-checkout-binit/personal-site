@@ -8,6 +8,48 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+// Structured Data for Blog Posts
+const generateStructuredData = (post: any, slug: string) => {
+  const baseUrl = 'https://binshr.me';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    image: `${baseUrl}${slug === 'muay-thai-bangkok-fight-camp' ? '/images/muay-thai-belts.jpg' : '/images/nfl-fantasy-pff.webp'}`,
+    author: {
+      '@type': 'Person',
+      name: post.author,
+      url: `${baseUrl}`,
+      sameAs: [
+        'https://www.linkedin.com/in/binitrshrestha',
+        'https://www.instagram.com/binitshrestharealdeal/',
+        'https://www.strava.com/athletes/64573648',
+        'https://www.imdb.com/name/nm15282353/'
+      ]
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Binit Shrestha',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/images/logo.png`
+      }
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${baseUrl}/blog/${slug}`
+    },
+    keywords: post.tags.join(', '),
+    articleSection: slug === 'muay-thai-bangkok-fight-camp' ? 'Personal Growth' : 'Technology',
+    wordCount: slug === 'muay-thai-bangkok-fight-camp' ? 1200 : 1500,
+    timeRequired: post.readingTime,
+    url: `${baseUrl}/blog/${slug}`
+  };
+};
+
 
 export default function BlogPost() {
   const params = useParams();
@@ -82,6 +124,16 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Structured Data for SEO */}
+      {post && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateStructuredData(post, post.slug))
+          }}
+        />
+      )}
+      
       {/* Header */}
       <section className="py-12 border-b border-border">
         <div className="container mx-auto px-6 max-w-4xl">
