@@ -75,11 +75,12 @@ function CalendarAuthContent() {
             {/* Funny description */}
             <div className="bg-black/20 rounded-2xl p-6 mb-6 border border-white/10">
               <p className="text-lg text-white text-center leading-relaxed">
-                <span className="italic text-purple-200 block mb-2">
-                  &quot;They want to know where I be at, check the calendar app&quot;
+                <span className="italic text-purple-200 block mb-4">
+                  &quot;My schedule&apos;s busier than a bee in spring, got races to run and celebrations to bring&quot;
                 </span>
-                Behind here is a peek at my life: where I&apos;m running, 
-                who I&apos;m celebrating with, and what I&apos;m actually up to. 
+                <span className="text-xs text-purple-300 block mb-4">
+                  - Original Binit bars 🎤
+                </span>
                 <span className="block mt-3 text-purple-300 font-semibold">
                   What&apos;s the passcode to see his private calendar? 🗓️
                 </span>
