@@ -7,7 +7,7 @@ import { CalendarView } from '@/components/CalendarView';
 import { Input } from '@/components/ui/input';
 import calendarData from '../../data/calendar.json';
 
-const CALENDAR_KEY = process.env.NEXT_PUBLIC_CALENDAR_KEY || 'wyabinit';
+const CALENDAR_KEY = process.env.NEXT_PUBLIC_CALENDAR_KEY || 'imy';
 
 interface CalendarEvent {
   id: string;
