@@ -144,7 +144,7 @@ export default function BlogPost() {
               {post?.slug === 'muay-thai-bangkok-fight-camp' && (
                 <>
                   <p className="text-xl leading-relaxed text-muted-foreground italic border-l-4 border-primary/30 pl-6 py-4 bg-primary/5 rounded-r-lg">
-                    &quot;You are going to die.&quot; — My cab driver, Google Translated
+                    &quot;You are going to die.&quot; - My cab driver, Google Translated
                   </p>
                   
                   {/* Hero Image */}
