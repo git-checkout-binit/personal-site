@@ -140,27 +140,26 @@ function CalendarAuthContent() {
       <div className="border-b border-purple-200/50 bg-gradient-to-r from-white/95 via-purple-50/30 to-pink-50/30 backdrop-blur-md sticky top-0 z-10 shadow-sm">
         <div className="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-medium text-gray-900 flex items-center space-x-2">
+            <h1 className="text-xl md:text-2xl font-medium text-gray-900 flex items-center space-x-2">
               <span>🗓️</span>
-              <span>Binit&apos;s World</span>
+              <span>Binit&apos;s Calendar</span>
             </h1>
-            <p className="text-sm text-gray-600 mt-1">
-              Tracking my runs, celebrations, and questionable life choices
-            </p>
           </div>
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-1 md:space-x-3">
             <Link
               href="/"
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors px-3 py-1 rounded-lg hover:bg-gray-100 flex items-center space-x-1"
+              className="text-xs md:text-sm text-gray-600 hover:text-gray-900 transition-colors px-2 md:px-3 py-1 rounded-lg hover:bg-gray-100 flex items-center space-x-1"
             >
               <span>←</span>
-              <span>Back to Site</span>
+              <span className="hidden sm:inline">Back to Site</span>
+              <span className="sm:hidden">Back</span>
             </Link>
             <button
               onClick={handleSignOut}
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors px-3 py-1 rounded-lg hover:bg-gray-100"
+              className="text-xs md:text-sm text-gray-600 hover:text-gray-900 transition-colors px-2 md:px-3 py-1 rounded-lg hover:bg-gray-100"
             >
-              Sign Out
+              <span className="hidden sm:inline">Sign Out</span>
+              <span className="sm:hidden">Exit</span>
             </button>
           </div>
         </div>
