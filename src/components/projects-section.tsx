@@ -4,12 +4,14 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, BookOpen } from 'lucide-react';
+import Link from 'next/link';
 
 const projects = [
   {
     title: "NFL Playoff Fantasy Draft Platform",
     description: "Building a head-to-head fantasy football platform specifically for NFL playoffs. After searching extensively, nothing like this exists on the market - most fantasy platforms end before playoffs begin. Moving beyond complex spreadsheet formulas to create a dynamic draft system where friends compete with real-time player performance data and leaderboards.",
+    blogUrl: "/blog/nfl-fantasy-spreadsheet-to-web",
     image: "/images/nfl-fantasy-pff.webp",
     technologies: ["React", "Node.js", "Sports Data API", "Real-time Updates", "PostgreSQL"],
     githubUrl: null,
@@ -115,10 +117,20 @@ export function ProjectsSection() {
                   
                   <div className="flex gap-3">
                     {project.comingSoon ? (
-                      <Button size="sm" variant="outline" className="w-full" disabled>
-                        <div className="w-4 h-4 mr-2 rounded-full bg-accent animate-pulse" />
-                        Coming Soon
-                      </Button>
+                      <>
+                        <Button size="sm" variant="outline" className="flex-1" disabled>
+                          <div className="w-4 h-4 mr-2 rounded-full bg-accent animate-pulse" />
+                          Coming Soon
+                        </Button>
+                        {project.blogUrl && (
+                          <Button size="sm" variant="ghost" className="flex-1" asChild>
+                            <Link href={project.blogUrl}>
+                              <BookOpen className="w-4 h-4 mr-2" />
+                              Read Story
+                            </Link>
+                          </Button>
+                        )}
+                      </>
                     ) : (
                       <>
                         {project.githubUrl && (
