@@ -48,7 +48,7 @@ export function Footer() {
                 href="https://www.linkedin.com/in/binitrshrestha" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
+                className="hover:text-[#0A66C2] transition-colors"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
@@ -59,7 +59,7 @@ export function Footer() {
                 href="https://www.instagram.com/binitshrestharealdeal/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-accent transition-colors"
+                className="hover:text-[#C13584] transition-colors"
               >
                 <Instagram className="w-6 h-6" />
               </a>
@@ -70,7 +70,7 @@ export function Footer() {
                 href="https://www.strava.com/athletes/binit_shrestha" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-orange-500 transition-colors"
+                className="hover:text-[#FC4C02] transition-colors"
               >
                 <StravaIcon className="w-6 h-6" />
               </a>
@@ -78,7 +78,7 @@ export function Footer() {
             
             <Button variant="ghost" size="sm" asChild>
               <a 
-                href="https://www.imdb.com/name/nm_binit_shrestha" 
+                href="/filmography" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
