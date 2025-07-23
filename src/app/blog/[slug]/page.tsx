@@ -30,7 +30,7 @@ export default function BlogPost() {
     if (slug === 'muay-thai-bangkok-fight-camp') {
       setPost({
         slug: 'muay-thai-bangkok-fight-camp',
-        title: 'From Marathons to Muay Thai: One Week of Pain, Sweat, and Noodles',
+        title: 'What I Learned Living in a Bangkok Muay Thai Fight Camp',
         description: 'How I accidentally joined a Muay Thai fight camp in Bangkok during a solo backpacking trip. Three lessons learned from training with real fighters in sweltering heat.',
         date: '2025-06-15',
         author: 'Binit Shrestha',
@@ -168,12 +168,13 @@ export default function BlogPost() {
                   </h2>
                   
                   <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                    This summer I joined a Muay Thai fight camp in Bangkok. I was traveling solo, had no real Muay Thai experience, 
-                    and it was incredibly hot. But I wanted to try something hard while I was there.
+                    Two summers ago, I joined a Muay Thai fight camp in Bangkok. I was traveling solo through Southeast Asia, 
+                    had no real Muay Thai experience, and it was incredibly hot. But I saw a TikTok of these camps and decided 
+                    to full send and live with some of the most vicious fighters in the world.
                   </p>
                   
                   <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
-                    I do have a black belt in Taekwondo and I run marathons, but that doesn&apos;t really translate to Muay Thai. 
+                    I do have a black belt in Taekwondo and run marathons, but that doesn&apos;t really translate to Muay Thai. 
                     The cab driver taking me to the camp couldn&apos;t believe where I was going. He Google Translated 
                     something that said &quot;You are going to die.&quot;
                   </p>
@@ -183,42 +184,52 @@ export default function BlogPost() {
                     <h4 className="font-bold text-xl mb-6 text-orange-600 flex items-center gap-2">
                       <span>⏰</span> What a Day Looked Like
                     </h4>
-                    <div className="grid md:grid-cols-2 gap-4 text-sm">
-                      <div className="space-y-2">
-                        <div className="flex justify-between py-2 border-b border-orange-500/20">
-                          <span className="font-semibold">6:00 AM</span>
-                          <span className="text-muted-foreground">Wake up, light breakfast</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b border-orange-500/20">
-                          <span className="font-semibold">6:30 AM</span>
-                          <span className="text-muted-foreground">50km morning run</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b border-orange-500/20">
-                          <span className="font-semibold">9:00 AM</span>
-                          <span className="text-muted-foreground">Breakfast and rest</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b border-orange-500/20">
-                          <span className="font-semibold">3:00 PM</span>
-                          <span className="text-muted-foreground">Pad work and technique</span>
-                        </div>
+                    
+                    <div className="relative rounded-lg overflow-hidden shadow-lg mb-6">
+                      <img
+                        src="/images/muay-thai-schedule.jpg"
+                        alt="Daily training schedule at Bangkok Muay Thai fight camp"
+                        className="w-full object-cover border border-border"
+                      />
+                    </div>
+                    
+                    <h5 className="font-bold text-lg mb-4 text-orange-600">MY USUAL ROUTINE</h5>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between py-2 border-b border-orange-500/20">
+                        <span className="font-semibold">5:30 AM</span>
+                        <span className="text-muted-foreground">Wake up, still sore from the day before</span>
                       </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between py-2 border-b border-orange-500/20">
-                          <span className="font-semibold">4:00 PM</span>
-                          <span className="text-muted-foreground">Heavy bag training</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b border-orange-500/20">
-                          <span className="font-semibold">5:00 PM</span>
-                          <span className="text-muted-foreground">Sparring</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b border-orange-500/20">
-                          <span className="font-semibold">6:00 PM</span>
-                          <span className="text-muted-foreground">Conditioning and stretching</span>
-                        </div>
-                        <div className="flex justify-between py-2 border-b border-orange-500/20">
-                          <span className="font-semibold">8:00 PM</span>
-                          <span className="text-muted-foreground">Dinner and recovery</span>
-                        </div>
+                      <div className="flex justify-between py-2 border-b border-orange-500/20">
+                        <span className="font-semibold">6:00 AM</span>
+                        <span className="text-muted-foreground">Already running outside, I&apos;m half asleep</span>
+                      </div>
+                      <div className="flex justify-between py-2 border-b border-orange-500/20">
+                        <span className="font-semibold">7:45 AM</span>
+                        <span className="text-muted-foreground">Sprinting with tires filled with rocks tied to us</span>
+                      </div>
+                      <div className="flex justify-between py-2 border-b border-orange-500/20">
+                        <span className="font-semibold">8:00 AM</span>
+                        <span className="text-muted-foreground">Sparring drills and ab workouts</span>
+                      </div>
+                      <div className="flex justify-between py-2 border-b border-orange-500/20">
+                        <span className="font-semibold">9:00 AM</span>
+                        <span className="text-muted-foreground">Stretch, breakfast, then sleep (too hot to do anything)</span>
+                      </div>
+                      <div className="flex justify-between py-2 border-b border-orange-500/20">
+                        <span className="font-semibold">2:30 PM</span>
+                        <span className="text-muted-foreground">Running in the hot Bangkok sun (shorter than AM)</span>
+                      </div>
+                      <div className="flex justify-between py-2 border-b border-orange-500/20">
+                        <span className="font-semibold">3:00 PM</span>
+                        <span className="text-muted-foreground">Intense pad sessions (they&apos;d beat you with a stick if you mess up)</span>
+                      </div>
+                      <div className="flex justify-between py-2 border-b border-orange-500/20">
+                        <span className="font-semibold">4:00 PM</span>
+                        <span className="text-muted-foreground">Crazy sparring sessions (watched from sidelines, thank god)</span>
+                      </div>
+                      <div className="flex justify-between py-2 border-b border-orange-500/20">
+                        <span className="font-semibold">5:00 PM</span>
+                        <span className="text-muted-foreground">Done for the day, some of us get dinner together</span>
                       </div>
                     </div>
                     <p className="text-orange-600 font-medium mt-4 text-center">
@@ -244,10 +255,28 @@ export default function BlogPost() {
                         These fighters weren&apos;t training for fun. Many were doing this to get out of poverty. 
                         Their lives actually depended on being disciplined about training.
                       </p>
+                      
+                      <div className="grid md:grid-cols-2 gap-4 my-6">
+                        <div className="relative rounded-lg overflow-hidden shadow-lg">
+                          <img
+                            src="/images/muay-thai-morning-run.jpg"
+                            alt="Morning run with Muay Thai fighters in Bangkok"
+                            className="w-full h-[200px] object-cover border border-border"
+                          />
+                        </div>
+                        <div className="relative rounded-lg overflow-hidden shadow-lg">
+                          <img
+                            src="/images/muay-thai-strava.jpg"
+                            alt="Strava screenshot of Bangkok morning run"
+                            className="w-full h-[200px] object-cover border border-border"
+                          />
+                        </div>
+                      </div>
+                      
                       <p className="text-muted-foreground mb-4 leading-relaxed">
                         The training was hard. On day one I asked how far we were running. They said 50 kilometers. 
-                        I thought they were joking. They weren&apos;t. During those runs I realized how different our situations were. 
-                        But showing up consistently earned their respect.
+                        They thought I would crack, but I ran alongside them the whole time. It was actually like 10 km luckily that day. 
+                        During those runs I realized how different our situations were. But showing up consistently earned their respect.
                       </p>
                       <div className="bg-red-500/5 p-4 rounded-lg border border-red-500/20 mt-4">
                         <p className="font-semibold text-red-600">The Point:</p>
@@ -264,9 +293,21 @@ export default function BlogPost() {
                       </h3>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
                         These were some of the toughest people I&apos;ve met, but also some of the kindest. 
-                        <strong className="text-green-600"> Petch Morakot</strong>, a former #1 ranked fighter, 
+                        <strong className="text-green-600">Petch Morakot</strong>, a former #1 ranked fighter, 
                         trained with us every day.
                       </p>
+                      
+                      <div className="relative rounded-lg overflow-hidden shadow-lg my-6">
+                        <img
+                          src="/images/muay-thai-group.jpg"
+                          alt="Group photo with Muay Thai fighters including Petch Morakot"
+                          className="w-full object-cover border border-border"
+                        />
+                        <div className="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-1 rounded text-sm">
+                          Petch Morakot is two people to my left in this photo
+                        </div>
+                      </div>
+                      
                       <p className="text-muted-foreground mb-4 leading-relaxed">
                         On runs he&apos;d greet everyone we passed. In the gym he was serious but helpful. 
                         They invited me to dinner after training. They made me feel included. I still talk to some of them.
@@ -306,58 +347,66 @@ export default function BlogPost() {
                       <h4 className="text-lg font-semibold mb-4 text-foreground">Training with Real Fighters</h4>
                       <div className="relative rounded-lg overflow-hidden shadow-lg mb-4">
                         <img
-                          src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=800&h=500&fit=crop&crop=center"
-                          alt="Muay Thai fighters training - the brotherhood of the ring"
-                          className="w-full h-[300px] object-cover"
-                          style={{
-                            filter: 'brightness(0.8) contrast(1.1) sepia(0.3)'
-                          }}
+                          src="/images/muay-thai-belts.jpg"
+                          alt="Behind all the championship belts this gym has won"
+                          className="w-full h-[400px] object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                       </div>
                       <p className="text-sm text-muted-foreground italic">
-                        Training with champions like Petch Morakot showed me that being tough and being kind aren&apos;t opposites
+                        Behind all the championship belts this gym has won - there are a lot of them
                       </p>
                     </div>
                   </div>
                   
                   <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
-                    <span className="text-4xl">🥋</span> Taking It Home
+                    <span className="text-4xl">🥋</span> Why This Mattered
                   </h2>
                   
                   <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                    I went there as a tourist trying something hard. I left feeling like I understood something about 
-                    what real preparation looks like. You don&apos;t need to be in a fight camp to apply this stuff.
+                    I went to Bangkok planning to backpack around Southeast Asia. I ended up living with professional fighters 
+                    for a week and learning more about discipline and character than I had in years.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+                    The experience changed how I approach hard things. When I&apos;m training for a marathon or working on a difficult project, 
+                    I think about those 5:30 AM wake-ups and remember that the hardest part is just showing up.
                   </p>
                   
                   <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-xl border border-primary/20 my-8">
-                    <h4 className="text-xl font-bold text-primary mb-4">The Three Things</h4>
-                    <ul className="space-y-3 text-muted-foreground">
+                    <h4 className="text-xl font-bold text-primary mb-4">What Stuck With Me</h4>
+                    <ul className="space-y-4 text-muted-foreground">
                       <li className="flex items-start gap-3">
-                        <span className="text-primary font-bold">1.</span>
-                        <span><strong>Do the work early:</strong> Prepare before you need it</span>
+                        <span className="text-primary font-bold text-lg">💪</span>
+                        <span><strong>Front-load the suffering:</strong> Do the hard work before you need it. When it matters, you&apos;ll be ready.</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="text-primary font-bold">2.</span>
-                        <span><strong>Strength includes kindness:</strong> The toughest people can be the most generous</span>
+                        <span className="text-primary font-bold text-lg">❤️</span>
+                        <span><strong>Strength and kindness aren&apos;t opposites:</strong> The toughest people I met were also the most generous.</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="text-primary font-bold">3.</span>
-                        <span><strong>Set your date:</strong> Give your effort a specific target</span>
+                        <span className="text-primary font-bold text-lg">📅</span>
+                        <span><strong>Set your fight date:</strong> Having a specific date on the calendar makes your preparation real.</span>
                       </li>
                     </ul>
                   </div>
                   
+                  <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
+                    Two years later, I&apos;m still in touch with some of the fighters. I never became good at Muay Thai, 
+                    but I learned what it feels like to train like your life depends on it. That lesson applies to everything.
+                  </p>
+                  
                   <div className="bg-gradient-to-br from-orange-500/5 to-red-500/5 p-6 rounded-lg border border-orange-500/20 my-8">
                     <h4 className="text-orange-600 font-bold text-lg mb-3 flex items-center gap-2">
-                      <span>✈️</span> If You Want to Try This
+                      <span>✈️</span> If You&apos;re Thinking About It
                     </h4>
                     <ul className="text-sm text-muted-foreground space-y-2">
-                      <li>• Start running now. The cardio is brutal.</li>
-                      <li>• Learn basic Thai. &quot;Thank you&quot; (kob khun) helps a lot.</li>
-                      <li>• Bring extra gear: wraps, shorts, electrolytes.</li>
-                      <li>• Don&apos;t expect to be good. Expect to get humbled. Show up anyway.</li>
-                      <li>• The heat is serious. Drink more water than you think you need.</li>
+                      <li>• Start running now. The cardio requirements are no joke.</li>
+                      <li>• Learn basic Thai. &quot;Thank you&quot; (kob khun) and &quot;sorry&quot; (kor tort) go a long way.</li>
+                      <li>• Bring extra everything: wraps, shorts, electrolytes, patience.</li>
+                      <li>• Don&apos;t expect to be good. Expect to be humbled. Then show up anyway.</li>
+                      <li>• The heat is brutal. Hydrate constantly and respect your limits.</li>
+                      <li>• Go in with the right mindset. You&apos;re there to learn, not to prove anything.</li>
                     </ul>
                   </div>
                 </>

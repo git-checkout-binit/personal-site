@@ -26,7 +26,7 @@ export default function BlogPage() {
     const hardcodedPosts = [
       {
         slug: 'muay-thai-bangkok-fight-camp',
-        title: 'From Marathons to Muay Thai: One Week of Pain, Sweat, and Noodles',
+        title: 'What I Learned Living in a Bangkok Muay Thai Fight Camp',
         description: 'How I accidentally joined a Muay Thai fight camp in Bangkok during a solo backpacking trip. Three lessons learned from training with real fighters in sweltering heat.',
         date: '2025-06-15',
         author: 'Binit Shrestha',
