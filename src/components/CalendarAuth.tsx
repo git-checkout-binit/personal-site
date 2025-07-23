@@ -8,6 +8,18 @@ import calendarData from '../../data/calendar.json';
 
 const CALENDAR_KEY = process.env.NEXT_PUBLIC_CALENDAR_KEY || 'wyabinit';
 
+interface CalendarEvent {
+  id: string;
+  title: string;
+  start: string;
+  end?: string;
+  location: string;
+  note: string;
+  color: string;
+  display?: string;
+  type?: 'race' | 'volunteer';
+}
+
 function CalendarAuthContent() {
   const searchParams = useSearchParams();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -119,7 +131,7 @@ function CalendarAuthContent() {
 
   return (
     <div className="min-h-screen bg-background p-6">
-      <CalendarView events={calendarData} />
+      <CalendarView events={calendarData as CalendarEvent[]} />
     </div>
   );
 }
