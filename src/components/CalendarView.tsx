@@ -54,13 +54,9 @@ export function CalendarView({ events }: CalendarViewProps) {
 
   const currentEvent = getCurrentLocationEvent();
 
-  const handleEventClick = (clickInfo: { event: { id: string } }) => {
-    const event = clickInfo.event;
-    const eventData = events.find(e => e.id === event.id);
-    
-    if (eventData && eventData.display !== 'background') {
-      alert(`${eventData.location}\n${eventData.note}`);
-    }
+  const handleEventClick = () => {
+    // Disable click interactions - no popup alerts
+    return;
   };
 
   // Get upcoming events for mobile
@@ -116,18 +112,16 @@ export function CalendarView({ events }: CalendarViewProps) {
         <div>
           <div className="text-sm text-gray-500 mb-8 tracking-wider uppercase">Schedule</div>
           
-          <div className="space-y-6">
+          <div className="space-y-4">
             {getUpcomingEvents().map((event) => (
-              <div key={event.id} className="group">
-                <div className="flex items-baseline justify-between border-b border-gray-100 pb-4">
-                  <div className="flex-1">
-                    <div className="text-base font-medium mb-1">{event.location}</div>
-                    <div className="text-sm text-gray-600">{event.note}</div>
-                  </div>
-                  <div className="text-sm text-gray-500 font-mono ml-4 shrink-0">
+              <div key={event.id} className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="text-base font-medium text-gray-900">{event.location}</div>
+                  <div className="text-sm text-gray-500 font-mono">
                     {formatDateRange(event.start, event.end)}
                   </div>
                 </div>
+                <div className="text-sm text-gray-600">{event.note}</div>
               </div>
             ))}
           </div>
@@ -180,14 +174,11 @@ export function CalendarView({ events }: CalendarViewProps) {
           eventDisplay="block"
           dayMaxEvents={2}
           moreLinkClick="popover"
-          eventMouseEnter={(info) => {
-            if (info.event.extendedProps.display !== 'background') {
-              info.el.style.cursor = 'pointer';
-              info.el.style.opacity = '0.8';
-            }
+          eventMouseEnter={() => {
+            // Disable hover effects
           }}
-          eventMouseLeave={(info) => {
-            info.el.style.opacity = '1';
+          eventMouseLeave={() => {
+            // Disable hover effects
           }}
           dayCellClassNames={(arg) => {
             const today = new Date();
@@ -208,7 +199,7 @@ export function CalendarView({ events }: CalendarViewProps) {
             if (arg.event.extendedProps.display === 'background') {
               return 'opacity-40 cursor-default';
             }
-            return 'cursor-pointer';
+            return 'cursor-default';
           }}
           dayCellDidMount={(arg) => {
             const today = new Date();
@@ -230,6 +221,15 @@ export function CalendarView({ events }: CalendarViewProps) {
               arg.el.style.backgroundColor = '#f9fafb';
               arg.el.style.fontWeight = '500';
             }
+            
+            // Remove hover effects on day cells
+            arg.el.style.transition = 'none';
+            arg.el.addEventListener('mouseenter', (e) => {
+              e.preventDefault();
+            });
+            arg.el.addEventListener('mouseleave', (e) => {
+              e.preventDefault();
+            });
             
             // Style day numbers
             const dayNumber = arg.el.querySelector('.fc-daygrid-day-number') as HTMLElement;
