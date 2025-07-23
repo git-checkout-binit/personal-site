@@ -256,11 +256,12 @@ export default function BlogPost() {
                   <div className="space-y-12 my-10">
                     <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-xl border-l-4 border-red-500">
                       <h3 className="text-2xl font-bold text-red-600 mb-4 flex items-center gap-3">
-                        <span className="text-3xl">💪</span> 1. Put in the Work Early
+                        <span className="text-3xl">💪</span> 1. Sweat Now, Bleed Later
                       </h3>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        These fighters weren&apos;t training for fun. Many were doing this to get out of poverty. 
-                        Their lives actually depended on being disciplined about training.
+                        These fighters weren&apos;t training for fun. Many were doing this to escape poverty. 
+                        Their survival literally depended on their discipline. The mentality was simple: put in the brutal work now 
+                        so you don&apos;t pay the price later.
                       </p>
                       
                       <div className="relative rounded-lg overflow-hidden shadow-lg my-6">
@@ -272,15 +273,15 @@ export default function BlogPost() {
                       </div>
                       
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        The training was hard. On day one I asked how far we were running. They said 50 kilometers. 
-                        They thought I would crack, but I ran alongside them the whole time. It was actually like 10 km luckily that day. 
-                        During those runs I realized how different our situations were. But showing up consistently earned their respect.
+                        Day one, I asked how far we were running. They said 50 kilometers. I thought they were messing with me. 
+                        Turned out to be closer to 10 km, but their point was clear: they wanted to see if I&apos;d break. 
+                        I stuck with them the whole way. That consistency earned their respect more than any technique ever could.
                       </p>
                       <div className="bg-red-500/5 p-4 rounded-lg border border-red-500/20 mt-4">
-                        <p className="font-semibold text-red-600">The Point:</p>
+                        <p className="font-semibold text-red-600">The Reality:</p>
                         <p className="text-muted-foreground text-sm mt-1">
-                          Do the hard work before you need it. Whatever you&apos;re preparing for, front-load the effort 
-                          so when it matters, you&apos;re ready.
+                          Front-load the suffering. Do the work when you don&apos;t want to, so when it matters, you&apos;re ready. 
+                          Most people wait until they need to be tough to start getting tough. That&apos;s too late.
                         </p>
                       </div>
                     </div>
@@ -290,72 +291,74 @@ export default function BlogPost() {
                         <span className="text-3xl">❤️</span> 2. Strength and Kindness Go Together
                       </h3>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        These were some of the toughest people I&apos;ve met, but also some of the kindest. 
-                        <strong className="text-green-600">Petch Morakot</strong>, a former #1 ranked fighter, 
-                        trained with us every day.
+                        The toughest person at the camp was also the nicest. 
+                        <a href="https://www.onefc.com/athletes/petchmorakot/" target="_blank" rel="noopener noreferrer" className="text-green-600 font-bold underline hover:text-green-700">Petchmorakot Petchyindee</a>, 
+                        a former #1 ranked ONE Championship fighter, trained with us every day.
                       </p>
                       
                       <div className="relative rounded-lg overflow-hidden shadow-lg my-6">
                         <img
                           src="/images/muay-thai-group.jpg"
-                          alt="Group photo with Muay Thai fighters including Petch Morakot"
+                          alt="Group photo with Muay Thai fighters including Petchmorakot Petchyindee"
                           className="w-full object-cover border border-border"
                         />
                         <div className="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-1 rounded text-sm">
-                          Petch Morakot is two people to my left in this photo
+                          Petchmorakot is two people to my left in this photo
                         </div>
                       </div>
                       
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        On runs he&apos;d greet everyone we passed. In the gym he was serious but helpful. 
-                        They invited me to dinner after training. They made me feel included. I still talk to some of them.
+                        On morning runs, he&apos;d wave and say hello to every person we passed. In the gym, he was focused but helpful. 
+                        After training, they&apos;d invite me to dinner. Made me feel like part of the group instead of just a tourist. 
+                        Still talk to some of them today.
                       </p>
                       <div className="bg-green-500/5 p-4 rounded-lg border border-green-500/20 mt-4">
-                        <p className="font-semibold text-green-600">The Point:</p>
+                        <p className="font-semibold text-green-600">The Reality:</p>
                         <p className="text-muted-foreground text-sm mt-1">
-                          Being strong doesn&apos;t mean being mean. The strongest people I met were also the most generous.
+                          Being dangerous and being kind aren&apos;t opposites. The most capable people I met were also the most generous. 
+                          Strength without character is just violence.
                         </p>
                       </div>
                     </div>
                     
                     <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-8 rounded-xl border-l-4 border-blue-500">
                       <h3 className="text-2xl font-bold text-blue-600 mb-4 flex items-center gap-3">
-                        <span className="text-3xl">📅</span> 3. Have a Date in Mind
+                        <span className="text-3xl">🎯</span> 3. Set Your Fight Date
                       </h3>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        Every fighter there was training for a specific fight date. That date made their training 
-                        urgent and focused. I realized most of us need something like that.
+                        Every fighter had a specific date on the calendar. A real fight they were preparing for. 
+                        That date made everything urgent. Every morning run, every sparring session, every meal mattered 
+                        because it was building toward something real.
                       </p>
+                      
+                      {/* Sparring Video */}
+                      <div className="relative rounded-lg overflow-hidden shadow-lg my-6">
+                        <video
+                          src="/images/muay-thai-sparring.mov"
+                          className="w-full h-[300px] object-cover border border-border"
+                          controls
+                          preload="metadata"
+                        />
+                        <div className="absolute bottom-4 left-4 bg-black/60 text-white px-3 py-1 rounded text-sm">
+                          Light sparring session - this is me getting schooled
+                        </div>
+                      </div>
+                      
                       <p className="text-muted-foreground mb-4 leading-relaxed">
-                        It could be a race, a deadline, a presentation. But having a specific date gives your preparation 
-                        meaning. Since then I try to set dates for things I&apos;m working on and treat the prep seriously.
+                        I started setting artificial deadlines for my own goals after this. Marathon dates, project launch dates, 
+                        presentation dates. Having something real on the calendar changes how you prepare. 
+                        It makes the daily work feel like it actually matters.
                       </p>
                       <div className="bg-blue-500/5 p-4 rounded-lg border border-blue-500/20 mt-4">
-                        <p className="font-semibold text-blue-600">The Point:</p>
+                        <p className="font-semibold text-blue-600">The Reality:</p>
                         <p className="text-muted-foreground text-sm mt-1">
-                          Having a date on the calendar makes your preparation real. Pick your date, then train accordingly.
+                          Pick your date and work backward. Without a real deadline, preparation feels optional. 
+                          With one, every day of training becomes necessary.
                         </p>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Photo section */}
-                  <div className="bg-muted/30 p-8 rounded-xl border my-10">
-                    <div className="text-center">
-                      <h4 className="text-lg font-semibold mb-4 text-foreground">Training with Real Fighters</h4>
-                      <div className="relative rounded-lg overflow-hidden shadow-lg mb-4">
-                        <img
-                          src="/images/muay-thai-belts.jpg"
-                          alt="Behind all the championship belts this gym has won"
-                          className="w-full h-[400px] object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                      </div>
-                      <p className="text-sm text-muted-foreground italic">
-                        Behind all the championship belts this gym has won - there are a lot of them
-                      </p>
-                    </div>
-                  </div>
                   
                   <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground flex items-center gap-4">
                     <span className="text-4xl">🥋</span> Why This Mattered
@@ -371,41 +374,18 @@ export default function BlogPost() {
                     I think about those 5:30 AM wake-ups and remember that the hardest part is just showing up.
                   </p>
                   
-                  <div className="bg-gradient-to-br from-primary/10 to-accent/10 p-8 rounded-xl border border-primary/20 my-8">
-                    <h4 className="text-xl font-bold text-primary mb-4">What Stuck With Me</h4>
-                    <ul className="space-y-4 text-muted-foreground">
-                      <li className="flex items-start gap-3">
-                        <span className="text-primary font-bold text-lg">💪</span>
-                        <span><strong>Front-load the suffering:</strong> Do the hard work before you need it. When it matters, you&apos;ll be ready.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-primary font-bold text-lg">❤️</span>
-                        <span><strong>Strength and kindness aren&apos;t opposites:</strong> The toughest people I met were also the most generous.</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-primary font-bold text-lg">📅</span>
-                        <span><strong>Set your fight date:</strong> Having a specific date on the calendar makes your preparation real.</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
-                    Two years later, I&apos;m still in touch with some of the fighters. I never became good at Muay Thai, 
-                    but I learned what it feels like to train like your life depends on it. That lesson applies to everything.
-                  </p>
-                  
+                  {/* Gym Details */}
                   <div className="bg-gradient-to-br from-orange-500/5 to-red-500/5 p-6 rounded-lg border border-orange-500/20 my-8">
                     <h4 className="text-orange-600 font-bold text-lg mb-3 flex items-center gap-2">
-                      <span>✈️</span> If You&apos;re Thinking About It
+                      <span>🏟️</span> The Gym
                     </h4>
-                    <ul className="text-sm text-muted-foreground space-y-2">
-                      <li>• Start running now. The cardio requirements are no joke.</li>
-                      <li>• Learn basic Thai. &quot;Thank you&quot; (kob khun) and &quot;sorry&quot; (kor tort) go a long way.</li>
-                      <li>• Bring extra everything: wraps, shorts, electrolytes, patience.</li>
-                      <li>• Don&apos;t expect to be good. Expect to be humbled. Then show up anyway.</li>
-                      <li>• The heat is brutal. Hydrate constantly and respect your limits.</li>
-                      <li>• Go in with the right mindset. You&apos;re there to learn, not to prove anything.</li>
-                    </ul>
+                    <p className="text-muted-foreground mb-3">
+                      This all happened at <a href="https://www.instagram.com/petchyindee/?hl=en" target="_blank" rel="noopener noreferrer" className="text-orange-600 font-semibold underline hover:text-orange-700">Petchyindee Kingdom</a> in Bangkok. 
+                      Real fighters, real training, real champions. If you&apos;re serious about experiencing authentic Muay Thai, this is the place.
+                    </p>
+                    <p className="text-sm text-muted-foreground italic">
+                      📍 36/36 Charan Sanitwong 34 Alley, Arun Amarin, Bangkok Noi, Bangkok 10700, Thailand
+                    </p>
                   </div>
                 </>
               )}
