@@ -10,7 +10,7 @@ import { Eye, EyeOff, Lock, Calendar as CalendarIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import calendarData from '../../../data/calendar.json';
 
-const CALENDAR_KEY = 'binit2025'; // Hardcoded for personal use
+const CALENDAR_KEY = process.env.NEXT_PUBLIC_CALENDAR_KEY || 'fallback2025';
 
 interface CalendarEvent {
   id: string;
