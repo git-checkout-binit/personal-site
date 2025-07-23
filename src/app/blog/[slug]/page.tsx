@@ -32,7 +32,7 @@ export default function BlogPost() {
         slug: 'muay-thai-bangkok-fight-camp',
         title: 'From Marathons to Muay Thai: One Week of Pain, Sweat, and Noodles',
         description: 'How I accidentally joined a Muay Thai fight camp in Bangkok during a solo backpacking trip. Three lessons learned from training with real fighters in sweltering heat.',
-        date: '2025-02-15',
+        date: '2025-06-15',
         author: 'Binit Shrestha',
         tags: ['Travel', 'Martial Arts', 'Personal Growth', 'Bangkok', 'Challenge'],
         readingTime: '6 min read',
@@ -42,7 +42,7 @@ export default function BlogPost() {
         slug: 'nfl-fantasy-spreadsheet-to-web',
         title: 'From Spreadsheet Chaos to Web Platform: Building NFL Playoff Fantasy',
         description: 'The story of building a fantasy football platform for NFL playoffs after discovering nothing like it exists. From complex spreadsheet formulas to a possible full-stack web application.',
-        date: '2025-01-22',
+        date: '2025-03-08',
         author: 'Binit Shrestha',
         tags: ['React', 'Full-stack', 'Sports Data', 'Product Development', 'Node.js'],
         readingTime: '8 min read',
@@ -438,9 +438,8 @@ export default function BlogPost() {
                   <h4 className="font-bold text-primary mb-3">📋 Draft Tracker Sheet</h4>
                   <ul className="space-y-2 text-sm text-muted-foreground mb-4">
                     <li>• Player names manually typed from group chat</li>
-                    <li>• Color-coded cells for each team owner</li>
-                    <li>• Position tracking (QB, RB, WR, etc.)</li>
                     <li>• Draft order reconstruction</li>
+                    <li>• Funny meme of Zack</li>
                   </ul>
                   <div className="relative rounded-lg overflow-hidden shadow-lg">
                     <img
