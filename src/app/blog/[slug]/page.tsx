@@ -776,7 +776,10 @@ export default function BlogPost() {
           >
             <h3 className="text-2xl font-bold mb-4">Thoughts on this post?</h3>
             <p className="text-muted-foreground mb-6">
-              I&apos;d love to hear your feedback or discuss the technical details further. Or do you want a copy of my spreadsheet for your own league.
+              {post?.slug === 'muay-thai-bangkok-fight-camp' 
+                ? "I'd love to hear your thoughts or stories about your own training adventures. Have you tried something similar?"
+                : "I'd love to hear your feedback or discuss the technical details further. Or do you want a copy of my spreadsheet for your own league."
+              }
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild>
