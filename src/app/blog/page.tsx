@@ -41,6 +41,8 @@ export default function BlogPage() {
     author: string;
     tags: string[];
     readingTime: string;
+    image: string;
+    imageAlt: string;
   }>>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -56,6 +58,8 @@ export default function BlogPage() {
         author: 'Binit Shrestha',
         tags: ['Travel', 'Martial Arts', 'Personal Growth', 'Bangkok', 'Challenge'],
         readingTime: '6 min read',
+        image: '/images/muay-thai-belts.jpg',
+        imageAlt: 'Binit Shrestha at Bangkok Muay Thai fight camp with championship belts'
       },
       {
         slug: 'nfl-fantasy-spreadsheet-to-web',
@@ -65,6 +69,8 @@ export default function BlogPage() {
         author: 'Binit Shrestha',
         tags: ['React', 'Full-stack', 'Sports Data', 'Product Development', 'Node.js'],
         readingTime: '8 min read',
+        image: '/images/nfl-fantasy-pff.webp',
+        imageAlt: 'Pro Football Focus fantasy football analytics dashboard'
       }
     ];
     
@@ -135,21 +141,33 @@ export default function BlogPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Card className="group hover:shadow-xl transition-all duration-500 overflow-hidden border-2 hover:border-primary/20">
+                    {/* Hero Image */}
+                    <div className="relative h-48 md:h-64 overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.imageAlt}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        style={{
+                          filter: 'brightness(0.9) contrast(1.1) saturate(1.05)'
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                      <div className="absolute top-4 right-4">
+                        <Badge className="bg-black/60 text-white border-white/20">
+                          {post.readingTime}
+                        </Badge>
+                      </div>
+                    </div>
+                    
                     <CardHeader className="pb-4">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                          <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4" />
-                            {new Date(post.date).toLocaleDateString('en-US', {
-                              month: 'long',
-                              day: 'numeric',
-                              year: 'numeric'
-                            })}
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-4 h-4" />
-                            {post.readingTime}
-                          </div>
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          {new Date(post.date).toLocaleDateString('en-US', {
+                            month: 'long',
+                            day: 'numeric',
+                            year: 'numeric'
+                          })}
                         </div>
                       </div>
                       
