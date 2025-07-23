@@ -16,15 +16,19 @@ const StravaIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// Custom IMDB Icon Component  
+// Custom IMDB Icon Component (Square Yellow Logo)
 const IMDBIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
     viewBox="0 0 24 24"
-    fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M22.017 0H1.983C.888 0 0 .888 0 1.983v20.034C0 23.112.888 24 1.983 24h20.034c1.095 0 1.983-.888 1.983-1.983V1.983C24 .888 23.112 0 22.017 0zM4.642 18.668V5.988h2.137v12.68H4.642zm6.728 0l-1.374-5.032L8.642 18.668H6.505V5.988h2.137l1.354 4.957 1.374-4.957h2.137v12.68h-2.137zm7.851 0V5.988h2.137v12.68h-2.137z"/>
+    <rect x="0" y="0" width="24" height="24" rx="2" fill="#F5C518"/>
+    <g fill="#000000">
+      <rect x="3.5" y="6" width="1.5" height="12"/>
+      <path d="M6.5 6h2.5l1.2 4.8L11.4 6H14v12h-1.5V9.5L11.2 18h-1.4L8.5 9.5V18H6.5V6z"/>
+      <path d="M15.5 6h3.5c1.1 0 2 0.9 2 2v8c0 1.1-0.9 2-2 2h-3.5V6zm1.5 1.5V16.5h2c0.3 0 0.5-0.2 0.5-0.5V8c0-0.3-0.2-0.5-0.5-0.5h-2z"/>
+    </g>
   </svg>
 );
 
@@ -77,7 +81,7 @@ export function Footer() {
                 href="https://www.imdb.com/name/nm_binit_shrestha" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:text-yellow-500 transition-colors"
+                className="hover:scale-110 transition-transform"
               >
                 <IMDBIcon className="w-6 h-6" />
               </a>
