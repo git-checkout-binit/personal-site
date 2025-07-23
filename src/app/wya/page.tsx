@@ -1,6 +1,6 @@
 import './calendar.css';
 import { CalendarAuth } from '@/components/CalendarAuth';
 
-export default function CalendarPage() {
+export default function WyaPage() {
   return <CalendarAuth />;
 }
