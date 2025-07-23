@@ -150,16 +150,16 @@ export default function BlogPost() {
                   {/* Hero Image */}
                   <div className="relative rounded-xl overflow-hidden shadow-2xl my-12">
                     <img
-                      src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=1200&h=600&fit=crop&crop=center"
-                      alt="Muay Thai training in Bangkok - intense martial arts workout in sweltering heat"
+                      src="/images/muay-thai-belts.jpg"
+                      alt="At Bangkok Muay Thai fight camp with championship belts"
                       className="w-full h-[400px] object-cover"
                       style={{
-                        filter: 'brightness(0.7) contrast(1.3) saturate(1.1)'
+                        filter: 'brightness(0.8) contrast(1.2) saturate(1.1)'
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute bottom-6 left-6 text-white">
-                      <p className="text-sm opacity-80">Training at a Bangkok Muay Thai camp: where marathon endurance meets combat reality</p>
+                      <p className="text-sm opacity-80">Training with real fighters at a Bangkok Muay Thai camp</p>
                     </div>
                   </div>
                   
@@ -168,32 +168,42 @@ export default function BlogPost() {
                   </h2>
                   
                   <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                    Two summers ago, I joined a Muay Thai fight camp in Bangkok. I was traveling solo through Southeast Asia, 
-                    had no real Muay Thai experience, and it was incredibly hot. But I saw a TikTok of these camps and decided 
-                    to full send and live with some of the most vicious fighters in the world.
+                    In the summer of 2023, I joined a Muay Thai fight camp in Bangkok. I was backpacking solo through Southeast Asia 
+                    with zero real Muay Thai experience, in 95-degree heat with brutal humidity. I&apos;d seen these camps on TikTok 
+                    and thought it looked intense enough to be worth trying. So I decided to go all in and train alongside 
+                    some of the most dangerous fighters in the world.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
+                    I have a black belt in Taekwondo and run marathons, but none of that prepares you for Muay Thai. 
+                    The cab driver taking me to the camp kept shaking his head and muttering in Thai. He pulled out Google Translate 
+                    and showed me his phone: &quot;You are going to die.&quot;
                   </p>
                   
                   <p className="text-lg leading-relaxed mb-8 text-muted-foreground">
-                    I do have a black belt in Taekwondo and run marathons, but that doesn&apos;t really translate to Muay Thai. 
-                    The cab driver taking me to the camp couldn&apos;t believe where I was going. He Google Translated 
-                    something that said &quot;You are going to die.&quot;
+                    When I got there, they gave me a schedule and a room. I was doing the same training as people 
+                    who fight professionally. They thought it was funny, but I kept showing up.
                   </p>
 
                   {/* Daily Schedule */}
                   <div className="bg-gradient-to-br from-orange-500/5 to-red-500/5 p-8 rounded-xl border border-orange-500/20 my-8">
-                    <h4 className="font-bold text-xl mb-6 text-orange-600 flex items-center gap-2">
-                      <span>⏰</span> What a Day Looked Like
+                    <h4 className="font-bold text-xl mb-4 text-orange-600 flex items-center gap-2">
+                      <span>⏰</span> The Reality: What Every Day Actually Looked Like
                     </h4>
+                    
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      This wasn&apos;t a tourist class. Here&apos;s the actual schedule they handed me - the same one the professional fighters followed:
+                    </p>
                     
                     <div className="relative rounded-lg overflow-hidden shadow-lg mb-6">
                       <img
-                        src="/images/muay-thai-schedule.jpg"
+                        src="/images/muay-thai-schedule-new.jpg"
                         alt="Daily training schedule at Bangkok Muay Thai fight camp"
                         className="w-full object-cover border border-border"
                       />
                     </div>
                     
-                    <h5 className="font-bold text-lg mb-4 text-orange-600">MY USUAL ROUTINE</h5>
+                    <h5 className="font-bold text-lg mb-4 text-orange-600">HOW MY DAYS ACTUALLY WENT</h5>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between py-2 border-b border-orange-500/20">
                         <span className="font-semibold">5:30 AM</span>
@@ -232,15 +242,12 @@ export default function BlogPost() {
                         <span className="text-muted-foreground">Done for the day, some of us get dinner together</span>
                       </div>
                     </div>
-                    <p className="text-orange-600 font-medium mt-4 text-center">
-                      This wasn&apos;t a tourist class. I was doing the real fighter schedule.
+                    
+                    <p className="text-orange-600 font-medium mt-6 leading-relaxed">
+                      The hardest part wasn&apos;t the physical training. It was realizing that while I was there for a week-long adventure, 
+                      most of these fighters were doing this every single day to survive. That perspective shift hit different.
                     </p>
                   </div>
-                  
-                  <p className="text-lg leading-relaxed mb-6 text-muted-foreground">
-                    When I got there, they gave me a schedule and a room. I was doing the same training as people 
-                    who fight professionally. They thought it was funny, but I kept showing up.
-                  </p>
                   
                   <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-8 text-foreground">
                     What I Learned
@@ -256,21 +263,12 @@ export default function BlogPost() {
                         Their lives actually depended on being disciplined about training.
                       </p>
                       
-                      <div className="grid md:grid-cols-2 gap-4 my-6">
-                        <div className="relative rounded-lg overflow-hidden shadow-lg">
-                          <img
-                            src="/images/muay-thai-morning-run.jpg"
-                            alt="Morning run with Muay Thai fighters in Bangkok"
-                            className="w-full h-[200px] object-cover border border-border"
-                          />
-                        </div>
-                        <div className="relative rounded-lg overflow-hidden shadow-lg">
-                          <img
-                            src="/images/muay-thai-strava.jpg"
-                            alt="Strava screenshot of Bangkok morning run"
-                            className="w-full h-[200px] object-cover border border-border"
-                          />
-                        </div>
+                      <div className="relative rounded-lg overflow-hidden shadow-lg my-6">
+                        <img
+                          src="/images/muay-thai-morning-run.jpg"
+                          alt="Morning run with Muay Thai fighters in Bangkok"
+                          className="w-full h-[300px] object-cover border border-border"
+                        />
                       </div>
                       
                       <p className="text-muted-foreground mb-4 leading-relaxed">
