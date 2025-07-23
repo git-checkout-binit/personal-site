@@ -257,7 +257,7 @@ export default function BlogPost() {
                   <div className="space-y-12 my-10">
                     <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 p-8 rounded-xl border-l-4 border-red-500">
                       <h3 className="text-2xl font-bold text-red-600 mb-4 flex items-center gap-3">
-                        <span className="text-3xl">💪</span> 1. Sweat Now, Bleed Later
+                        <span className="text-3xl">💪</span> 1. Sweat in Training, Survive in Battle
                       </h3>
                       <p className="text-muted-foreground mb-4 leading-relaxed">
                         These fighters weren&apos;t training for fun. Many were doing this to escape poverty. 
