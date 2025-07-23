@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 // Custom LinkedIn Icon Component (Brand Blue)
 const LinkedinIcon = ({ className }: { className?: string }) => (
   <svg

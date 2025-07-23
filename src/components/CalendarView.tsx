@@ -1,10 +1,9 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import { Badge } from '@/components/ui/badge';
 
 interface CalendarEvent {
   id: string;
@@ -18,10 +17,9 @@ interface CalendarEvent {
 
 interface CalendarViewProps {
   events: CalendarEvent[];
-  currentLocation?: string;
 }
 
-export function CalendarView({ events, currentLocation }: CalendarViewProps) {
+export function CalendarView({ events }: CalendarViewProps) {
   const calendarRef = useRef<FullCalendar>(null);
 
   // Find current location based on today's date
@@ -36,7 +34,7 @@ export function CalendarView({ events, currentLocation }: CalendarViewProps) {
 
   const currentEvent = getCurrentLocationEvent();
 
-  const handleEventClick = (clickInfo: any) => {
+  const handleEventClick = (clickInfo: { event: { id: string } }) => {
     const event = clickInfo.event;
     const eventData = events.find(e => e.id === event.id);
     

@@ -10,7 +10,7 @@ import { Eye, EyeOff, Lock, Calendar as CalendarIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import calendarData from '../../../data/calendar.json';
 
-const CALENDAR_KEY = process.env.NEXT_PUBLIC_CALENDAR_KEY || 'fallback2025';
+const CALENDAR_KEY = process.env.NEXT_PUBLIC_CALENDAR_KEY || 'wyabinit';
 
 interface CalendarEvent {
   id: string;
@@ -84,7 +84,7 @@ export default function CalendarPage() {
             </motion.div>
             <h1 className="text-3xl font-bold mb-2">Private Calendar</h1>
             <p className="text-muted-foreground">
-              Enter the access key to view Binit's schedule
+              Enter the access key to view Binit&apos;s schedule
             </p>
           </div>
 
@@ -149,7 +149,7 @@ export default function CalendarPage() {
                 Binit's Calendar
               </h1>
               <p className="text-muted-foreground mt-1">
-                Where I'll be and what I'm up to
+                Where I&apos;ll be and what I&apos;m up to
               </p>
             </motion.div>
             
