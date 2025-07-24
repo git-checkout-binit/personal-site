@@ -12,7 +12,7 @@ export function AppPitchPresentation() {
           <div>
             <h1 className="text-xl font-medium text-gray-900 flex items-center space-x-2">
               <span>🗺️</span>
-              <span>Private Travel Calendar</span>
+              <span>IMY - Private Travel Calendar</span>
             </h1>
           </div>
           <Link
