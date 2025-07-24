@@ -63,39 +63,54 @@ export function FantasyFootballPitchPresentation() {
           </div>
 
           {/* Problem Statement */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-gray-100">
-            <div className="flex items-start space-x-4">
-              <div className="bg-red-100 rounded-lg p-3">
+          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-12 border border-gray-100">
+            <div className="md:flex md:items-start md:space-x-4">
+              <div className="bg-red-100 rounded-lg p-3 w-fit mx-auto md:mx-0 mb-4 md:mb-0">
                 <span className="text-2xl">📊</span>
               </div>
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">The Problem</h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              <div className="flex-1">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 text-center md:text-left">The Problem</h2>
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                   <strong>Fantasy football ends right when the NFL gets most exciting.</strong> Every January, 
                   friend groups watch incredible playoff performances with no way to compete like they did 
                   during the regular season. The solution? Complex Excel spreadsheets with nightmare formulas.
                 </p>
-                <div className="bg-red-50 rounded-lg p-4 mb-4">
-                  <p className="text-sm text-gray-700 font-mono bg-gray-100 p-3 rounded mb-3">
-                    =IF(AND(VLOOKUP(B2,PlayerStats!$A:$Z,15,FALSE)&gt;0,
-                    VLOOKUP(B2,PlayerStats!$A:$Z,2,FALSE)=GameWeek),
-                    VLOOKUP(B2,PlayerStats!$A:$Z,15,FALSE)*
-                    INDEX(Multipliers,MATCH(GameRound,RoundNames,0)),0)
-                  </p>
-                  <p className="text-xs text-gray-500 italic">Actual formula from our friend group&apos;s spreadsheet</p>
+                
+                {/* Formula section - mobile optimized */}
+                <div className="bg-red-50 rounded-lg p-4 mb-6">
+                  <div className="bg-gray-100 p-3 rounded mb-3 overflow-x-auto">
+                    <pre className="text-xs md:text-sm text-gray-700 whitespace-pre-wrap break-all font-mono">
+=IF(AND(VLOOKUP(B2,PlayerStats!$A:$Z,15,FALSE)&gt;0,
+VLOOKUP(B2,PlayerStats!$A:$Z,2,FALSE)=GameWeek),
+VLOOKUP(B2,PlayerStats!$A:$Z,15,FALSE)*
+INDEX(Multipliers,MATCH(GameRound,RoundNames,0)),0)
+                    </pre>
+                  </div>
+                  <p className="text-xs text-gray-500 italic text-center">Actual formula from our friend group&apos;s spreadsheet</p>
                 </div>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-red-500">❌</span>
-                    <span className="text-gray-700"><strong>ESPN, Yahoo, FanDuel</strong>: Regular season only</span>
+
+                {/* Platform limitations - mobile stacked */}
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
+                    <span className="text-red-500 text-sm mt-0.5 flex-shrink-0">❌</span>
+                    <div className="text-sm md:text-base text-gray-700">
+                      <strong>ESPN, Yahoo, FanDuel</strong><br className="md:hidden" />
+                      <span className="md:ml-1">Regular season only</span>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-red-500">❌</span>
-                    <span className="text-gray-700"><strong>DraftKings</strong>: No ongoing playoff competition</span>
+                  <div className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
+                    <span className="text-red-500 text-sm mt-0.5 flex-shrink-0">❌</span>
+                    <div className="text-sm md:text-base text-gray-700">
+                      <strong>DraftKings</strong><br className="md:hidden" />
+                      <span className="md:ml-1">No ongoing playoff competition</span>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-red-500">❌</span>
-                    <span className="text-gray-700"><strong>NFL.com</strong>: Season ends before playoffs</span>
+                  <div className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
+                    <span className="text-red-500 text-sm mt-0.5 flex-shrink-0">❌</span>
+                    <div className="text-sm md:text-base text-gray-700">
+                      <strong>NFL.com</strong><br className="md:hidden" />
+                      <span className="md:ml-1">Season ends before playoffs</span>
+                    </div>
                   </div>
                 </div>
               </div>
