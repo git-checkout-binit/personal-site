@@ -105,7 +105,7 @@ export function AppPitchPresentation() {
                   <span className="text-2xl">🔐</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Granular Privacy</h4>
-                <p className="text-gray-600 text-sm">No "friends of friends", no public feeds—just your chosen ten</p>
+                <p className="text-gray-600 text-sm">No &ldquo;friends of friends&rdquo;, no public feeds—just your chosen ten</p>
               </div>
               
               <div className="text-center">
@@ -155,7 +155,7 @@ export function AppPitchPresentation() {
             <h3 className="text-2xl font-bold mb-4">Intended Impact</h3>
             <p className="text-xl font-medium mb-2">Reclaim privacy, while staying in touch with those who matter.</p>
             <p className="text-blue-100 leading-relaxed">
-              Whether it's family wanting to know you're safe, friends finding you on the road, 
+              Whether it&apos;s family wanting to know you&apos;re safe, friends finding you on the road, 
               or simply coordinating events, this app puts sharing back in <em>your</em> hands—private, 
               secure, and beautifully simple.
             </p>
@@ -390,7 +390,7 @@ export function AppPitchPresentation() {
               <h4 className="text-lg font-semibold text-orange-900 mb-3">🔧 Engineering Analysis</h4>
               <div className="space-y-3 text-gray-700">
                 <p><strong>FastAPI Choice:</strong> Excellent for MVP with automatic OpenAPI docs, async support, and fast development cycles. Python ecosystem provides rich libraries for auth, validation, and testing.</p>
-                <p><strong>PWA Strategy:</strong> Critical for mobile adoption—enables "Add to Home Screen" and offline caching. Consider service worker for basic offline functionality.</p>
+                <p><strong>PWA Strategy:</strong> Critical for mobile adoption—enables &ldquo;Add to Home Screen&rdquo; and offline caching. Consider service worker for basic offline functionality.</p>
                 <p><strong>Deployment Concerns:</strong> Railway/Render offer zero-config deployments but consider Docker containers for consistency across environments.</p>
               </div>
             </div>
