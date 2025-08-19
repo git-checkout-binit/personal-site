@@ -1,37 +1,61 @@
-'use client';
-
-import { useMemo } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { COMPLETE_DRAFT_DATA, YAHOO_ADP_DATA } from '@/lib/draft-data';
-import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: '2025 Fantasy Football Draft Analysis - Expert Insights & Team Grades',
+  description: 'Comprehensive analysis of the 2025 NFL fantasy football auction draft with expert insights, player evaluations, and championship predictions. Research-backed grades for all 12 teams.',
+  openGraph: {
+    title: '🏈 2025 Fantasy Football Draft Deep Dive - Expert Analysis',
+    description: 'Comprehensive research-backed analysis of our August 2025 auction draft. Expert insights, player grades, and championship predictions for all 12 teams.',
+    type: 'article',
+    url: 'https://fantasy-analysis.com/draft-results',
+    siteName: 'Fantasy Football Central',
+    images: [
+      {
+        url: 'https://logoeps.com/wp-content/uploads/2013/03/yahoo-vector-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Fantasy Football Draft Analysis 2025',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '🏈 2025 Fantasy Football Draft Analysis',
+    description: 'Expert analysis and grades for our 2025 auction draft with championship predictions',
+    images: ['https://logoeps.com/wp-content/uploads/2013/03/yahoo-vector-logo.png'],
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function DraftResults() {
-  const spendingByOwner = useMemo(() => {
-    const spending = COMPLETE_DRAFT_DATA.reduce((acc, pick) => {
-      acc[pick.owner] = (acc[pick.owner] || 0) + pick.salary;
-      return acc;
-    }, {} as Record<string, number>);
-    return Object.entries(spending).sort((a, b) => b[1] - a[1]);
-  }, []);
+  const spending = COMPLETE_DRAFT_DATA.reduce((acc, pick) => {
+    acc[pick.owner] = (acc[pick.owner] || 0) + pick.salary;
+    return acc;
+  }, {} as Record<string, number>);
+  
+  const spendingByOwner = Object.entries(spending).sort((a, b) => b[1] - a[1]);
 
-  const ownerAnalysis = useMemo(() => {
-    return spendingByOwner.map(([owner, spent]) => {
-      const picks = COMPLETE_DRAFT_DATA.filter(p => p.owner === owner);
-      const totalValue = picks.reduce((sum, pick) => {
-        const yahooValue = YAHOO_ADP_DATA[pick.player] || 0;
-        return sum + yahooValue;
-      }, 0);
+  const ownerAnalysis = spendingByOwner.map(([owner, spent]) => {
+    const picks = COMPLETE_DRAFT_DATA.filter(p => p.owner === owner);
+    const totalValue = picks.reduce((sum, pick) => {
+      const yahooValue = YAHOO_ADP_DATA[pick.player] || 0;
+      return sum + yahooValue;
+    }, 0);
 
-      return {
-        owner,
-        spent,
-        totalValue,
-        efficiency: totalValue - spent,
-        picks: picks.length,
-        valueScore: Math.round(((totalValue / spent) * 100) * 10) / 10
-      };
-    });
-  }, [spendingByOwner]);
+    return {
+      owner,
+      spent,
+      totalValue,
+      efficiency: totalValue - spent,
+      picks: picks.length,
+      valueScore: Math.round(((totalValue / spent) * 100) * 10) / 10
+    };
+  });
 
   const getDraftGrade = (efficiency: number, valueScore: number) => {
     if (efficiency >= 15 && valueScore >= 110) return { grade: 'A+', color: 'text-green-700' };
