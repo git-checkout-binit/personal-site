@@ -392,6 +392,146 @@ export default function DraftResults() {
           </div>
         </section>
 
+        {/* Complete Draft Analysis Table */}
+        <section>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">Complete Draft Analysis: Every Pick Analyzed</h2>
+          
+          <Card className="border border-gray-200 dark:border-gray-700 mb-12">
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold flex items-center gap-3">
+                📊 Player-by-Player Efficiency Analysis
+                <span className="text-sm font-normal text-muted-foreground">(Click to expand full breakdown)</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <details className="group">
+                <summary className="cursor-pointer list-none">
+                  <div className="flex items-center justify-between p-4 bg-muted/20 rounded-lg hover:bg-muted/40 transition-colors">
+                    <span className="font-semibold">View Complete Draft Table with Market Analysis</span>
+                    <span className="group-open:rotate-180 transition-transform duration-200">▼</span>
+                  </div>
+                </summary>
+                
+                <div className="mt-6 overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b-2 border-primary/20">
+                        <th className="text-left p-3 font-bold">Player</th>
+                        <th className="text-left p-3 font-bold">Owner</th>
+                        <th className="text-center p-3 font-bold">Draft $</th>
+                        <th className="text-center p-3 font-bold">Market $</th>
+                        <th className="text-center p-3 font-bold">Efficiency</th>
+                        <th className="text-left p-3 font-bold">Analysis</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {COMPLETE_DRAFT_DATA
+                        .sort((a, b) => b.salary - a.salary)
+                        .map((pick, index) => {
+                          const marketValue = YAHOO_ADP_DATA[pick.player] || 0;
+                          const efficiency = marketValue - pick.salary;
+                          const efficiencyScore = efficiency > 0 ? 'positive' : efficiency < -5 ? 'negative' : 'neutral';
+                          
+                          const getAnalysis = (player: string, salary: number, marketValue: number, efficiency: number) => {
+                            // Elite tier analysis
+                            if (salary >= 50) {
+                              if (player === 'Bijan Robinson') return { verdict: 'High Risk/High Reward', reason: 'Premium price demands RB1 overall production. Falcons improved O-line could unlock ceiling.' };
+                              if (player === 'Ja\'Marr Chase') return { verdict: 'Championship Foundation', reason: 'Consensus #1 overall pick at discount. Safest floor in fantasy football.' };
+                              if (player === 'CeeDee Lamb') return { verdict: 'Solid but Risky', reason: 'Fair market value but Cowboys offensive uncertainty creates volatility.' };
+                              if (player === 'Justin Jefferson') return { verdict: 'Elite Value', reason: 'Best WR in NFL at below-market price. Vikings offense trending up with J.J. McCarthy.' };
+                              if (player === 'Saquon Barkley') return { verdict: 'Ceiling Play', reason: 'Eagles O-line upgrade could unlock massive upside after 2005 yards behind Giants.' };
+                              if (player === 'Malik Nabers') return { verdict: 'Boom or Bust', reason: 'Pro Bowl rookie but Giants offense questions. Price assumes immediate WR1 production.' };
+                              if (player === 'Ashton Jeanty') return { verdict: 'Potential Steal', reason: 'Rookie Super Model score of 91. Raiders run-heavy scheme perfect fit.' };
+                            }
+                            
+                            // High-value picks analysis  
+                            if (salary >= 30) {
+                              if (efficiency >= 8) return { verdict: 'Excellent Value', reason: 'Significantly below market consensus with strong upside potential.' };
+                              if (efficiency >= 0) return { verdict: 'Fair Value', reason: 'Market-appropriate pricing with solid floor/ceiling ratio.' };
+                              return { verdict: 'Overpaid', reason: 'Above market consensus - needs everything to go right.' };
+                            }
+                            
+                            // Mid-tier analysis
+                            if (salary >= 10) {
+                              if (efficiency >= 5) return { verdict: 'Great Value', reason: 'Below-market pricing with legitimate breakout potential.' };
+                              if (efficiency >= -2) return { verdict: 'Reasonable', reason: 'Near market value with acceptable risk/reward profile.' };
+                              return { verdict: 'Questionable', reason: 'Overpaid for production tier - risky investment.' };
+                            }
+                            
+                            // Late round flyers
+                            if (efficiency >= 3) return { verdict: 'Steal Potential', reason: 'Excellent value for late-round upside swing.' };
+                            if (efficiency >= -1) return { verdict: 'Reasonable Flyer', reason: 'Appropriate lottery ticket pricing.' };
+                            return { verdict: 'Reach', reason: 'Overpaid for speculative asset.' };
+                          };
+
+                          const analysis = getAnalysis(pick.player, pick.salary, marketValue, efficiency);
+                          
+                          return (
+                            <tr key={index} className="border-b border-gray-100 dark:border-gray-800 hover:bg-muted/10 transition-colors">
+                              <td className="p-3">
+                                <div>
+                                  <div className="font-semibold">{pick.player}</div>
+                                  <div className="text-xs text-muted-foreground">{pick.position}</div>
+                                </div>
+                              </td>
+                              <td className="p-3 font-medium">{pick.owner}</td>
+                              <td className="p-3 text-center font-bold">${pick.salary}</td>
+                              <td className="p-3 text-center">${marketValue}</td>
+                              <td className="p-3 text-center">
+                                <div className={`flex items-center justify-center gap-1 ${
+                                  efficiencyScore === 'positive' ? 'text-green-600' : 
+                                  efficiencyScore === 'negative' ? 'text-red-600' : 'text-yellow-600'
+                                }`}>
+                                  <span className="font-bold">
+                                    {efficiency > 0 ? '+' : ''}${efficiency}
+                                  </span>
+                                  <span className="text-xs">
+                                    {efficiencyScore === 'positive' ? '📈' : efficiencyScore === 'negative' ? '📉' : '➡️'}
+                                  </span>
+                                </div>
+                              </td>
+                              <td className="p-3">
+                                <div>
+                                  <div className={`text-xs font-bold mb-1 ${
+                                    analysis.verdict.includes('Steal') || analysis.verdict.includes('Excellent') || analysis.verdict.includes('Elite') ? 'text-green-600' :
+                                    analysis.verdict.includes('Overpaid') || analysis.verdict.includes('Risk') || analysis.verdict.includes('Reach') ? 'text-red-600' : 'text-blue-600'
+                                  }`}>
+                                    {analysis.verdict}
+                                  </div>
+                                  <div className="text-xs text-muted-foreground leading-relaxed">
+                                    {analysis.reason}
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                    </tbody>
+                  </table>
+                  
+                  <div className="mt-6 p-4 bg-muted/20 rounded-lg text-sm">
+                    <h4 className="font-bold mb-3">Key Metrics Explained:</h4>
+                    <div className="grid md:grid-cols-2 gap-4 text-xs">
+                      <div>
+                        <strong>Market Value:</strong> Yahoo Fantasy consensus auction values from expert rankings
+                      </div>
+                      <div>
+                        <strong>Efficiency Score:</strong> Market Value minus Draft Price (positive = value, negative = overpay)
+                      </div>
+                      <div>
+                        <strong>Analysis Categories:</strong> Based on player tier, market consensus, and 2025 projections
+                      </div>
+                      <div>
+                        <strong>Research Sources:</strong> ESPN, CBS Sports, FantasyPros, NFL.com expert consensus
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </CardContent>
+          </Card>
+        </section>
+
         {/* Spending Analysis */}
         <section>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">Draft Spending Breakdown</h2>
