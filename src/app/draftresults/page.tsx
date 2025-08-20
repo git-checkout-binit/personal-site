@@ -162,14 +162,14 @@ export default function DraftResults() {
                     </p>
                   </div>
 
-                  <div className="border-l-4 border-green-500 pl-6">
-                    <h3 className="text-xl font-bold text-green-600">4. Justin Jefferson - $62 (Binit)</h3>
+                  <div className="border-l-4 border-orange-500 pl-6">
+                    <h3 className="text-xl font-bold text-orange-600">4. Justin Jefferson - $62 (Binit)</h3>
                     <p className="text-gray-700 dark:text-gray-300 mt-2">
-                      <strong>Market Analysis:</strong> Exceptional value for a player many consider the NFL&apos;s best receiver. Jefferson&apos;s consistency 
-                      and target share make him one of the safest picks in fantasy football. Vikings&apos; improved offense with J.J. McCarthy adds upside.
+                      <strong>Market Analysis:</strong> Paid $7 above market consensus ($55) for the NFL&apos;s best receiver. Jefferson&apos;s consistency 
+                      and target share still make him a safe pick despite the premium. Vikings&apos; improved offense with J.J. McCarthy adds upside.
                     </p>
-                    <p className="text-sm text-green-600 font-medium mt-2">
-                      VERDICT: Draft steal. Jefferson at $62 is championship equity.
+                    <p className="text-sm text-orange-600 font-medium mt-2">
+                      VERDICT: Slight overpay for elite talent. Still championship-caliber foundation piece.
                     </p>
                   </div>
 
@@ -438,7 +438,7 @@ export default function DraftResults() {
                               if (player === 'Bijan Robinson') return { verdict: 'High Risk/High Reward', reason: 'Premium price demands RB1 overall production. Falcons improved O-line could unlock ceiling.' };
                               if (player === 'Ja\'Marr Chase') return { verdict: 'Championship Foundation', reason: 'Consensus #1 overall pick at discount. Safest floor in fantasy football.' };
                               if (player === 'CeeDee Lamb') return { verdict: 'Solid but Risky', reason: 'Fair market value but Cowboys offensive uncertainty creates volatility.' };
-                              if (player === 'Justin Jefferson') return { verdict: 'Elite Value', reason: 'Best WR in NFL at below-market price. Vikings offense trending up with J.J. McCarthy.' };
+                              if (player === 'Justin Jefferson') return { verdict: 'Slight Overpay', reason: 'Best WR in NFL but paid $7 above market consensus. Still elite talent with high floor.' };
                               if (player === 'Saquon Barkley') return { verdict: 'Ceiling Play', reason: 'Eagles O-line upgrade could unlock massive upside after 2005 yards behind Giants.' };
                               if (player === 'Malik Nabers') return { verdict: 'Boom or Bust', reason: 'Pro Bowl rookie but Giants offense questions. Price assumes immediate WR1 production.' };
                               if (player === 'Ashton Jeanty') return { verdict: 'Potential Steal', reason: 'Rookie Super Model score of 91. Raiders run-heavy scheme perfect fit.' };
